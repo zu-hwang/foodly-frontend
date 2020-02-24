@@ -4,8 +4,8 @@ class LogoContainer extends React.Component {
 
     render(){
         return( 
-          <div className = "header-container">
-            asdfsdfasfsafasfsa
+          <div className = "headerContainer">
+            {/* Header search form */}
           </div>
         )
     }
