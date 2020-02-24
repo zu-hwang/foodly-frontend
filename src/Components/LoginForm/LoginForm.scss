@@ -1,0 +1,53 @@
+$s-srf: Raleway, san-serif;
+$srf: Bitter, serif;
+$black: #342f2f;
+$pink: #f06060;
+$gray: #ada2a4;
+$l-gray: #f5f4f4;
+
+@mixin flexCenter {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.form-container {
+	@include flexCenter();
+	border: solid 1px #eee;
+	width: 300px;
+	margin: 0 auto;
+
+	.title {
+		font-family: $s-srf;
+		font-size: 32px;
+		font-weight: 300;
+		padding-bottom: 5px;
+	}
+	.sub-title {
+		font-family: $srf;
+		font-weight: 400;
+		font-style: italic;
+		font-size: 16px;
+		color: $gray;
+		letter-spacing: -0.5px;
+	}
+	.input-wrap {
+		width: 100%;
+
+		input {
+			box-sizing: border-box;
+			border: none;
+			padding: 10px;
+			background-color: $l-gray;
+			width: 100%;
+		}
+		input::placeholder {
+			color: $gray;
+			font-size: 14px;
+		}
+	}
+	.small-red {
+		font-size: 14px;
+	}
+}
