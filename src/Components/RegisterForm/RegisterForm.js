@@ -1,30 +1,36 @@
 import React, { Component } from "react";
 import "../../Styles/accountForm.scss";
 
-class LoginForm extends Component {
+class Register extends Component {
 	render() {
 		return (
 			<>
 				<div className='container'>
 					<div className='title-container'>
-						<p className='title'>login</p>
-						<p className='sub-title'>glad you are back, we have missed you</p>
+						<p className='title'>create account</p>
+						<p className='sub-title'>
+							to take advantage of personalized shopping
+						</p>
 					</div>
 					<div className='form-container'>
+						<div className='input-wrap'>
+							<input type='text' placeholder='First name'></input>
+						</div>
+						<div className='input-wrap'>
+							<input type='text' placeholder='Last name'></input>
+						</div>
 						<div className='input-wrap'>
 							<input type='text' placeholder='Email'></input>
 						</div>
 						<div className='input-wrap'>
 							<input type='password' placeholder='Password'></input>
 						</div>
-						<p className='small-red'>Forgot password</p>
 						<div className='btn-wrap'>
-							<button type='button'>login to my account</button>
+							<button type='button'>create my account</button>
 						</div>
 						<div className='text-container'>
 							<p className=''>
-								Don't have account yet?{" "}
-								<span className='mid-red'>Create it here.</span>
+								<span className='mid-red'>Return to store</span>
 							</p>
 						</div>
 					</div>
@@ -34,4 +40,4 @@ class LoginForm extends Component {
 	}
 }
 
-export default LoginForm;
+export default Register;
