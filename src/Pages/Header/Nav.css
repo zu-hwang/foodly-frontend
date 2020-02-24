@@ -1,0 +1,7 @@
+/* 나중에 보고 수정할 예정 */
+.header {
+	position: absolute;
+	left: auto;
+	right: 0;
+	box-sizing: border-box;
+}
