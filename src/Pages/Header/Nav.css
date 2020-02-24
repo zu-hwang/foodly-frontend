@@ -1,0 +1,6 @@
+.header {
+	position: absolute;
+	left: auto;
+	right: 0;
+	box-sizing: border-box;
+}
