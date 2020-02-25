@@ -8,7 +8,7 @@ class MainContent extends Component {
         <div className='main-container'>
           <div className='slide-banner-wrap'>
             <div className='img-container'>
-              <ul>{/* 여기에 배너 슬라이드 컴포넌트? */}</ul>
+              <ul>main - content</ul>
             </div>
             {/* <div className='btn-container'>
               <div className='img-btn-wrap'>btn-1</div>

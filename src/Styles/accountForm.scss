@@ -1,12 +1,5 @@
 @import './var.scss';
 
-@mixin flexCenter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
 .account-form-container {
   @include flexCenter();
   // border: solid 1px #eee;
