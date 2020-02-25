@@ -1,104 +1,99 @@
-$s-srf: Raleway, san-serif;
-$srf: Bitter, serif;
-$black: #342f2f;
-$pink: #f06060;
-$gray: #ada2a4;
-$l-gray: #f5f4f4;
+@import './var.scss';
 
 @mixin flexCenter {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.container {
-	@include flexCenter();
-	// border: solid 1px #eee;
-	margin: 0 auto;
-	width: 300px;
+.account-form-container {
+  @include flexCenter();
+  // border: solid 1px #eee;
+  margin: 0 auto;
+  width: 300px;
 
-	.title-container {
-		@include flexCenter();
-		margin-bottom: 50px;
+  .title-container {
+    @include flexCenter();
+    margin-bottom: 50px;
 
-		.title {
-			font-family: $s-srf;
-			font-size: 32px;
-			font-weight: 300;
-			padding-bottom: 5px;
-			letter-spacing: -0.5px;
-			text-transform: uppercase;
-		}
-		.sub-title {
-			font-family: $srf;
-			font-weight: 400;
-			font-style: italic;
-			font-size: 16px;
-			color: $gray;
-			letter-spacing: -0.3px;
-			overflow: hidden;
-			white-space: nowrap;
-		}
-	}
-	.form-container {
-		@include flexCenter();
+    .title {
+      font-family: $s-srf;
+      font-size: 32px;
+      font-weight: 300;
+      padding-bottom: 5px;
+      letter-spacing: -0.5px;
+      text-transform: uppercase;
+    }
+    .sub-title {
+      font-family: $srf;
+      font-weight: 400;
+      font-style: italic;
+      font-size: 16px;
+      color: $gray;
+      letter-spacing: -0.3px;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  }
+  .form-container {
+    @include flexCenter();
 
-		.input-wrap {
-			width: 100%;
-			padding-bottom: 30px;
+    .input-wrap {
+      width: 100%;
+      padding-bottom: 30px;
 
-			input {
-				box-sizing: border-box;
-				border: none;
-				border-radius: 1px;
-				padding: 14px;
-				background-color: $l-gray;
-				width: 100%;
-			}
-			input::placeholder {
-				color: $gray;
-				font-size: 14px;
-			}
-		}
-		.small-red {
-			font-size: 14px;
-			letter-spacing: -0.5px;
-			color: $pink;
-			margin-bottom: 30px;
-		}
-		.btn-wrap {
-			width: 100%;
+      input {
+        box-sizing: border-box;
+        border: none;
+        border-radius: 1px;
+        padding: 14px;
+        background-color: $l-gray;
+        width: 100%;
+      }
+      input::placeholder {
+        color: $gray;
+        font-size: 14px;
+      }
+    }
+    .small-red {
+      font-size: 14px;
+      letter-spacing: -0.5px;
+      color: $pink;
+      margin-bottom: 30px;
+    }
+    .btn-wrap {
+      width: 100%;
 
-			button {
-				letter-spacing: 1px;
-				width: 100%;
-				color: #fff;
-				background-color: $pink;
-				font-weight: 700;
-				font-size: 16px;
-				text-transform: uppercase;
-				border: none;
-				border-radius: 3px;
-				padding: 20px;
-			}
-		}
-		.text-container {
-			font-family: $s-srf;
-			padding-top: 20px;
+      button {
+        letter-spacing: 1px;
+        width: 100%;
+        color: #fff;
+        background-color: $pink;
+        font-weight: 700;
+        font-size: 16px;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 3px;
+        padding: 20px;
+      }
+    }
+    .text-container {
+      font-family: $s-srf;
+      padding-top: 20px;
 
-			p {
-				color: $black;
-				font-size: 16px;
-				font-weight: 400;
-				letter-spacing: -0.2px;
-			}
-			.mid-red {
-				color: $pink;
-				font-size: 16px;
-				font-weight: 600;
-				letter-spacing: -0.2px;
-			}
-		}
-	}
+      p {
+        color: $black;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: -0.2px;
+      }
+      .mid-red {
+        color: $pink;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: -0.2px;
+      }
+    }
+  }
 }
