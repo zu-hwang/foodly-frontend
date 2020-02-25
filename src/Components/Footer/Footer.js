@@ -1,11 +1,25 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee, faAddressBook } from '@fortawesome/free-solid-svg-icons';
+import {
+  faFacebookF,
+  faTwitter,
+  faPinterest,
+  faInstagram,
+  faYoutube,
+  faTumblr,
+  faCcVisa,
+  faCcMastercard,
+  faCcPaypal,
+  faCcDiscover,
+  faCcAmex,
+  faCcDinersClub
+} from '@fortawesome/free-brands-svg-icons';
 
 import './Footer.scss';
 
 class Footer extends Component {
   render() {
+    const cardIconSize = '3x';
     return (
       <footer>
         <div className='insta-container'>
@@ -41,22 +55,22 @@ class Footer extends Component {
               <p>follow us</p>
               <ul className='icon-list'>
                 <li>
-                  <FontAwesomeIcon icon={faAddressBook} />
+                  <FontAwesomeIcon icon={faFacebookF} />
                 </li>
                 <li>
-                  <FontAwesomeIcon icon={faCoffee} />
+                  <FontAwesomeIcon icon={faTwitter} />
                 </li>
                 <li>
-                  <FontAwesomeIcon icon={faCoffee} />
+                  <FontAwesomeIcon icon={faPinterest} />
                 </li>
                 <li>
-                  <FontAwesomeIcon icon={faCoffee} />
+                  <FontAwesomeIcon icon={faInstagram} />
                 </li>
                 <li>
-                  <FontAwesomeIcon icon={faCoffee} />
+                  <FontAwesomeIcon icon={faYoutube} />
                 </li>
                 <li>
-                  <FontAwesomeIcon icon={faCoffee} />
+                  <FontAwesomeIcon icon={faTumblr} />
                 </li>
               </ul>
             </div>
@@ -64,22 +78,22 @@ class Footer extends Component {
               <p>payment methods</p>
               <ul className='card-list'>
                 <li>
-                  <FontAwesomeIcon icon={faCoffee} />
+                  <FontAwesomeIcon icon={faCcVisa} size={cardIconSize} />
                 </li>
                 <li>
-                  <FontAwesomeIcon icon={faCoffee} />
+                  <FontAwesomeIcon icon={faCcMastercard} size={cardIconSize} />
                 </li>
                 <li>
-                  <FontAwesomeIcon icon={faCoffee} />
+                  <FontAwesomeIcon icon={faCcAmex} size={cardIconSize} />
                 </li>
                 <li>
-                  <FontAwesomeIcon icon={faCoffee} />
+                  <FontAwesomeIcon icon={faCcPaypal} size={cardIconSize} />
                 </li>
                 <li>
-                  <FontAwesomeIcon icon={faCoffee} />
+                  <FontAwesomeIcon icon={faCcDinersClub} size={cardIconSize} />
                 </li>
                 <li>
-                  <FontAwesomeIcon icon={faCoffee} />
+                  <FontAwesomeIcon icon={faCcDiscover} size={cardIconSize} />
                 </li>
               </ul>
             </div>
