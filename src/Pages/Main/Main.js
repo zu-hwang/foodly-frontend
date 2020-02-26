@@ -1,14 +1,8 @@
-import React from ‘react’;
-import Footer from ‘../../Components/Footer/Footer’;
-import MainContent from ‘../../Components/MainContent/MainContent’;
+import React from "react";
+
 class Main extends React.Component {
-  render() {
-    return (
-      <>
-        <MainContent />
-        <Footer />
-      </>
-    );
-  }
+	render() {
+		return <></>;
+	}
 }
 export default Main;
