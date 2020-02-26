@@ -4,3 +4,10 @@ $black: #342f2f;
 $pink: #f06060;
 $gray: #ada2a4;
 $l-gray: #f5f4f4;
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
