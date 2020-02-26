@@ -1,7 +1,7 @@
 import React from 'react';
-import LogoContainer from '../../Components/LogoContainer';
-import MainNav from '../../Components/MainNav';
-import '../Header/Nav'
+import LogoContainer from '../../Components/NavForm/LogoContainer';
+import MainNav from '../../Components/NavForm/MainNav';
+import '../../Styles/Nav.css';
 
 class Nav extends React.Component {
 
