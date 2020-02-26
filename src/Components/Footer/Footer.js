@@ -14,12 +14,34 @@ import {
   faCcAmex,
   faCcDinersClub
 } from '@fortawesome/free-brands-svg-icons';
-
 import './Footer.scss';
 
 class Footer extends Component {
+  constructor() {
+    super();
+    this.state = {
+      instaImage: []
+    };
+  }
+  componentDidMount() {
+    fetch('http://localhost:3000/data/instagram.json')
+      .then((response) => response.json())
+      .then((response) => {
+        this.setState({ instaImage: response.instaImage });
+        console.log(this.state.instaImage);
+      });
+  }
   render() {
     const cardIconSize = '3x';
+    const instaImage = this.state.instaImage.map((pic) => {
+      const instaImg = pic.url;
+      return (
+        <div>
+          <img src={instaImg} key={pic.id} alt='' />
+        </div>
+      );
+    });
+
     return (
       <footer>
         <div className='insta-container'>
@@ -28,7 +50,8 @@ class Footer extends Component {
             let’s have a look what is behind the scenes
           </p>
           <div className='insta-pic-container'>
-            <div>사진들</div>
+            {/* 여기에 인스타 사진 뿌리기 */}
+            {instaImage}
           </div>
         </div>
         <div className='footer-container'>
