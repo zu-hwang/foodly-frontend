@@ -1,0 +1,92 @@
+$s-srf: Raleway, san-serif;
+$srf: Bitter, serif;
+
+// .headerContainer전체
+.headerContainer {
+	width: 96%;
+
+	text-align: center;
+
+	margin: 0 19px 0 19px;
+	padding: 13px 0;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+// 중간에 홈 로고랑 글귀
+.centerContainer {
+	width: 80vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #342f2f;
+	-webkit-font-smoothing: antialiased;
+	// 웹킷 이거 왜쓰는거야?
+}
+
+.siteLogo img {
+	vertical-align: middle;
+}
+
+.storeDesc {
+	margin: 0 12px;
+	display: inline-block;
+	font-family: $srf;
+	font-size: 14px;
+	font-style: italic;
+	line-height: 20px;
+}
+
+// 왼쪽에 망할 인풋
+
+.searchContainer,
+.formSearchPrimary {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.iconSearch img {
+	height: 18px;
+	width: 18px;
+}
+
+//오른쪽 망할 장바구니
+
+.cartOpenButton .countCart {
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	position: absolute;
+	top: 2px;
+	right: 1px;
+	font-size: 11px;
+	line-height: 15px;
+	color: #fff;
+	background-color: #f06060;
+	border-radius: 50%;
+}
+
+.cartOpenButton {
+	width: 70px;
+	height: 28px;
+
+	display: flex;
+	// color: buttontext;
+	letter-spacing: normal;
+	word-spacing: normal;
+	text-transform: none;
+	text-indent: 0px;
+	text-shadow: none;
+	text-align: center;
+	cursor: default;
+	font: 400 13.3333px Arial;
+}
+
+#iconCart {
+	width: 16px;
+	height: 20px;
+}
