@@ -1,6 +1,6 @@
 import React from "react";
-import DropDownList from "./DropDownList";
-import ImgProduct from "./ImgProduct";
+import DropDownList from "../../Components/ProductForm/DropDownList";
+import ImgProduct from "../../Components/ProductForm/ImgProduct";
 import "../../Styles/Product.scss";
 import { faBorderAll } from "@fortawesome/free-solid-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
@@ -57,11 +57,11 @@ class Product extends React.Component {
 						<div className='pagination'>
 							<ul>
 								<li className='pagination-item-prev'>
-									<a
+									<div
 										className='pagination__link'
 										href='/collections/fresh?page=1&view=grid'
 										title='« Previous'
-									></a>
+									></div>
 								</li>
 								<li className='pagination-item-parts'></li>
 								<li className='pagination-item-next'></li>

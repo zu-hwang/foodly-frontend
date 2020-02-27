@@ -70,35 +70,3 @@ class DropDownList extends React.Component {
 }
 
 export default DropDownList;
-
-{
-	/* <select className = "sortFilter"   >
-              <option value="state"selected>State</option>
-              <option value="any states">Any states</option>
-              <option value="fresh">Fresh</option>
-              <option value="frozen">Frozen</option>
-              <option value="dried">Dried</option>
-              <option value="liquid">Liquid</option>
-            </select> */
-}
-
-{
-	/* <select className = "sortFilter"  value={this.state.value} onClick={this.handleChange} >
-            <option value="state">State</option>
-            <option value="any states">Any states</option>
-            <option selected value="fresh">Fresh</option>
-            <option value="frozen">Frozen</option>
-            <option value="dried">Dried</option>
-            <option value="liquid">Liquid</option>
-          </select> */
-}
-
-// <button className="dropbtn"></button>
-//   <div className="dropdown-content">
-//     <a href="#" className = "state" >State</a>
-//     <a href="#" className = "any states" >Any States</a>
-//     <a href="#" className = "fresh" >Fresh</a>
-//     <a href="#" className = "frozen" >Frozen</a>
-//     <a href="#" className = "dried" >Dried</a>
-//     <a href="#" className = "liquid" >liquid</a>
-//   </div>

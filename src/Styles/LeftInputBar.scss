@@ -1,0 +1,29 @@
+@import "./var.scss";
+
+// 왼쪽에 망할 인풋
+.search--container {
+	display: block;
+	position: absolute;
+	top: 60px;
+	left: 20px;
+	z-index: 5;
+
+	.searchBar {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 210px;
+		border-bottom: 1px solid #bcbcbc;
+		position: relative;
+	}
+}
+
+.searchInput {
+	border: none;
+}
+
+.iconSearch {
+	margin-right: 20px;
+	position: absolute;
+	right: -10px;
+}
