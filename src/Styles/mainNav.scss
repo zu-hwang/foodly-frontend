@@ -1,0 +1,32 @@
+@import "./var.scss";
+
+.MainNav {
+	min-width: 770px;
+	// width: 1530px;
+	height: 90px;
+	outline: none;
+	margin: 5px auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #f5f4f4;
+	.nav--list {
+		// width: 650px;
+		height: 90px;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		.nav--list__item {
+			display: inline;
+			margin: 0 5 px;
+			div.item {
+				// width: 100px;
+				padding: 25px 38px 25px 22px;
+			}
+		}
+	}
+}

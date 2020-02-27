@@ -11,13 +11,6 @@ $l-gray: #f5f4f4;
 	align-items: center;
 }
 
-@mixin flexCenter {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
-}
-
 .product {
 	@include center();
 	display: inline-block;
