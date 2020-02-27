@@ -7,7 +7,7 @@
 } */
 
 /* 이거 body 공용 CSS인것같은데 이걸로 쓸지 물어보기 */
-* {
+.header {
 	font-size: 16px;
 	line-height: 1.7;
 	font-family: "Raleway", Tahoma, Geneva, sans-serif, sans-serif;
