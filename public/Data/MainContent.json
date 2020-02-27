@@ -1,0 +1,39 @@
+{
+  "slideBanner": [
+    {
+      "title": "tomato season",
+      "subTitle": "nutritious delicious",
+      "price": "$3.05",
+      "priceText": "start point",
+      "pictureUrl": ""
+    },
+    {
+      "title": "paella or paster",
+      "subTitle": "you'll need this sweet pepper for both",
+      "price": "$6.95",
+      "price-text": "start point",
+      "pictureUrl": ""
+    },
+    {
+      "title": "apple pie? yes, please",
+      "subTitle": "of Gala Cultivar",
+      "price": "$3.55",
+      "price-text": "start point",
+      "pictureUrl": ""
+    }
+  ],
+  "specialBanner": [
+    {
+      "title": "start your day",
+      "subTitle": "with vit-plate",
+      "icon": "special pack",
+      "pictureUrl": ""
+    },
+    {
+      "title": "c-overload",
+      // "subTitle": "with vit-plate",
+      "icon": "20% discount",
+      "pictureUrl": ""
+    }
+  ]
+}

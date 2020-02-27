@@ -1,0 +1,16 @@
+/* 나중에 보고 수정할 예정 */
+/* .header {
+	position: absolute;
+	left: auto;
+	right: 0;
+	box-sizing: border-box;
+} */
+
+/* 이거 body 공용 CSS인것같은데 이걸로 쓸지 물어보기 */
+* {
+	font-size: 16px;
+	line-height: 1.7;
+	font-family: "Raleway", Tahoma, Geneva, sans-serif, sans-serif;
+	color: #342f2f;
+	-webkit-font-smoothing: antialiased;
+}
