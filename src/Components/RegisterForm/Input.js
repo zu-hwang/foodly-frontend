@@ -1,29 +1,29 @@
-import React, { Component } from 'react';
-import InputCheckBox from './InputCheckBox';
-import './Input.scss';
+import React, { Component } from "react";
+import InputCheckBox from "./InputCheckBox";
+import "./Input.scss";
 
 class Input extends Component {
   constructor(props) {
     super(props);
     this.state = {
       inputVal: this.props.Value,
-      inputFocused: 'focus-out',
+      inputFocused: "focus-out",
       btnCheck: this.props.CheckForm, // 버튼클릭했을때 트루로 변경
       display: false
     };
   }
   handleOnFocus = (e) => {
     if (this.props.Value || e.target) {
-      this.setState({ inputFocused: 'focused' });
+      this.setState({ inputFocused: "focused" });
     }
   };
   handleOnBlur = (e) => {
     if (!this.props.Value && !e.target) {
-      this.setState({ inputFocused: 'focus-out' });
+      this.setState({ inputFocused: "focus-out" });
     } else if (this.props.Value || !e.target) {
-      this.setState({ inputFocused: 'focus-opacity' });
+      this.setState({ inputFocused: "focus-opacity" });
     } else {
-      this.setState({ inputFocused: 'focus-out' });
+      this.setState({ inputFocused: "focus-out" });
     }
   };
   checkStyle = () => {
@@ -55,13 +55,13 @@ class Input extends Component {
     } = this.props;
 
     return (
-      <div className='input-wrap'>
+      <div className="input-wrap">
         <div
           className={
             // this.checkInputVal()
             !Value && CheckForm && !this.state.display
-              ? 'block-scale'
-              : 'none-scale'
+              ? "block-scale"
+              : "none-scale"
           }>
           <InputCheckBox
             Type={Type}
@@ -82,7 +82,7 @@ class Input extends Component {
           style={
             this.checkStyle()
               ? // this.state.display
-                { border: 'solid 1px #f060607a ' }
+                { border: "solid 1px #f060607a " }
               : null
           }
           value={Value}></input>
