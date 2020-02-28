@@ -1,7 +1,6 @@
-import React from "react";
-import "../Detail/Detail.scss";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { fafacebookF } from "@fortawesome/free-regular-svg-icons";
+import React from 'react';
+import '../Detail/Detail.scss';
+import {FaFacebookF} from 'react-icons/fa';
 
 class Detail extends React.Component {
   render() {
@@ -56,12 +55,11 @@ class Detail extends React.Component {
           </div>
           <div className="share-container">
             <div className="share-title">SHARE</div>
-            <div className="facebook-logo" />
-            {/* <FontAwesomeIcon icon={fafacebookF} /> */}
-            <div className="twiter-logo" />
-            <div className="pinterest-logo" />
-            <div className="google-logo" />
-            <div className="social-logo" />
+            <div className="facebook-logo"><FaFacebookF/></div>
+            <div className="twiter-logo"></div>
+            <div className="pinterest-logo"></div>
+            <div className="google-logo"></div>           
+            <div className="social-logo"></div>
           </div>
         </div>
 
@@ -114,7 +112,6 @@ class Detail extends React.Component {
               </div>
             </div>
           </div>
-
           <div className="recipe-container">
             <div className="recipe-title">Special Recipe</div>
             <div className="recipe-box">
@@ -133,71 +130,66 @@ class Detail extends React.Component {
               <div className="ingredients-box">
                 <ul className="ingredients-ul">
                   <li className="ingredients-li">1/2 pound angel hair pasta</li>
-                  <li className="ingredients-li">
-                    3/4 pound raw, peeled, deveined shrimp (medium sized)
-                  </li>
+                  <li className="ingredients-li">3/4 pound raw, peeled, deveined shrimp <br /> (medium sized)</li>
                   <li className="ingredients-li">4 ripe Campari Tomatoes</li>
                   <li className="ingredients-li">3 cloves garilc. minced</li>
-                  <li className="ingredients-li">
-                    1/3 cup torn fresh basil leaves
-                  </li>
-                  <li className="ingredients-li">
-                    3 Tbsp olive oil (divided, 1 Tbsp and 2 Tbsp)
-                  </li>
-                  <li className="ingredients-li">
-                    Salt and freshly ground black pepper to taste
-                  </li>
+                  <li className="ingredients-li">1/3 cup torn fresh basil leaves</li>
+                  <li className="ingredients-li">3 Tbsp olive oil <br /> (divided, 1 Tbsp and 2 Tbsp)</li>
+                  <li className="ingredients-li">Salt and freshly ground black pepper <br /> to taste</li>
                 </ul>
               </div>
               <div className="directions-box">
-                1{" "}
-                <p className="directions-text">
-                  {" "}
-                  Fill a large pot with 2 quarts of water. Bring to a boil (You
-                  will be using this water to both blanch the tomatoes and boil
-                  the pasta.) Core the tomatoes and use a sharp knife to cut a
-                  small X into the bottom end of each tomato. When the water is
-                  boiling, use a slotted spoon to lower the tomatoes into the
-                  water. Blanch for no more than one minute, just enough to
-                  loosen the skins. Remove tomatoes with a slotted spoon to a
-                  bowl of icy water, saving the blanching water.
-                </p>
-                2{" "}
-                <p className="directions-text">
-                  {" "}
-                  Peel off the tomato skins from the tomatoes. Cut the tomatoes
-                  crosswise in half, and squeeze out most of the seeds and
-                  juices. Chop the tomatoes into 1-inch pieces.
-                </p>
-                3{" "}
-                <p className="directions-text">
-                  {" "}
-                  Heat 1 Tbsp of olive oil in a large sauté pan on medium high
-                  heat. Add the shrimp to the pan and cook for 1 minute. Turn
-                  the shrimp over in the pan. Lower the heat to medium.
-                </p>
-                4{" "}
-                <p className="directions-text">
-                  {" "}
-                  Add the garlic, cook a minute more. Add the chopped tomatoes
-                  and basil. Sprinkle with salt. Cook for a minute more and
-                  remove from heat.
-                </p>
-                5{" "}
-                <p className="directions-text">
-                  {" "}
-                  Add a tablespoon of salt to the water you used to blanch the
-                  tomatoes. Bring to a boil again. Add the angel hair pasta and
-                  cook for 3 minutes.
-                </p>
-                6{" "}
-                <p className="directions-text">
-                  {" "}
-                  Drain the pasta and immediately add to pot with the shrimp and
-                  tomatoes. Drizzle the pasta with 2 Tbsp of olive oil. Then
-                  stir the pasta in with the shrimp and tomatoes. Serve
-                  immediately or at room temp.
-                </p>
+                <ol className="directions-ol">
+                  <li className="directions-li"> Fill a large pot with 2 quarts of water. Bring to a boil (You will be using this water to both blanch the tomatoes and boil the pasta.) Core the tomatoes and use a sharp knife to cut a small X into the bottom end of each tomato. When the water is boiling, use a slotted spoon to lower the tomatoes into the water. Blanch for no more than one minute, just enough to loosen the skins. Remove tomatoes with a slotted spoon to a bowl of icy water, saving the blanching water.</li>
+                  <li className="directions-li"> Peel off the tomato skins from the tomatoes. Cut the tomatoes crosswise in half, and squeeze out most of the seeds and juices. Chop the tomatoes into 1-inch pieces.</li>
+                  <li className="directions-li"> Heat 1 Tbsp of olive oil in a large sauté pan on medium high heat. Add the shrimp to the pan and cook for 1 minute. Turn the shrimp over in the pan. Lower the heat to medium.</li>
+                  <li className="directions-li"> Add the garlic, cook a minute more. Add the chopped tomatoes and basil. Sprinkle with salt. Cook for a minute more and remove from heat.</li>
+                  <li className="directions-li"> Add a tablespoon of salt to the water you used to blanch the tomatoes. Bring to a boil again. Add the angel hair pasta and cook for 3 minutes.</li>
+                  <li className="directions-li"> Drain the pasta and immediately add to pot with the shrimp and tomatoes. Drizzle the pasta with 2 Tbsp of olive oil. Then stir the pasta in with the shrimp and tomatoes. Serve immediately or at room temp.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          <div className="comment-container">
+            <div className="comment-title">LET'S HAVE A CHAT</div>
+            <div className="comment-box">
+              <div className="textarea-box">
+                <textarea className="comment-textarea" placeholder="My message..." />
+              </div>
+              <div className="comment-input-box">
+                <input className="comment-name-input" placeholder="My name is..." />
+                <input className="comment-email-input" placeholder="Reply me to email..." />
+              </div>
+              <div className="comment-btn-box">
+                <button className="comment-btn">SEND MY MESSAGE</button>
+              </div>
+            </div>
+          </div>
+          <div className="similar-container">
+            <div className="similar-title">Similar Products</div>
+            <div className="similar-img-box">
+              <div className="similar-first">
+                <div className="first-img"></div>
+                <div className="first-title">Basil</div>
+                <div className="first-explanation">Harvest 2015 | In stock | Bunch</div>
+              </div>
+
+              <div className="similar-first">
+                <div className="first-img"></div>
+                <div className="first-title">Basil</div>
+                <div className="first-explanation">Harvest 2015 | In stock | Bunch</div>
+              </div>
+
+              <div className="similar-first">
+                <div className="first-img"></div>
+                <div className="first-title">Basil</div>
+                <div className="first-explanation">Harvest 2015 | In stock | Bunch</div>
+              </div>
+
+              <div className="similar-first">
+                <div className="first-img"></div>
+                <div className="first-title">Basil</div>
+                <div className="first-explanation">Harvest 2015 | In stock | Bunch</div>
               </div>
             </div>
           </div>
