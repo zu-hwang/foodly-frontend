@@ -2,16 +2,18 @@ import React from 'react';
 import '../Detail/Detail.scss';
 import {FaFacebookF} from 'react-icons/fa';
 
-class Detail extends React.Component{
-  render(){
-    return(
+class Detail extends React.Component {
+  render() {
+    return (
       <div className="detail-main">
-        <div className="detail-cover"/>
-        
+        <div className="detail-cover" />
+
         <div className="detail-top">
           <div className="purchase-container">
             <div className="purchase-name">Brandywine Tomatoes</div>
-            <div className="purchase-explanation">Harvest 2015 | In stock | kg</div>
+            <div className="purchase-explanation">
+              Harvest 2015 | In stock | kg
+            </div>
             <div className="purchase">
               <div className="price-box">
                 <div className="price">$8.05</div>
@@ -20,25 +22,35 @@ class Detail extends React.Component{
               <div className="purchase-box">
                 <div className="purchase-quantity">
                   <button className="minus-btn">◁</button>
-                  <input className="purchase-input"/>
+                  <input className="purchase-input" />
                   <button className="plus-btn">▷</button>
-                  <span className="multiply">x$8.05=</span>  
+                  <span className="multiply">x$8.05=</span>
                 </div>
                 <div className="btn">
                   <button className="add-btn">ADD TO BAG</button>
                 </div>
               </div>
-            </div>  
+            </div>
           </div>
           <div className="description-container">
             <div className="description-title">Description</div>
             <p className="description-text">
-            Brandywine tomatoes popularly is considered among the best tasting available.<br />
-            probably is caused its origin. Brandywine tomato plant is an heirloom cultivar of the<br />
-            species. if you want to taste the best tomatoey flavor this tomato is exactly what you<br />
-            need. This particular cultivar is extremely succulent and tasty. It is a beautifully sweet<br />
-            tomato that is offset by a wonderful acidity that is a perfect combination for delicious<br />
-            dishes.
+              Brandywine tomatoes popularly is considered among the best tasting
+              available.
+              <br />
+              probably is caused its origin. Brandywine tomato plant is an
+              heirloom cultivar of the
+              <br />
+              species. if you want to taste the best tomatoey flavor this tomato
+              is exactly what you
+              <br />
+              need. This particular cultivar is extremely succulent and tasty.
+              It is a beautifully sweet
+              <br />
+              tomato that is offset by a wonderful acidity that is a perfect
+              combination for delicious
+              <br />
+              dishes.
             </p>
           </div>
           <div className="share-container">
@@ -108,7 +120,8 @@ class Detail extends React.Component{
                 <img
                   src="https://www.simplyrecipes.com/wp-content/uploads/2015/09/pasta-pomodoro-shrimp-horiz-a2-2000.jpg"
                   className="recipe-img"
-                  alt="recipe-img"/>
+                  alt="recipe-img"
+                />
                 <div className="directions">DIRECTIONS</div>
               </div>
             </div>

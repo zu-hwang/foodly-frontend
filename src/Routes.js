@@ -8,19 +8,19 @@ import Product from "./Pages/Product/Product";
 import Main from "./Pages/Main/Main";
 
 class Routes extends React.Component {
-	render() {
-		return (
-			<Router>
-				<Switch>
-					<Route exact path='/' component={Main} />
-					<Route exact path='/login' component={Login} />
-					<Route exact path='/register' component={Register} />
-          <Route exact path='/detail' component={Detail} />
-					<Route exact path='/nav' component={Nav} />
-					<Route exact path='/product' component={Product} />
-				</Switch>
-			</Router>
-		);
-	}
+  render() {
+    return (
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Main} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/register" component={Register} />
+          <Route exact path="/detail" component={Detail} />
+          <Route exact path="/nav" component={Nav} />
+          <Route exact path="/product" component={Product} />
+        </Switch>
+      </Router>
+    );
+  }
 }
 export default Routes;
