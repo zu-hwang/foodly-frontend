@@ -5,7 +5,7 @@ import Register from "./Pages/Register/Register";
 import Detail from "./Pages/Detail/Detail";
 import Nav from "./Pages/Header/Nav";
 import Product from "./Pages/Product/Product";
-// import Main from "./Pages/Main/Main";
+import Main from "./Pages/Main/Main";
 
 class Routes extends React.Component {
 	render() {
