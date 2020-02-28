@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
-import './MainContent.scss';
+import React, { Component } from "react";
+import "./MainContent.scss";
 
 class MainContent extends Component {
   render() {
     return (
       <>
-        <div className='main-container'>
-          <div className='slide-banner-wrap'>
-            <div className='img-container'>
+        <div className="main-container">
+          <div className="slide-banner-wrap">
+            <div className="img-container">
               <ul>main - content</ul>
             </div>
             {/* <div className='btn-container'>
