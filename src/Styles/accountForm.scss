@@ -1,92 +1,125 @@
-@import "./var.scss";
+@import './var.scss';
 
+.summit-error-border {
+  border: 1px $pink solid;
+}
 .account-form-container {
-	@include flexCenter();
-	// border: solid 1px #eee;
-	margin: 0 auto;
-	width: 300px;
+  @include flexCenter();
+  // border: solid 1px #eee;
+  outline: none;
+  margin: 50px auto 220px;
+  width: 300px;
 
-	.title-container {
-		@include flexCenter();
-		margin-bottom: 50px;
+  .title-container {
+    @include flexCenter();
+    margin-bottom: 50px;
 
-		.title {
-			font-family: $s-srf;
-			font-size: 32px;
-			font-weight: 300;
-			padding-bottom: 5px;
-			letter-spacing: -0.5px;
-			text-transform: uppercase;
-		}
-		.sub-title {
-			font-family: $srf;
-			font-weight: 400;
-			font-style: italic;
-			font-size: 16px;
-			color: $gray;
-			letter-spacing: -0.3px;
-			overflow: hidden;
-			white-space: nowrap;
-		}
-	}
-	.form-container {
-		@include flexCenter();
+    .title {
+      font-family: $s-srf;
+      font-size: 32px;
+      font-weight: 300;
+      padding-bottom: 5px;
+      letter-spacing: -0.5px;
+      text-transform: uppercase;
+    }
+    .sub-title {
+      font-family: $srf;
+      font-weight: 400;
+      font-style: italic;
+      font-size: 16px;
+      color: $gray;
+      letter-spacing: -0.01px;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  }
+  .form-container {
+    @include flexCenter();
 
-		.input-wrap {
-			width: 100%;
-			padding-bottom: 30px;
+    // .input-wrap {
+    //   width: 100%;
+    //   padding-bottom: 30px;
+    //   position: relative;
+    // }
+    // .focus-out {
+    //   font-family: $s-srf;
+    //   letter-spacing: -0.1px;
+    //   position: relative;
+    //   top: 27px;
+    //   left: 20px;
+    //   color: $gray;
+    //   font-size: 14px;
+    //   transition: all 0.2s linear;
+    // }
+    // .focused {
+    //   font-family: $s-srf;
+    //   letter-spacing: -0.1px;
+    //   position: relative;
+    //   top: 0;
+    //   left: 20px;
+    //   color: $gray;
+    //   font-size: 12px;
+    //   transition: all 0.2s linear;
+    // }
 
-			input {
-				box-sizing: border-box;
-				border: none;
-				border-radius: 1px;
-				padding: 14px;
-				background-color: $l-gray;
-				width: 100%;
-			}
-			input::placeholder {
-				color: $gray;
-				font-size: 14px;
-			}
-		}
-		.small-red {
-			font-size: 14px;
-			letter-spacing: -0.5px;
-			color: $pink;
-			margin-bottom: 30px;
-		}
-		.btn-wrap {
-			width: 100%;
+    // input {
+    //   box-sizing: border-box;
+    //   border: none;
+    //   border-radius: 1px;
+    //   padding: 12px 20px;
+    //   background-color: $l-gray;
+    //   width: 100%;
+    //   border: 1px solid $l-gray;
 
-			button {
-				letter-spacing: 1px;
-				width: 100%;
-				color: #fff;
-				background-color: $pink;
-				font-weight: 700;
-				font-size: 16px;
-				text-transform: uppercase;
-				border: none;
-				border-radius: 3px;
-				padding: 20px;
-			}
-		}
-		.text-container {
-			font-family: $s-srf;
-			padding-top: 20px;
+    //   &:focus {
+    //     outline: none;
+    //     background-color: #fff;
+    //   }
+    // }
+    .small-red {
+      font-size: 14px;
+      letter-spacing: -0.5px;
+      color: $pink;
+      margin-bottom: 30px;
+    }
+    .btn-wrap {
+      width: 100%;
 
-			p {
-				color: $black;
-				font-size: 16px;
-				font-weight: 400;
-				letter-spacing: -0.2px;
-			}
-			.mid-red {
-				color: $pink;
-				font-size: 16px;
-				font-weight: 600;
-				letter-spacing: -0.2px;
-			}
-		}
-	}
+      button {
+        letter-spacing: 1px;
+        width: 100%;
+        color: #fff;
+        background-color: $pink;
+        font-weight: 700;
+        font-size: 16px;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 3px;
+        padding: 21px;
+        margin-top: 20px;
+        outline: none;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    .text-container {
+      font-family: $s-srf;
+      padding-top: 20px;
+
+      p {
+        color: $black;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: -0.2px;
+      }
+      .mid-red {
+        color: $pink;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: -0.2px;
+        cursor: pointer;
+      }
+    }
+  }
 }
