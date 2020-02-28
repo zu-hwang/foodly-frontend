@@ -26,14 +26,29 @@ class LoginForm extends Component {
   handleClickBtn = (e) => {
     this.setState({ checkForm: true });
     if (this.state.email && this.state.password) {
-      // 내용이 모두 있다! 내용검사하기
-      if (this.state.email.indexOf("@")) {
-        console.log("@있으");
-      }
+      // let myHeaders = new Headers();
+      // myHeaders.append("Content-Type", "application/json");
+
+      let raw = JSON.stringify({
+        email: this.state.email,
+        password: this.state.password
+      });
+
+      let requestOptions = {
+        method: "POST",
+        body: raw
+      };
+
+      fetch("http://10.58.1.127:8000/account/signin", requestOptions)
+        .then((response) => response.text())
+        .then((result) => {
+          console.log(result);
+        })
+        .catch((error) => console.log("error", error));
     }
     // //! 클릭했을때 유효 검사
     // //! 이메일에 @ 체크 없으면 && pw에 6자 이상일때 >> checkForm :true
-    // if ("@" in this.state.email) {
+    // if ("@" in this.state.email && `'` in this.state.email) {
     //   this.setState({ checkForm: true });
     // }
   };
