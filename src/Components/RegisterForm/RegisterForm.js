@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Input from './Input';
+import Main from '../../Pages/Main/Main';
 import '../../Styles/accountForm.scss';
 
 class Register extends Component {
@@ -54,7 +55,7 @@ class Register extends Component {
   };
   render() {
     return (
-      <>
+      <Main>
         <div className='account-form-container'>
           <div className='title-container'>
             <p className='title'>create account</p>
@@ -113,7 +114,7 @@ class Register extends Component {
             </div>
           </div>
         </div>
-      </>
+      </Main>
     );
   }
 }
