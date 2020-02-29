@@ -1,35 +1,41 @@
-@import '../../Styles/var.scss';
+@import "../../Styles/var.scss";
 
 .input-check-box {
   font-family: $s-srf;
   border: 3px solid $pink;
   padding: 25px;
-  display: flex;
-  justify-content: space-between;
-  p {
-    font-size: 14px;
-    letter-spacing: -0.01px;
-    font-weight: 300;
-    span {
-      padding-right: 8px;
-      font-weight: 700;
+  margin-top: 10px;
+
+  div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    p {
+      font-size: 14px;
       letter-spacing: -0.01px;
+      font-weight: 300;
+      span {
+        padding-right: 8px;
+        font-weight: 700;
+        letter-spacing: -0.01px;
+        color: $pink;
+      }
+    }
+    span {
       color: $pink;
+      font-weight: 700;
+    }
+
+    .block {
+      display: block;
+    }
+    .none {
+      display: none;
+    }
+
+    .border {
+      border: solid 1px $pink;
     }
   }
-  span {
-    color: $pink;
-    font-weight: 700;
-  }
-}
-
-.block {
-  display: block;
-}
-.none {
-  display: none;
-}
-
-.border {
-  border: solid 1px $pink;
 }
