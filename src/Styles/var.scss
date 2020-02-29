@@ -18,6 +18,11 @@ $l-gray: #f5f4f4;
   align-items: center;
 }
 
+@mixin serif-italic {
+  font-family: $srf;
+  font-style: italic;
+  letter-spacing: -0.1px;
+}
 .none {
   display: none;
 }
