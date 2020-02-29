@@ -14,7 +14,7 @@ class InputCheckBox extends Component {
     };
   }
 
-  handleDelBtn = (e) => {
+  handleDelBtn = e => {
     this.setState({
       toggle: !this.state.toggle
     });
@@ -22,13 +22,19 @@ class InputCheckBox extends Component {
 
   componentDidMount() {
     const { Type, Label } = this.props;
-    if (!Data[Type] || !Data[Type.errText]) {
+    if (Type === "text") {
+      // 인풋이 text 타입일때
       return this.setState({
         interjection: Data[Type].interjection,
-        // ! errText에 출력할 내용 입력하기
-        errText: `The ${Label} is empty`
+        errText: Data[Type].errText + Label
       });
-    } else {
+    } else if (Type === "email") {
+      // 인풋이 이메일일때
+      return this.setState({
+        interjection: Data[Type].interjection,
+        errText: Data[Type].errText
+      });
+    } else if (Type === "password") {
       return this.setState({
         interjection: Data[Type].interjection,
         errText: Data[Type].errText
@@ -38,13 +44,15 @@ class InputCheckBox extends Component {
   render() {
     return (
       <div className="input-check-box">
-        <p>
-          <span>{this.state.interjection}</span>
-          {this.state.errText}
-        </p>
-        <span onClick={this.props.HandleDelBtn}>
-          <FontAwesomeIcon icon={faTimes} />
-        </span>
+        <div>
+          <p>
+            <span>{this.state.interjection}</span>
+            {this.state.errText}
+          </p>
+          <span onClick={this.props.HandleDelBtn}>
+            <FontAwesomeIcon icon={faTimes} />
+          </span>
+        </div>
       </div>
     );
   }

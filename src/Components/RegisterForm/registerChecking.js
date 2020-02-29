@@ -1,18 +1,18 @@
 // import InputCheckBox from './InputCheckBox';
 
-const Interjection = ["Oops!", "Oh!", "Nonp!"];
-const getRandomNumber = (num) => {
+const Interjection = ["Ooops!", "Oh!", "Nope!"];
+const getRandomNumber = num => {
   return Math.floor(Math.random() * num);
 };
 
 export const Data = {
   text: {
     interjection: Interjection[getRandomNumber(Interjection.length)],
-    errText: ""
+    errText: "pleas ckeck "
   },
   email: {
     interjection: Interjection[getRandomNumber(Interjection.length)],
-    errText: "please check E-mail!"
+    errText: "please check E-mail (abc@abc.com)"
   },
   password: {
     interjection: "Notice!",
