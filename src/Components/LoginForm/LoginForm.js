@@ -33,7 +33,7 @@ class LoginForm extends Component {
           this.props.history.push("/"); // 토큰 저장 후 메인창으로 이동
         } else {
           // 에러창 팝업
-          this.setState({ loginError: true });
+          this.setState({ loginError: true, email: "", password: "" });
         }
       })
       .catch(error => console.log("error", error));
@@ -96,9 +96,7 @@ class LoginForm extends Component {
           <div className="form-container">
             {this.state.loginError && (
               <div className="login-error-box">
-                <div>
-                  <p>Incorrect email or password</p>
-                </div>
+                <p>Incorrect email or password</p>
               </div>
             )}
             <Input
@@ -128,7 +126,7 @@ class LoginForm extends Component {
               </button>
             </div>
             <div className="text-container">
-              <p className="">
+              <p>
                 Don't have account yet?
                 <span className="mid-red" onClick={this.goToRegister}>
                   Create it here.
