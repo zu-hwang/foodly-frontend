@@ -1,0 +1,49 @@
+@import "./var.scss";
+
+// 왼쪽에 망할 인풋
+.search--container {
+	display: block;
+	position: absolute;
+	top: 60px;
+	left: 90px;
+	z-index: 5;
+
+	.searchBar {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		// width: 210px;
+		height: 38px;
+		position: relative;
+
+		.searchInput--open {
+			width: 210px;
+			height: 38px;
+			border: none;
+			text-align: start;
+			cursor: text;
+			border-bottom: 1px solid #bcbcbc;
+			z-index: -1;
+			transition: width 340ms linear;
+		}
+		.searchInput {
+			width: 0px;
+			height: 38px;
+			border: none;
+			text-align: start;
+			cursor: text;
+			border-bottom: 0px solid #bcbcbc;
+			z-index: -1;
+			letter-spacing: normal;
+			word-spacing: normal;
+			transition: width 340ms linear;
+		}
+
+		.iconSearch {
+			margin-right: 18px;
+			position: absolute;
+			right: -6px;
+			cursor: pointer;
+		}
+	}
+}

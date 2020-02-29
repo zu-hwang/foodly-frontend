@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
-import MainContent from '../../Components/MainContent/MainContent';
-import Footer from '../../Components/Footer/Footer';
+import React from "react";
+import Nav from "../Header/Nav";
+import Footer from "../../Components/Footer/Footer";
 
-class Main extends Component {
+class Main extends React.Component {
   render() {
     return (
       <>
-        {/* <MainNav /> */}
-        <MainContent />
+        <Nav />
+        {this.props.children}
         <Footer />
       </>
     );

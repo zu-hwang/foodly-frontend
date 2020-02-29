@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React, { Component } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebookF,
   faTwitter,
@@ -13,8 +13,8 @@ import {
   faCcDiscover,
   faCcAmex,
   faCcDinersClub
-} from '@fortawesome/free-brands-svg-icons';
-import './Footer.scss';
+} from "@fortawesome/free-brands-svg-icons";
+import "./Footer.scss";
 
 class Footer extends Component {
   constructor() {
@@ -24,39 +24,39 @@ class Footer extends Component {
     };
   }
   componentDidMount() {
-    fetch('http://localhost:3000/data/instagram.json')
-      .then((response) => response.json())
-      .then((response) => {
+    fetch("http://localhost:3000/data/instagram.json")
+      .then(response => response.json())
+      .then(response => {
         this.setState({ instaImage: response.instaImage });
         console.log(this.state.instaImage);
       });
   }
   render() {
-    const cardIconSize = '3x';
-    const instaImage = this.state.instaImage.map((pic) => {
+    const cardIconSize = "3x";
+    const instaImage = this.state.instaImage.map(pic => {
       const instaImg = pic.url;
       return (
         <div>
-          <img src={instaImg} key={pic.id} alt='' />
+          <img src={instaImg} key={pic.id} alt="" />
         </div>
       );
     });
 
     return (
       <footer>
-        <div className='insta-container'>
-          <p className='title'>instagram</p>
-          <p className='sub-title'>
+        <div className="insta-container">
+          <p className="title">instagram</p>
+          <p className="sub-title">
             let’s have a look what is behind the scenes
           </p>
-          <div className='insta-pic-container'>
+          <div className="insta-pic-container">
             {/* 여기에 인스타 사진 뿌리기 */}
             {instaImage}
           </div>
         </div>
-        <div className='footer-container'>
-          <div className='center-wrap'>
-            <div className='box-wrap'>
+        <div className="footer-container">
+          <div className="center-wrap">
+            <div className="box-wrap">
               <p>more info</p>
               <ul>
                 <li>About us</li>
@@ -65,7 +65,7 @@ class Footer extends Component {
                 <li>Return Policy</li>
               </ul>
             </div>
-            <div className='box-wrap'>
+            <div className="box-wrap">
               <p>foodly family</p>
               <ul>
                 <li>Food Markets</li>
@@ -74,9 +74,9 @@ class Footer extends Component {
                 <li>Recipes</li>
               </ul>
             </div>
-            <div className='box-wrap'>
+            <div className="box-wrap">
               <p>follow us</p>
-              <ul className='icon-list'>
+              <ul className="icon-list">
                 <li>
                   <FontAwesomeIcon icon={faFacebookF} />
                 </li>
@@ -97,9 +97,9 @@ class Footer extends Component {
                 </li>
               </ul>
             </div>
-            <div className='box-wrap'>
+            <div className="box-wrap">
               <p>payment methods</p>
-              <ul className='card-list'>
+              <ul className="card-list">
                 <li>
                   <FontAwesomeIcon icon={faCcVisa} size={cardIconSize} />
                 </li>
@@ -121,7 +121,7 @@ class Footer extends Component {
               </ul>
             </div>
           </div>
-          <div className='copyrignt-container'>
+          <div className="copyrignt-container">
             <p>© 2020, foodly-store. All rights reserved.</p>
             <p>Foodly</p>
           </div>

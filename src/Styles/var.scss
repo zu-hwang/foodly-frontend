@@ -11,3 +11,13 @@ $l-gray: #f5f4f4;
   align-items: center;
   flex-wrap: wrap;
 }
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.none {
+  display: none;
+}
