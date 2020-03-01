@@ -3,10 +3,14 @@
 .single-banner {
   @include flexCenter();
   margin-top: 2px;
+  margin-left: 2px;
   width: 50%;
   min-height: 540px;
   position: relative;
   background-color: $l-gray;
+  &:hover {
+    cursor: pointer;
+  }
 
   .title-wrap {
     position: absolute;
@@ -20,31 +24,13 @@
     align-items: center;
     justify-content: space-around;
     width: 100%;
-    margin: 0 30px;
+    margin: 0 100px;
     z-index: 1;
 
-    .circle-sticker-wrap {
-      @include flexCenter();
-      padding: 20px;
-      width: 100px;
-      height: 100px;
-      background-color: $orange;
-      border-radius: 50%;
-      text-align: center;
-      box-sizing: border-box;
-      font-size: 17px;
-      color: $l-gray;
-      p {
-        font-family: $srf;
-        font-weight: 700;
-        letter-spacing: -0.01px;
-        line-height: 1.2em;
-      }
-    }
     div:last-child {
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
+      // justify-content: flex-end;
       span {
         font-family: $srf;
         color: $black;
@@ -72,18 +58,10 @@
     left: 0;
     opacity: 1;
     transition: all 0.2s ease-in-out;
-    background-color: greenyellow;
     &:hover {
       cursor: pointer;
       opacity: 0.7;
       transition: all 0.2s ease-in-out;
-      background-color: greenyellow;
     }
   }
-}
-.single-banner:first-child {
-  margin-right: 1px;
-}
-.single-banner:last-child {
-  margin-left: 1px;
 }

@@ -3,15 +3,22 @@ import "./MainTitle.scss";
 
 class MainTitle extends Component {
   render() {
-    const { id, title, subTitle, handleTextClick } = this.props;
+    const {
+      id,
+      title,
+      subTitle,
+      handleTextClick,
+      titleStyle,
+      subTitleStyle
+    } = this.props;
     return (
       <div
         className="main-title"
         id={id + "main-title"}
         onClick={handleTextClick}
       >
-        <p>{title}</p>
-        <p>{subTitle}</p>
+        <p style={titleStyle}>{title}</p>
+        <p style={subTitleStyle}>{subTitle}</p>
       </div>
     );
   }

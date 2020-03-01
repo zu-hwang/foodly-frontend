@@ -3,6 +3,8 @@ import MainTitle from "../OverlayBanner/MainTitle";
 import "./SingleBanner.scss";
 import CircleSticker from "./CircleSticker";
 
+// todo 1. 화면 작아졌을때 완전짜부러짐..음..
+
 class SingleBanner extends Component {
   constructor() {
     super();
@@ -25,7 +27,13 @@ class SingleBanner extends Component {
           style={{ backgroundImage: `URL(${bgImg})` }}
         ></div>
         <div className="title-wrap">
-          <MainTitle id={id} title={title} subTitle={subTitle} />
+          <MainTitle
+            id={id}
+            title={title}
+            subTitle={subTitle}
+            titleStyle={{ fontSize: "1.8em" }}
+            subTitleStyle={{ fontSize: "1.5em" }}
+          />
         </div>
         <div className="sub-text-wrap">
           <div className="circle-sticker-wrap">
