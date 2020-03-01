@@ -40,7 +40,7 @@ class OverlayBanner extends Component {
     this.props.history.push("/");
   };
   componentDidMount() {
-    fetch("http://localhost:3000/Data/OverlayBanner.json")
+    fetch("http://localhost:3000/Data/MainContent.json")
       .then(data => data.json())
       .then(data => {
         // console.log("data", data.overlayBanner);

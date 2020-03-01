@@ -10,7 +10,7 @@ class PriceSticker extends Component {
         key={id + "-price-sticker"}
       >
         <div>
-          <p>${price}</p>
+          <p>{price}</p>
           <p>{priceText}</p>
         </div>
       </div>
