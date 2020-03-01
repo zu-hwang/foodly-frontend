@@ -12,9 +12,8 @@ class CircleBtn extends Component {
   render() {
     const { id, buttonImg, handleBtnClick } = this.props;
     return (
-      <div className="circle-btn" key={id}>
+      <div className="circle-btn" key={id + "-circle-btn"}>
         <div
-          key={id}
           id={id + "-circle-btn"}
           className={id === this.props.selectedId ? "selected" : "btn"}
           style={{ backgroundImage: `URL(${buttonImg})` }}

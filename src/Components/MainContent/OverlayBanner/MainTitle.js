@@ -8,7 +8,6 @@ class MainTitle extends Component {
       <div
         className="main-title"
         id={id + "main-title"}
-        key={id + "main-title"}
         onClick={handleTextClick}
       >
         <p>{title}</p>

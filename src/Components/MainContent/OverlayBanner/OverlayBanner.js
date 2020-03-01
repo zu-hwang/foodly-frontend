@@ -64,6 +64,7 @@ class OverlayBanner extends Component {
       return (
         <CircleBtn
           id={data.id}
+          key={data.id + "-circlebtn-key"}
           buttonImg={data.buttonImg}
           handleBtnClick={this.handleBtnClick}
           selectedId={this.state.selectedId}

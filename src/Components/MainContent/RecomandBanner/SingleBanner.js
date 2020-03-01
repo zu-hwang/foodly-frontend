@@ -19,11 +19,11 @@ class SingleBanner extends Component {
       subText
     } = this.props;
     return (
-      <div
-        className="single-banner"
-        onClick={onClick}
-        style={{ backgroundImage: `URL(${bgImg})` }}
-      >
+      <div className="single-banner" onClick={onClick}>
+        <div
+          className="background-img"
+          style={{ backgroundImage: `URL(${bgImg})` }}
+        ></div>
         <div className="title-wrap">
           <MainTitle id={id} title={title} subTitle={subTitle} />
         </div>
