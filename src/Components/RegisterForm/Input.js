@@ -12,7 +12,6 @@ class Input extends Component {
       display: false
     };
   }
-
   handleOnFocus = e => {
     if (this.props.Value || e.target) {
       this.setState({ inputFocused: "focused" });
