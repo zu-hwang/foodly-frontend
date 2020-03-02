@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 import Input from "./Input";
 import Main from "../../Pages/Main/Main";
 import "../../Styles/accountForm.scss";
@@ -11,9 +12,47 @@ class Register extends Component {
       lastName: "",
       email: "",
       password: "",
-      checkForm: false
+      checkForm: false,
+      retry: false
     };
   }
+  goToHome = () => {
+    this.props.history.push("/");
+  };
+  postData = () => {
+    // ! 요청보내기
+    let myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    let raw = JSON.stringify({
+      email: this.state.email,
+      first_name: this.state.firstName,
+      last_name: this.state.lastName,
+      password: this.state.password
+    });
+
+    let requestOptions = {
+      method: "POST",
+      body: raw
+    };
+
+    fetch("http://10.58.1.127:8000/account/signup", requestOptions)
+      .then(response => response.json())
+      .then(result => {
+        console.log("결과", result);
+        if (result.acess) {
+          // ! 결과에 acess가 있으면, 200일때 다음 창으로 넘어가기
+          return this.goToHome();
+        } else if ("400일때") {
+          console.log("인풋 형식이 옳지 않음");
+          // ! 회원가입 등록이 안될경우 어떻게 할지
+          return this.setState({ retry: true });
+        } else if ("500일때") {
+          //  500page 띄우기
+        }
+      })
+      .catch(error => console.log("error", error));
+  };
   handleFirstNameValue = e => {
     this.setState({ firstName: e.target.value });
     // console.log(this.state.firstName);
@@ -34,18 +73,43 @@ class Register extends Component {
   handleClickBtn = e => {
     this.setState({ checkForm: true });
     if (
-      this.state.firstName &&
-      this.state.lastName &&
-      this.state.email &&
-      this.state.password
+      this.state.firstName.length > 1 &&
+      !this.state.email.includes(" ") &&
+      this.state.lastName.length > 1 &&
+      !this.state.email.includes(" ") &&
+      this.state.email.indexOf("@") > 0 &&
+      this.state.email.indexOf(".") > 2 &&
+      !this.state.email.includes(" ") &&
+      this.state.password.length > 6 &&
+      !this.state.password.includes(" ")
     ) {
-      this.setState({ checkForm: true });
+      // this.setState({ checkForm: true });
+      this.postData();
+      // console.log("입력이 완벽하군 ! 버튼을 클릭했으니 POST 요청!");
     }
   };
   handleEnterKey = e => {
+<<<<<<< HEAD
     // console.log(e);
+=======
+    // console.log("엔터키 실행!");
+>>>>>>> 56d930b4c660d478b8e34dac6769429687c5764a
     if (e.key === "Enter") {
       this.setState({ checkForm: true });
+      if (
+        this.state.firstName.length > 1 &&
+        !this.state.email.includes(" ") &&
+        this.state.lastName.length > 1 &&
+        !this.state.email.includes(" ") &&
+        this.state.email.indexOf("@") > 0 &&
+        this.state.email.indexOf(".") > 2 &&
+        !this.state.email.includes(" ") &&
+        this.state.password.length > 6 &&
+        !this.state.password.includes(" ")
+      ) {
+        this.postData();
+        // console.log("입력이 완벽하군 ! ENTER를 눌렀으니 POST 요청!");
+      }
     }
   };
   handleDisplay = () => {
@@ -53,6 +117,7 @@ class Register extends Component {
       checkForm: false
     });
   };
+
   render() {
     return (
       <Main>
@@ -100,16 +165,35 @@ class Register extends Component {
               OnChange={this.handlePasswordValue}
               OnKeyUp={this.handleEnterKey}
               CheckForm={this.state.checkForm}
+              OnFocus={this.handleOnFocus}
+              OnBlur={this.handleOnBlur}
             />
 
             <div className="btn-wrap">
+<<<<<<< HEAD
+=======
+              <div
+                className={
+                  this.state.retry ? "notice-retry-block" : "notice-retry-none"
+                }
+              >
+                형식에 맞지 않음. 다시!
+              </div>
+>>>>>>> 56d930b4c660d478b8e34dac6769429687c5764a
               <button type="button" onClick={this.handleClickBtn}>
                 re create my account
               </button>
             </div>
             <div className="text-container">
+<<<<<<< HEAD
               <p className="">
                 <span className="mid-red">Return to store</span>
+=======
+              <p>
+                <span className="mid-red" onClick={this.goToHome}>
+                  Return to store
+                </span>
+>>>>>>> 56d930b4c660d478b8e34dac6769429687c5764a
               </p>
             </div>
           </div>
@@ -119,4 +203,4 @@ class Register extends Component {
   }
 }
 
-export default Register;
+export default withRouter(Register);

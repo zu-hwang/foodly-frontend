@@ -4,6 +4,8 @@ $black: #342f2f;
 $pink: #f06060;
 $gray: #ada2a4;
 $l-gray: #f5f4f4;
+$mint: #8cbeb2;
+$orange: #f3b562;
 
 @mixin flexCenter {
   display: flex;
@@ -66,6 +68,11 @@ $l-gray: #f5f4f4;
   }
 }
 
+@mixin serif-italic {
+  font-family: $srf;
+  font-style: italic;
+  letter-spacing: -0.1px;
+}
 .none {
   display: none;
 }
