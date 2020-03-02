@@ -1,49 +1,105 @@
-@import "./var.scss";
+@import './var.scss';
 
 // 왼쪽에 망할 인풋
+// .search--container {
+//   display: block;
+//   position: absolute;
+//   top: 60px;
+//   left: 90px;
+//   z-index: 5;
+
+//   .searchBar {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     // width: 210px;
+//     height: 38px;
+//     position: relative;
+
+//     .searchInput--open {
+//       width: 210px;
+//       height: 38px;
+//       border: none;
+//       text-align: start;
+//       cursor: text;
+//       border-bottom: 1px solid #bcbcbc;
+//       z-index: -1;
+//       transition: width 340ms linear;
+//     }
+//     .searchInput {
+//       width: 0px;
+//       height: 38px;
+//       border: none;
+//       text-align: start;
+//       cursor: text;
+//       border-bottom: 0px solid #bcbcbc;
+//       z-index: -1;
+//       letter-spacing: normal;
+//       word-spacing: normal;
+//       transition: width 340ms linear;
+//     }
+
+//     .iconSearch {
+//       margin-right: 18px;
+//       position: absolute;
+//       right: -6px;
+//       cursor: pointer;
+//     }
+//   }
+// }
+
 .search--container {
-	display: block;
-	position: absolute;
-	top: 60px;
-	left: 90px;
-	z-index: 5;
+  position: absolute;
+  top: 60px;
+  left: 40px;
+  z-index: 5;
+}
+.search--box {
+  height: 20px;
+  padding: 10px;
+}
 
-	.searchBar {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		// width: 210px;
-		height: 38px;
-		position: relative;
+.search--btn {
+  @include center();
+  float: right;
+  width: 40px;
+  height: 20px;
+  background-color: transparent;
+}
 
-		.searchInput--open {
-			width: 210px;
-			height: 38px;
-			border: none;
-			text-align: start;
-			cursor: text;
-			border-bottom: 1px solid #bcbcbc;
-			z-index: -1;
-			transition: width 340ms linear;
-		}
-		.searchInput {
-			width: 0px;
-			height: 38px;
-			border: none;
-			text-align: start;
-			cursor: text;
-			border-bottom: 0px solid #bcbcbc;
-			z-index: -1;
-			letter-spacing: normal;
-			word-spacing: normal;
-			transition: width 340ms linear;
-		}
+.search--txt {
+  // display: none;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-top-width: 0;
+  border-bottom-width: 1;
+  background-color: transparent;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: $black;
+  font-size: 14px;
+  transition: width 340ms linear;
+  line-height: 20px;
+  width: 0px;
+}
 
-		.iconSearch {
-			margin-right: 18px;
-			position: absolute;
-			right: -6px;
-			cursor: pointer;
-		}
-	}
+.search--txt__open {
+  // display: block;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-top-width: 0;
+  border-bottom-width: 1;
+  background-color: transparent;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: $black;
+  font-size: 14px;
+  transition: width 340ms linear;
+  line-height: 20px;
+  width: 170px;
+}
+.search--btn:hover > .search--txt {
+  width: 240px;
 }
