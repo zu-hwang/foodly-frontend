@@ -1,268 +1,102 @@
 import React from "react";
-import Main from "../../Pages/Main/Main";
+import Main from "../Main/Main";
+import DetailTop from "../../Components/DetailTop";
+import DetailBottom from "../../Components/DetailBottom";
+import Footer from "../../Components/Footer/Footer";
 import "../Detail/Detail.scss";
-import { FaFacebookF } from "react-icons/fa";
 
 class Detail extends React.Component {
+  constructor() {
+    super();
+    this.page = React.createRef();
+    this.state = {
+      bgSelector: null,
+      windowScroll: 0,
+      pageTop: 0
+    };
+  }
+
+  bgChange = e => {
+    if (e.target.name === "btn1" && this.state.bgSelector !== null) {
+      this.setState({ bgSelector: true }, () =>
+        console.log("bg", this.state.bgSelector)
+      );
+    } else if (e.target.name === "btn2") {
+      this.setState({ bgSelector: false }, () =>
+        console.log("bg", this.state.bgSelector)
+      );
+    }
+  };
+
+  getWindowScorllY = () => {
+    this.setState(
+      {
+        windowScroll: window.pageYOffset,
+        pageTop: this.page.current.offsetTop
+      },
+      () => console.log(this.state)
+    );
+  };
+
   render() {
     return (
       <Main>
-        <div className="detail-main">
-          <div className="detail-cover" />
-
-          <div className="detail-top">
-            <div className="purchase-container">
-              <div className="purchase-name">Brandywine Tomatoes</div>
-              <div className="purchase-explanation">
-                Harvest 2015 | In stock | kg
-              </div>
-              <div className="purchase">
-                <div className="price-box">
-                  <div className="price">$8.05</div>
-                  <div className="kilogram">per kilogram</div>
-                </div>
-                <div className="purchase-box">
-                  <div className="purchase-quantity">
-                    <button className="minus-btn">◁</button>
-                    <input className="purchase-input" />
-                    <button className="plus-btn">▷</button>
-                    <span className="multiply">x$8.05=</span>
-                  </div>
-                  <div className="btn">
-                    <button className="add-btn">ADD TO BAG</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="description-container">
-              <div className="description-title">Description</div>
-              <p className="description-text">
-                Brandywine tomatoes popularly is considered among the best
-                tasting available.
-                <br />
-                probably is caused its origin. Brandywine tomato plant is an
-                heirloom cultivar of the
-                <br />
-                species. if you want to taste the best tomatoey flavor this
-                tomato is exactly what you
-                <br />
-                need. This particular cultivar is extremely succulent and tasty.
-                It is a beautifully sweet
-                <br />
-                tomato that is offset by a wonderful acidity that is a perfect
-                combination for delicious
-                <br />
-                dishes.
-              </p>
-            </div>
-            <div className="share-container">
-              <div className="share-title">SHARE</div>
-              <div className="facebook-logo">
-                <FaFacebookF />
-              </div>
-              <div className="twiter-logo"></div>
-              <div className="pinterest-logo"></div>
-              <div className="google-logo"></div>
-              <div className="social-logo"></div>
+        <div className="detail-main" onWheel={this.getWindowScorllY}>
+          <div className="detail-cover1">
+            <div
+              className={
+                this.state.bgSelector === null
+                  ? "detail-cover2"
+                  : this.state.bgSelector
+                  ? "detail-cover2 bg-opacity2"
+                  : "detail-cover2 bg-opacity1"
+              }
+            />
+            <div className="btn-container">
+              <button
+                className={
+                  this.state.bgSelector ? "btn-cover1-off" : "btn-cover1"
+                }
+                name="btn1"
+                style={
+                  this.state.bgSelector === null
+                    ? null
+                    : this.state.bgSelector
+                    ? null
+                    : { opacity: "1" }
+                }
+                onClick={this.bgChange}
+              ></button>
+              <button
+                className={
+                  !this.state.bgSelector ? "btn-cover2-off" : "btn-cover2"
+                }
+                name="btn2"
+                onClick={this.bgChange}
+                style={
+                  this.state.bgSelector === null
+                    ? { opacity: "1" }
+                    : this.state.bgSelector
+                    ? { opacity: "1" }
+                    : null
+                }
+              ></button>
             </div>
           </div>
-
-          <div className="detail-bottom">
-            <div className="nutritional-container">
-              <div className="nutritional-title">Nutritional value</div>
-              <div className="nutritional-value">
-                <div className="value-box">
-                  <div className="energy-box">
-                    <div className="energy">
-                      <div>Energy</div>
-                      <div className="energy-box-calorie">18Kcal</div>
-                    </div>
-                    <div className="carbohydrates">
-                      <div>Carbohydrates</div>
-                      <div className="energy-box-calorie">3.9g</div>
-                    </div>
-                    <div className="protein">
-                      <div>Protein</div>
-                      <div className="energy-box-calorie">0.9g</div>
-                    </div>
-                    <div className="total">
-                      <div>Total Fat</div>
-                      <div className="energy-box-calorie">0.2g</div>
-                    </div>
-                    <div className="dietary">
-                      <div>Dietary Fiber</div>
-                      <div className="energy-box-calorie">1.2g</div>
-                    </div>
-                  </div>
-                  <div className="vitamins-box">
-                    <div className="vitamins-text">Vitamins:</div>
-                    <ul className="vitamins-ul">
-                      <li className="vitamins-li">a</li>
-                      <li className="vitamins-li">c</li>
-                      <li className="vitamins-li">e</li>
-                      <li className="vitamins-li">k</li>
-                    </ul>
-                  </div>
-                  <div className="minerals-box">
-                    <div className="minerals-title">Minerals:</div>
-                    <ul className="minerals-ul">
-                      <li className="minerals-li">Zn</li>
-                      <li className="minerals-li">Ca</li>
-                      <li className="minerals-li">Ma</li>
-                      <li className="minerals-li">P</li>
-                      <li className="minerals-li">Mn</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="recipe-container">
-              <div className="recipe-title">Special Recipe</div>
-              <div className="recipe-box">
-                <div className="recipe-box-bg">
-                  <div className="ingredients">INGREDIENTS</div>
-                  <img
-                    src="https://www.simplyrecipes.com/wp-content/uploads/2015/09/pasta-pomodoro-shrimp-horiz-a2-2000.jpg"
-                    className="recipe-img"
-                    alt="recipe-img"
-                  />
-                  <div className="directions">DIRECTIONS</div>
-                </div>
-              </div>
-              <div className="dish-name">Pasta Pomodoro with Shrimp</div>
-              <div className="dish-box">
-                <div className="ingredients-box">
-                  <ul className="ingredients-ul">
-                    <li className="ingredients-li">
-                      1/2 pound angel hair pasta
-                    </li>
-                    <li className="ingredients-li">
-                      3/4 pound raw, peeled, deveined shrimp <br /> (medium
-                      sized)
-                    </li>
-                    <li className="ingredients-li">4 ripe Campari Tomatoes</li>
-                    <li className="ingredients-li">3 cloves garilc. minced</li>
-                    <li className="ingredients-li">
-                      1/3 cup torn fresh basil leaves
-                    </li>
-                    <li className="ingredients-li">
-                      3 Tbsp olive oil <br /> (divided, 1 Tbsp and 2 Tbsp)
-                    </li>
-                    <li className="ingredients-li">
-                      Salt and freshly ground black pepper <br /> to taste
-                    </li>
-                  </ul>
-                </div>
-                <div className="directions-box">
-                  <ol className="directions-ol">
-                    <li className="directions-li">
-                      {" "}
-                      Fill a large pot with 2 quarts of water. Bring to a boil
-                      (You will be using this water to both blanch the tomatoes
-                      and boil the pasta.) Core the tomatoes and use a sharp
-                      knife to cut a small X into the bottom end of each tomato.
-                      When the water is boiling, use a slotted spoon to lower
-                      the tomatoes into the water. Blanch for no more than one
-                      minute, just enough to loosen the skins. Remove tomatoes
-                      with a slotted spoon to a bowl of icy water, saving the
-                      blanching water.
-                    </li>
-                    <li className="directions-li">
-                      {" "}
-                      Peel off the tomato skins from the tomatoes. Cut the
-                      tomatoes crosswise in half, and squeeze out most of the
-                      seeds and juices. Chop the tomatoes into 1-inch pieces.
-                    </li>
-                    <li className="directions-li">
-                      {" "}
-                      Heat 1 Tbsp of olive oil in a large sauté pan on medium
-                      high heat. Add the shrimp to the pan and cook for 1
-                      minute. Turn the shrimp over in the pan. Lower the heat to
-                      medium.
-                    </li>
-                    <li className="directions-li">
-                      {" "}
-                      Add the garlic, cook a minute more. Add the chopped
-                      tomatoes and basil. Sprinkle with salt. Cook for a minute
-                      more and remove from heat.
-                    </li>
-                    <li className="directions-li">
-                      {" "}
-                      Add a tablespoon of salt to the water you used to blanch
-                      the tomatoes. Bring to a boil again. Add the angel hair
-                      pasta and cook for 3 minutes.
-                    </li>
-                    <li className="directions-li">
-                      {" "}
-                      Drain the pasta and immediately add to pot with the shrimp
-                      and tomatoes. Drizzle the pasta with 2 Tbsp of olive oil.
-                      Then stir the pasta in with the shrimp and tomatoes. Serve
-                      immediately or at room temp.
-                    </li>
-                  </ol>
-                </div>
-              </div>
-            </div>
-            <div className="comment-container">
-              <div className="comment-title">LET'S HAVE A CHAT</div>
-              <div className="comment-box">
-                <div className="textarea-box">
-                  <textarea
-                    className="comment-textarea"
-                    placeholder="My message..."
-                  />
-                </div>
-                <div className="comment-input-box">
-                  <input
-                    className="comment-name-input"
-                    placeholder="My name is..."
-                  />
-                  <input
-                    className="comment-email-input"
-                    placeholder="Reply me to email..."
-                  />
-                </div>
-                <div className="comment-btn-box">
-                  <button className="comment-btn">SEND MY MESSAGE</button>
-                </div>
-              </div>
-            </div>
-            <div className="similar-container">
-              <div className="similar-title">Similar Products</div>
-              <div className="similar-img-box">
-                <div className="similar-first">
-                  <div className="first-img"></div>
-                  <div className="first-title">Basil</div>
-                  <div className="first-explanation">
-                    Harvest 2015 | In stock | Bunch
-                  </div>
-                </div>
-
-                <div className="similar-first">
-                  <div className="first-img"></div>
-                  <div className="first-title">Basil</div>
-                  <div className="first-explanation">
-                    Harvest 2015 | In stock | Bunch
-                  </div>
-                </div>
-
-                <div className="similar-first">
-                  <div className="first-img"></div>
-                  <div className="first-title">Basil</div>
-                  <div className="first-explanation">
-                    Harvest 2015 | In stock | Bunch
-                  </div>
-                </div>
-
-                <div className="similar-first">
-                  <div className="first-img"></div>
-                  <div className="first-title">Basil</div>
-                  <div className="first-explanation">
-                    Harvest 2015 | In stock | Bunch
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div
+            className="detail-page-container"
+            ref={this.page}
+            style={{ zIndex: "15" }}
+          >
+            <DetailTop
+              pageTop={this.state.pageTop}
+              windowScroll={this.state.windowScroll}
+            />
+            <DetailBottom
+              pageTop={this.state.pageTop}
+              windowScroll={this.state.windowScroll}
+            />
+            <Footer />
           </div>
         </div>
       </Main>
