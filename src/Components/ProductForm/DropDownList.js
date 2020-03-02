@@ -25,9 +25,15 @@ class DropDownList extends React.Component {
   };
 
   handleChange = event => {
-    console.log(event.target.innerText);
+    // console.log(event.target.innerText);
     this.setState({
       now: event.target.innerText,
+      mode: "none"
+    });
+  };
+
+  mouseOut = () => {
+    this.setState({
       mode: "none"
     });
   };
@@ -43,6 +49,7 @@ class DropDownList extends React.Component {
             className="dropDownContainer"
             onClick={this.handleChange}
             style={{ display: this.state.mode }}
+            onMouseLeave={this.mouseOut}
           >
             <li className="dropdown-list__item" onClick={this.handleChange}>
               State

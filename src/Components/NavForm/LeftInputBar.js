@@ -7,35 +7,49 @@ class LeftInputBar extends React.Component {
   constructor() {
     super();
     this.state = {
-      // mode: "none"
-      toggle: "searchInput"
+      display: "search--txt",
+      inputValue: ""
+      // toggle: false
     };
   }
 
-  handleInput = () => {
-    if (this.state.toggle === "searchInput") {
-      this.setState({
-        toggle: "searchInput--open"
-      });
-    } else if (this.state.toggle === "searchInput--open") {
-      //여기서는 닫히는게 아니라 다른 경로로 이동해야해
-      this.setState({
-        toggle: "searchInput"
-      });
-    }
+  textStore = e => {
+    this.setState({ inputValue: e.target.value });
+  };
+
+  openInput = e => {
+    // if (e.target.value === null) {
+    this.setState({
+      display: "search--txt__open"
+    });
+    // }
+  };
+
+  closeInput = e => {
+    e.target.value = "";
+    this.setState({
+      display: "search--txt",
+      inputValue: ""
+    });
   };
 
   render() {
     return (
       // Header Search Bar
       <div className="search--container">
-        <div className="searchBar">
+        <div className="search--box" onMouseLeave={this.closeInput}>
           <input
-            type="search"
-            className={this.state.toggle}
+            type="text"
+            className={this.state.display}
             placeholder="Type your search request"
+            onChange={this.textStore}
+            value={this.state.inputValue}
+            // style={
+            //   this.state.toggle ? { display: "block" } : { display: "none" }
+            // }
+            // onClick
           />
-          <div className="iconSearch" onClick={this.handleInput}>
+          <div className="search--btn" onMouseEnter={this.openInput}>
             <FontAwesomeIcon icon={faSearch} />
           </div>
         </div>
