@@ -89,11 +89,7 @@ class Register extends Component {
     }
   };
   handleEnterKey = e => {
-<<<<<<< HEAD
-    // console.log(e);
-=======
     // console.log("엔터키 실행!");
->>>>>>> 56d930b4c660d478b8e34dac6769429687c5764a
     if (e.key === "Enter") {
       this.setState({ checkForm: true });
       if (
@@ -170,8 +166,6 @@ class Register extends Component {
             />
 
             <div className="btn-wrap">
-<<<<<<< HEAD
-=======
               <div
                 className={
                   this.state.retry ? "notice-retry-block" : "notice-retry-none"
@@ -179,21 +173,15 @@ class Register extends Component {
               >
                 형식에 맞지 않음. 다시!
               </div>
->>>>>>> 56d930b4c660d478b8e34dac6769429687c5764a
               <button type="button" onClick={this.handleClickBtn}>
                 re create my account
               </button>
             </div>
             <div className="text-container">
-<<<<<<< HEAD
-              <p className="">
-                <span className="mid-red">Return to store</span>
-=======
               <p>
                 <span className="mid-red" onClick={this.goToHome}>
                   Return to store
                 </span>
->>>>>>> 56d930b4c660d478b8e34dac6769429687c5764a
               </p>
             </div>
           </div>
