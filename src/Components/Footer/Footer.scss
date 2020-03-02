@@ -1,4 +1,4 @@
-@import '../../Styles/var.scss';
+@import "../../Styles/var.scss";
 
 footer {
   width: 100%;
@@ -55,7 +55,6 @@ footer {
       justify-content: space-between;
 
       .box-wrap {
-        // border: 1px solid black;
         font-size: 16px;
         width: 200px;
         p {
@@ -74,11 +73,11 @@ footer {
             letter-spacing: -0.1px;
             color: $gray;
             margin-bottom: 12px;
-            &:hover {
-              color: $black;
-              cursor: pointer;
-            }
           }
+        }
+        .menu-list li:hover {
+          color: $black;
+          cursor: pointer;
         }
 
         .icon-list {
@@ -95,6 +94,7 @@ footer {
             margin-right: 10px;
             margin-bottom: 10px;
             color: $black;
+
             &:hover {
               color: $l-gray;
               background-color: $black;
@@ -106,7 +106,6 @@ footer {
           display: flex;
           justify-content: space-between;
           flex-wrap: wrap;
-
           li {
             margin-right: 12px;
             color: $black;
