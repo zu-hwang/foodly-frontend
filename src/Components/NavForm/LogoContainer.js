@@ -5,9 +5,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import LeftInputBar from "../NavForm/LeftInputBar";
 
 class LogoContainer extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      navColor: this.props.navColor
+    };
+  }
   render() {
     return (
-      <div className="header--Container">
+      <div
+        className="header--Container"
+        style={{ backgroundColor: this.state.navColor }}
+      >
         {/* Header search form  */}
         <LeftInputBar />
         {/* 로고 중앙 글귀, 홈 로고 */}
@@ -30,12 +39,12 @@ class LogoContainer extends React.Component {
               {/* 로직넣어서 그날 환율로 계산되게 하자! */}
             </span>
             {/* 여기에 장바구니에서 올라온 것들의 값이 계산될거야 */}
+            <span className="iconCartWrapper">
+              {/* 여기에 장바구니 이미지 */}
+              <FontAwesomeIcon icon={faShoppingBag} className="cartIcon" />
+            </span>
           </span>
-          <span className="iconCartWrapper">
-            {/* 여기에 장바구니 이미지 */}
-            <FontAwesomeIcon icon={faShoppingBag} />
-          </span>
-          <span className="countCart">0</span>
+          <span className="countCart">3</span>
         </button>
       </div>
     );

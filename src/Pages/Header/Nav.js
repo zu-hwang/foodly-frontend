@@ -4,10 +4,16 @@ import MainNav from "../../Components/NavForm/MainNav";
 import "../../Styles/Nav.css";
 
 class Nav extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      navColor: this.props.navColor
+    };
+  }
   render() {
     return (
       <header className="header">
-        <LogoContainer />
+        <LogoContainer navColor={this.state.navColor} />
         <MainNav />
       </header>
     );
