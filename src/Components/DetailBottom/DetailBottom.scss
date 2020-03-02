@@ -1,0 +1,507 @@
+@import '../../Styles/var.scss';
+
+.detail-bottom {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 3;
+  padding-top: 35px;
+  background-color: #fff;
+  .nutritional-a-container {
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .nutritional-container {
+      width: 60%;
+      height: 280px;
+      position: absolute;
+      top: 100%;
+      .nutritional-title {
+        color: $black;
+        font-size: 24px;
+        font-family: 'Bitter', serif;
+        text-align: center;
+      }
+      .nutritional-value {
+        .value-box {
+          display: flex;
+          justify-content: space-around;
+          margin-top: 40px;
+          .energy-box {
+            width: 25%;
+            .energy {
+              display: flex;
+              justify-content: space-between;
+              margin-bottom: 15px;
+              color: $black;
+              font-size: 16px;
+              font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
+            }
+            .carbohydrates {
+              display: flex;
+              justify-content: space-between;
+              margin-bottom: 15px;
+              color: $black;
+              font-size: 16px;
+              font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
+            }
+            .protein {
+              display: flex;
+              justify-content: space-between;
+              margin-bottom: 15px;
+              color: $black;
+              font-size: 16px;
+              font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
+            }
+            .total {
+              display: flex;
+              justify-content: space-between;
+              margin-bottom: 15px;
+              color: $black;
+              font-size: 16px;
+              font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
+            }
+            .dietary {
+              display: flex;
+              justify-content: space-between;
+              margin-bottom: 15px;
+              color: $black;
+              font-size: 16px;
+              font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
+            }
+          }
+          .vitamins-box {
+            width: 25%;
+            .vitamins-text {
+              margin-bottom: 15px;
+              color: $black;
+              font-size: 16px;
+              font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
+            }
+            .vitamins-ul {
+              display: flex;
+              align-items: center;
+              li {
+                width: 40px;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row;
+                margin-right: 15px;
+                border-radius: 50%;
+                list-style: none;
+                color: $black;
+                font-size: 16px;
+                font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
+                background-color: $l-gray;
+              }
+            }
+          }
+          .minerals-box {
+            width: 25%;
+            .minerals-title {
+              margin-bottom: 15px;
+              color: $black;
+              font-size: 16px;
+              font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
+            }
+            .minerals-ul {
+              width: 250px;
+              display: flex;
+              align-items: center;
+              flex-wrap: wrap;
+              li {
+                width: 40px;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row;
+                margin-right: 10px;
+                margin-bottom: 5px;
+                border-radius: 50%;
+                list-style: none;
+                color: $black;
+                font-size: 16px;
+                font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
+                background-color: $l-gray;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .recipe-a-container {
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+    height: 1300px;
+    .recipe-container {
+      width: 100vw;
+      justify-content: center;
+      position: absolute;
+      top: 100%;
+      .recipe-title {
+        margin-bottom: 10px;
+        border-top: 3px solid $l-gray;
+        padding-top: 50px;
+        color: $black;
+        font-size: 24px;
+        font-family: 'Bitter', serif;
+        text-align: center;
+      }
+      .recipe-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .recipe-box-bg {
+          width: 440px;
+          height: 330px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAAD1BMVEVcTFL///9cTFJcTFJcTFIux7vQAAAABXRSTlMAAAgPFr80/pcAAAAnSURBVHgBY2DEBAxMWMAwVziqcFQhFoBdITMWwIIFjCoEg1GFowoBVCYPevB5gSUAAAAASUVORK5CYII=);
+          .ingredients {
+            margin-right: 10px;
+            color: #adaaaa;
+            font-size: 18px;
+            font-weight: 800;
+            font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
+            letter-spacing: 15px;
+          }
+          .recipe-img {
+            width: 320px;
+          }
+          .directions {
+            margin-left: 20px;
+            color: #adaaaa;
+            font-size: 18px;
+            font-weight: 800;
+            font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
+            letter-spacing: 15px;
+          }
+        }
+      }
+      .dish-name {
+        margin-bottom: 40px;
+        color: $black;
+        font-size: 18px;
+        font-weight: 700;
+        font-family: 'Raleway', Tahoma, Geneva, sans-serif;
+        text-align: center;
+      }
+      .dish-box {
+        display: flex;
+        justify-content: center;
+        .ingredients-box {
+          .ingredients-ul {
+            margin-right: 30px;
+            .ingredients-li {
+              margin-bottom: 20px;
+              color: $black;
+              font-size: 16px;
+              font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
+              list-style: none;
+            }
+          }
+        }
+        .directions-box {
+          width: 40%;
+          column-count: 2;
+          color: $black;
+          font-size: 16px;
+          font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
+          .directions-ol {
+            // width: 330px;
+            list-style: none;
+            counter-reset: direction;
+            .directions-li::before {
+              content: counter(direction);
+              counter-increment: direction;
+              top: 10px;
+              left: 5px;
+              display: block;
+              margin-bottom: 15px;
+              color: #adaaaa;
+              font-size: 16px;
+              font-weight: 700;
+              font-family: 'Raleway', Tahoma, Geneva, sans-serif;
+            }
+            .directions-li {
+              margin-bottom: 15px;
+              color: $black;
+              font-size: 16px;
+              font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
+              line-height: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .commet-a-container {
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+    height: 520px;
+    .comment-container {
+      width: 100vw;
+      height: 520px;
+      position: absolute;
+      top: 100%;
+      .comment-title {
+        margin-top: 50px;
+        border-top: 3px solid $l-gray;
+        padding: 30px 0;
+        text-align: center;
+        color: $black;
+        font-size: 28px;
+        font-weight: 300;
+        font-family: 'Raleway', Tahoma, Geneva, sans-serif;
+      }
+      .textarea-box {
+        display: flex;
+        justify-content: center;
+        .relative {
+          position: relative;
+          label {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 3;
+            color: #ada2a4;
+            font-size: 14px;
+            font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
+          }
+          .comment-textarea {
+            width: 520px;
+            height: 140px;
+            box-sizing: border-box;
+            border-radius: 3px;
+            border-style: none;
+            outline: none;
+            padding: 20px;
+            resize: none;
+            color: #ada2a4;
+            font-size: 14px;
+            font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
+            background-color: $l-gray;
+            &:focus {
+              border: solid 1px $l-gray;
+              background-color: #fff;
+            }
+          }
+        }
+      }
+      .comment-input-box {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0 30px 0;
+        .relative {
+          position: relative;
+          label {
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            z-index: 3;
+            color: #ada2a4;
+            font-size: 14px;
+            font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
+          }
+          .comment-name-input {
+            width: 249px;
+            height: 40px;
+            box-sizing: border-box;
+            margin-right: 20px;
+            padding-left: 20px;
+            border-style: none;
+            border-radius: 3px;
+            outline: none;
+            background-color: $l-gray;
+            padding-left: 20px;
+            &:focus {
+              border: solid 1px $l-gray;
+              background-color: #fff;
+            }
+          }
+        }
+        // .comment-name-input::placeholder {
+        //   color: #ada2a4;
+        //   font-size: 14px;
+        //   font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
+        // }
+        .comment-email-input {
+          width: 249px;
+          height: 40px;
+          box-sizing: border-box;
+          padding-left: 20px;
+          border-style: none;
+          border-radius: 3px;
+          outline: none;
+          background-color: $l-gray;
+          &:focus {
+            border: solid 1px $l-gray;
+            background-color: #fff;
+          }
+        }
+      }
+      .comment-btn-box {
+        display: flex;
+        justify-content: center;
+        /* Radial Out */
+        .comment-btn {
+          @include buttonEffect();
+          width: 520px;
+          height: 62px;
+          margin-bottom: 60px;
+          border-radius: 3px;
+          outline: none;
+          color: #fff;
+          font-size: 16px;
+          font-weight: 800;
+          font-family: 'Raleway', Tahoma, Geneva, sans-serif;
+          background-color: $pink;
+        }
+      }
+    }
+  }
+  .similar-a-container {
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+    height: 550px;
+    .similar-container {
+      width: 100vw;
+      height: 550px;
+      position: absolute;
+      top: 100%;
+      .similar-title {
+        border-top: 3px solid $l-gray;
+        padding: 60px 0 30px 0;
+        color: $black;
+        font-size: 24px;
+        font-family: 'Bitter', serif;
+        text-align: center;
+      }
+      .similar-box {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 100px;
+        .similar {
+          .similar-img {
+            width: 260px;
+            height: 260px;
+            object-fit: cover;
+            margin-bottom: 30px;
+            border: 3px solid $l-gray;
+          }
+          .similar-product-name {
+            text-align: center;
+            color: $black;
+            font-size: 16px;
+            font-weight: 700;
+            font-family: 'Bitter', serif;
+          }
+          .similar-product-explanation {
+            color: #adaaaa;
+            font-size: 14px;
+            font-family: 'Bitter', serif;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+.labelUp1 {
+  animation: labelUp 0.2s ease-in-out;
+  animation-fill-mode: both;
+}
+.labelUp2 {
+  animation: labelUp2 0.2s ease-in-out;
+  animation-fill-mode: both;
+}
+.labelDown1 {
+  animation: labelDown 0.2s ease-in-out;
+  animation-fill-mode: both;
+}
+.labelDown2 {
+  animation: labelDown2 0.2s ease-in-out;
+  animation-fill-mode: both;
+}
+@keyframes labelUp1 {
+  from {
+    opacity: 1;
+    display: block;
+    top: 20px;
+    font-size: 14px;
+  }
+  to {
+    opacity: 1;
+    top: -20px;
+    font-size: 11px;
+    display: block;
+  }
+}
+@keyframes labelUp2 {
+  from {
+    opacity: 1;
+    display: block;
+    top: 15px;
+    font-size: 14px;
+  }
+  to {
+    opacity: 1;
+    top: -15px;
+    font-size: 11px;
+    display: block;
+  }
+}
+@keyframes labelDown1 {
+  from {
+    display: block;
+    top: -20px;
+    font-size: 11px;
+  }
+  to {
+    display: block;
+    top: 20px;
+    font-size: 14px;
+  }
+}
+@keyframes labelDown2 {
+  from {
+    display: block;
+    top: -15px;
+    font-size: 11px;
+  }
+  to {
+    display: block;
+    top: 15px;
+    font-size: 14px;
+  }
+}
+
+.container-move {
+  animation: containerMove 0.5s ease-in-out;
+  animation-fill-mode: both;
+}
+@keyframes containerMove {
+  from {
+    opacity: 0;
+    top: 100%;
+  }
+  to {
+    opacity: 1;
+    top: 0%;
+  }
+}
