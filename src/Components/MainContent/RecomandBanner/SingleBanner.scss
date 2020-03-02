@@ -1,0 +1,70 @@
+@import "../../../Styles/var.scss";
+
+.single-banner {
+  @include flexCenter();
+  margin-top: 2px;
+  width: 50%;
+  min-height: 540px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  .title-wrap {
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    text-align: center;
+  }
+  .sub-text-wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0 30px;
+
+    .circle-sticker-wrap {
+      @include flexCenter();
+      padding: 20px;
+      width: 100px;
+      height: 100px;
+      background-color: $orange;
+      border-radius: 50%;
+      text-align: center;
+      box-sizing: border-box;
+      font-size: 17px;
+      color: $l-gray;
+      p {
+        font-family: $srf;
+        font-weight: 700;
+        letter-spacing: -0.01px;
+        line-height: 1.2em;
+      }
+    }
+    div:last-child {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      span {
+        font-family: $srf;
+        color: $l-gray;
+        letter-spacing: -0.1px;
+        font-weight: 700;
+        font-size: 20px;
+        padding-bottom: 10px;
+        text-align: right;
+      }
+      .line {
+        width: 300px;
+        margin: 10px 0;
+        background-color: $orange;
+        height: 3px;
+      }
+    }
+  }
+}
+.single-banner:first-child {
+  margin-right: 1px;
+}
+.single-banner:last-child {
+  margin-left: 1px;
+}

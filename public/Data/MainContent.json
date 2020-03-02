@@ -1,38 +1,55 @@
 {
-	"slideBanner": [
-		{
-			"title": "tomato season",
-			"subTitle": "nutritious delicious",
-			"price": "$3.05",
-			"priceText": "start point",
-			"pictureUrl": ""
-		},
-		{
-			"title": "paella or paster",
-			"subTitle": "you'll need this sweet pepper for both",
-			"price": "$6.95",
-			"price-text": "start point",
-			"pictureUrl": ""
-		},
-		{
-			"title": "apple pie? yes, please",
-			"subTitle": "of Gala Cultivar",
-			"price": "$3.55",
-			"price-text": "start point",
-			"pictureUrl": ""
-		}
-	],
-	"specialBanner": [
-		{
-			"title": "start your day",
-			"subTitle": "with vit-plate",
-			"icon": "special pack",
-			"pictureUrl": ""
-		},
-		{
-			"title": "c-overload",
-			"icon": "20% discount",
-			"pictureUrl": ""
-		}
-	]
+  "overlayBanner": [
+    {
+      "id": 0,
+      "title": "tomato season",
+      "subTitle": "nutritious delicious",
+      "price": "3.05",
+      "priceText": "start point",
+      "bgImg": "//cdn.shopify.com/s/files/1/1148/3974/files/img_homepage_slide_1_99ab6459-79aa-49be-89c7-fb4cd2ac027f_2000x.jpg?v=1488293606",
+      "buttonImg": "https://cdn.shopify.com/s/files/1/1148/3974/files/img_thumb_homepage_slide_1_3646b5c7-695e-4d0f-9e50-3c90ef410fbf_150x.jpg?v=1488293608",
+      "link": ""
+    },
+    {
+      "id": 1,
+      "title": "paella or paster",
+      "subTitle": "you'll need this sweet pepper for both",
+      "price": "6.95",
+      "priceText": "start point",
+      "bgImg": "//cdn.shopify.com/s/files/1/1148/3974/files/img_homepage_slide_2_1e0ca3da-09bc-46b3-a58e-952f99df5a5d_2000x.jpg?v=1488293660",
+      "buttonImg": "https://cdn.shopify.com/s/files/1/1148/3974/files/img_thumb_homepage_slide_2_0e49cdfc-a372-4dd9-a54a-1ac37bcd648a_150x.jpg?v=1488293661",
+      "link": ""
+    },
+    {
+      "id": 2,
+      "title": "apple pie? yes, please",
+      "subTitle": "of Gala Cultivar",
+      "price": "3.55",
+      "priceText": "start point",
+      "bgImg": "//cdn.shopify.com/s/files/1/1148/3974/files/img_homepage_slide_3_2d5607e9-6072-431a-9965-9e0421c370c6_2000x.jpg?v=1488293720",
+      "buttonImg": "//cdn.shopify.com/s/files/1/1148/3974/files/img_thumb_homepage_slide_3_7d484d7e-7ff3-4e10-b498-a27b89910779_150x.jpg?v=1488293723",
+      "link": ""
+    }
+  ],
+
+  "recomandBanner": [
+    {
+      "id": 0,
+      "title": "start your day",
+      "subTitle": "with vit-plate",
+      "stickerText": "special pack",
+      "subText": "Healthy deal",
+      "bgImg": "//cdn.shopify.com/s/files/1/1148/3974/files/img_homepage_special_1_1500x.jpg?v=1478008979",
+      "link": ""
+    },
+    {
+      "id": 1,
+      "title": "c-overload",
+      "subTitle": "",
+      "stickerText": "20% discount",
+      "subText": "September deal",
+      "bgImg": "//cdn.shopify.com/s/files/1/1148/3974/files/img_homepage_special_2_1500x.jpg?v=1478008992",
+      "link": ""
+    }
+  ]
 }

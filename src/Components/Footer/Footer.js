@@ -28,7 +28,7 @@ class Footer extends Component {
       .then(response => response.json())
       .then(response => {
         this.setState({ instaImage: response.instaImage });
-        console.log(this.state.instaImage);
+        // console.log(this.state.instaImage);
       });
   }
   render() {
@@ -36,8 +36,8 @@ class Footer extends Component {
     const instaImage = this.state.instaImage.map(pic => {
       const instaImg = pic.url;
       return (
-        <div>
-          <img src={instaImg} key={pic.id} alt="" />
+        <div key={pic.id}>
+          <img src={instaImg} alt="" />
         </div>
       );
     });
@@ -58,7 +58,7 @@ class Footer extends Component {
           <div className="center-wrap">
             <div className="box-wrap">
               <p>more info</p>
-              <ul>
+              <ul className="menu-list">
                 <li>About us</li>
                 <li>Search</li>
                 <li>Term &#38; Conditions</li>
@@ -67,7 +67,7 @@ class Footer extends Component {
             </div>
             <div className="box-wrap">
               <p>foodly family</p>
-              <ul>
+              <ul className="menu-list">
                 <li>Food Markets</li>
                 <li>Eco-activity</li>
                 <li>Awards</li>
