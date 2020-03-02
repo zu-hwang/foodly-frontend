@@ -6,6 +6,8 @@ import "../../Styles/Product.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBorderAll } from "@fortawesome/free-solid-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+// import Nav from "../Header/Nav";
+// import Footer from "../../Components/Footer/Footer";
 // import { Link, withRouter } from "react-router-dom"; 나중에 쓸거야
 
 class Product extends React.Component {
@@ -43,6 +45,7 @@ class Product extends React.Component {
     //   };
     // }
     return (
+      // <Nav/>
       <Main navColor={this.state.navColor}>
         <main className="mainContent" role="main">
           {/* 실제 product page +여백 시작*/}
@@ -81,7 +84,7 @@ class Product extends React.Component {
               </div>
 
               {/* 페이지 전환 바 */}
-              <div className="pagination">
+              {/* <div className="pagination">
                 <ul>
                   <li className="pagination-item-prev">
                     <div
@@ -93,13 +96,14 @@ class Product extends React.Component {
                   <li className="pagination-item-parts"></li>
                   <li className="pagination-item-next"></li>
                 </ul>
-              </div>
+              </div> */}
             </div>
 
             {/* 실제 페이지 끝 */}
           </section>
           {/* 실제 product page +여백 끝*/}
         </main>
+        {/* <Footer /> */}
       </Main>
     );
   }

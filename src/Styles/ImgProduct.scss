@@ -62,7 +62,7 @@ $l-gray: #f5f4f4;
       width: 60px;
       height: 60px;
       border-radius: 60px;
-      color: #342f2f;
+      color: $black;
       background-color: #f3b562;
       @include center();
       span {
