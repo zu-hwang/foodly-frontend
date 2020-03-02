@@ -10,7 +10,8 @@ class ImgProduct extends React.Component {
     this.state = {
       navColor: "#f5f4f4",
       productInfo: [],
-      buttonShow: "whole-wrapper"
+      buttonShow: "whole-wrapper",
+      num: ""
     };
   }
 
@@ -37,16 +38,25 @@ class ImgProduct extends React.Component {
   };
 
   render() {
-    const eachProduct = this.state.productInfo.map(productInfo => {
+    const eachProduct = this.state.productInfo.map((productInfo, idx) => {
       const image = "url(" + productInfo.thumbnail_url + ")"; //배경 URL을 style에 넣을 수 있는 상태로 변경
       return (
-        // console.log({+productInfo.toString()+});
-        <div className="product grid--in-row">
+        <div className="product grid--in-row" key={idx}>
           <div
             className="product__visuals"
             style={{ backgroundImage: image }}
-            onMouseEnter={this.mouseEnter}
-            onMouseOut={this.mouseEnter}
+            // onMouseEnter={this.mouseEnter}
+            // onMouseOut={this.mouseEnter}
+            onMouseEnter={() => {
+              this.setState({
+                num: `${idx} whole-wrapper--open`
+              });
+            }}
+            onMouseOut={() => {
+              this.setState({
+                num: null
+              });
+            }}
           >
             {/* 가격, sale 동그라미 */}
             <div className="price">
@@ -71,20 +81,24 @@ class ImgProduct extends React.Component {
               }
             ></div>
             {/* 플러스 마이너스 박스 */}
-            <div className={this.state.buttonShow}>
-              <div>
-                <div></div>
-                <div></div>
-              </div>
-              <div className="btn-container">
-                <div className="decrease-btn">
-                  <FontAwesomeIcon icon={faMinus} className="plus" />
+            {this.state.num === `${idx} whole-wrapper--open` ? (
+              <div className="whole-wrapper--open">
+                <div>
+                  <div></div>
+                  <div></div>
                 </div>
-                <div className="increase-btn">
-                  <FontAwesomeIcon icon={faPlus} className="minus" />
+                <div className="btn-container">
+                  <div className="decrease-btn">
+                    <FontAwesomeIcon icon={faMinus} className="plus" />
+                  </div>
+                  <div className="increase-btn">
+                    <FontAwesomeIcon icon={faPlus} className="minus" />
+                  </div>
                 </div>
               </div>
-            </div>
+            ) : (
+              ""
+            )}
           </div>
           {/* 상품정보 */}
           <div className="product__info">

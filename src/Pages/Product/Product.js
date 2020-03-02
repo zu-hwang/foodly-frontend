@@ -13,10 +13,35 @@ class Product extends React.Component {
     super();
     this.state = {
       navColor: "#f5f4f4"
+      // productInfo: []
+      // imageUrls: [], //썸네일url 담을 배열
+      // prices: [],
+      // onSales: [], //is_on_sale 담을 배열
+      // inStocks: [], //is_in_stock 담을 배열
+      // names: [], //제품이름
+      // harvests: [],
+      // measures: [] //무게단위 담을 배열
     };
   }
 
+  componentDidMount = () => {
+    fetch("http://localhost:3000/Data/productPage.json")
+      .then(res => res.json())
+      .then(res =>
+        this.setState({
+          productInfo: res.data
+        })
+      );
+  };
+  // mapOfImg = () =>{
+  //    <ImgProduct />
+  // }
   render() {
+    // info = () => {
+    //   this.state.productInfo.map(productInfo => {
+    //   this.setState()
+    //   };
+    // }
     return (
       <Main navColor={this.state.navColor}>
         <main className="mainContent" role="main">
