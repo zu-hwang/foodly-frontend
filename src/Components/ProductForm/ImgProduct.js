@@ -20,13 +20,34 @@ class ImgProduct extends React.Component {
   }
 
   componentDidMount = () => {
-    fetch("http://localhost:3000/Data/productPage.json")
-      .then(res => res.json())
-      .then(res =>
+    const myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    const raw = "";
+
+    const requestOptions = {
+      method: "GET",
+      headers: myHeaders,
+      body: raw,
+      redirect: "follow"
+    };
+
+    fetch("http://10.58.5.105:8000/products/collections", requestOptions)
+      .then(response => response.json())
+      .then(result => console.log(result))
+      .then(response =>
         this.setState({
-          productInfo: res.data
+          productInfo: response.data
         })
-      );
+      )
+      .catch(error => console.log("error", error));
+    // fetch("http://10.58.5.105:8000/collections")
+    //   .then(res => res.json())
+    //   .then(res =>
+    //     this.setState({
+    //       productInfo: res.data
+    //     })
+    //   );
   };
 
   spread = e => {
@@ -40,7 +61,7 @@ class ImgProduct extends React.Component {
 
   render() {
     const eachProduct = this.state.productInfo.map((productInfo, idx) => {
-      const image = "url(" + productInfo.thumbnail_url + ")"; //배경 URL을 style에 넣을 수 있는 상태로 변경
+      const image = "url(" + productInfo.small_image + ")"; //배경 URL을 style에 넣을 수 있는 상태로 변경
       return (
         <div className="product grid--in-row" key={idx}>
           <div
@@ -78,7 +99,7 @@ class ImgProduct extends React.Component {
             <div
               className="product__cart"
               style={
-                productInfo.is_in_stock
+                productInfo.is_in_stock === "1"
                   ? { display: "none" }
                   : { display: "block", backgroundColor: "white" }
               }
@@ -86,7 +107,7 @@ class ImgProduct extends React.Component {
             <div
               className="soldOut"
               style={
-                productInfo.is_in_stock
+                productInfo.is_in_stock === "1"
                   ? { display: "none" }
                   : { display: "block" }
               }
@@ -116,7 +137,7 @@ class ImgProduct extends React.Component {
                   <div
                     className={this.state.plus}
                     style={
-                      productInfo.is_in_stock
+                      productInfo.is_in_stock === "1"
                         ? { backgroundColor: "$pink #5c4b51" }
                         : { backgroundColor: "#5c4b51" }
                     }
@@ -139,7 +160,7 @@ class ImgProduct extends React.Component {
                 Harvest {productInfo.harvest_year__year}
               </span>
               <div className="vertical-bar"></div>
-              <span>{productInfo.measure_id_measure}</span>
+              <span>{productInfo.measure_id__measure}</span>
             </div>
           </div>
         </div>

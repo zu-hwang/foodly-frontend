@@ -48,6 +48,7 @@ class LogoContainer extends React.Component {
           </span>
           <span className="countCart">3</span>
         </button>
+        {/* 장바구니 시작 */}
         <div className="black-screen"></div>
         <div className="basket__wrapper">
           {/* 화면 어두워지는 부분 */}
@@ -64,46 +65,45 @@ class LogoContainer extends React.Component {
                   <div className="cart-header__item quentity">QTY</div>
                   <div className="cart-header__item quentityPrice">PRICE</div>
                 </div>
-                {/* component 분리하고 map돌려야하는 부분 */}
-                <ul>
-                  <li>
+                {/* component 분리하고 map돌려야하는 부분 /li가 계속 추가*/}
+                <ul className="cart-list__item--wrapper">
+                  <li className="cart-list__item--container">
+                    {/* 이미지 테두리 */}
                     <div className="cart-list__item--image">
                       <div className="item-Img"></div>
                     </div>
-                    <div className="cart-list__item--name"></div>
-                    <div className="cart-list__item--quantity">
-                      <input />
+                    <div className="cart-list__item--name">
+                      Brandywine Tomatoes
                     </div>
+                    <div className="cart-list__item--quantity"></div>
                     <div className="cart-list__item--price">
-                      <sapn></sapn>
+                      <sapn>$47.65</sapn>
                     </div>
-                    <div className="cart-list__item--remove"></div>
+                    <div className="cart-list__item--remove">X</div>
                   </li>
                 </ul>
                 <div className="special-packing">
                   <h3 className="choose-package">CHOOSE PACKAGE</h3>
-                  <div>
-                    <input type="radio" name="chk_info" value="paperBag" />
-                    paper gag
+                  <div className="paperBag__container">
+                    paper bag
                     <span className="default-packing__price money">$0</span>
                   </div>
-                  <div>
-                    <input type="radio" name="chk_info" value="woodenBox" />
+                  <div className="special-packing__container">
                     wooden box
                     <span className="special-packing__price money">$3.00</span>
                   </div>
                 </div>
                 <div className="hidden-woodenBox">
                   <div className="hidden-woddenBox__imgConatiner">
-                    <div className="hidden-woddenBox__img">
-                      <img
+                    <div className="hidden-woodenBox__img">
+                      {/* <img
                         src="https://cdn.shopify.com/s/files/1/1148/3974/products/wooden-box_small.jpg"
                         alt=""
-                      />
+                      /> */}
                     </div>
                   </div>
                   <div className="cart-list__item--title">Wooden box</div>
-                  <div className="">$3.00</div>
+                  <div className="cart-list__item--price">$3.00</div>
                 </div>
                 <div className="cart__total-price__wrapper">
                   <div className="total-price__container">
@@ -113,11 +113,12 @@ class LogoContainer extends React.Component {
                       <div className="total">$67.40</div>
                     </div>
                   </div>
-                  <div>
+                  <div className="bulabula">
                     Price excludes delivery, which is applied at checkout.
                     Orders will be processed in USD
                   </div>
                 </div>
+                {/* 일단 여기까지....;;; */}
                 <div className="note__container">
                   <div>NOTE TO FOODLY STORE</div>
                   <div className="comment__wrapper">
