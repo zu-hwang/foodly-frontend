@@ -9,10 +9,12 @@ class Detail extends React.Component {
   constructor() {
     super();
     this.page = React.createRef();
+
     this.state = {
       bgSelector: null,
       windowScroll: 0,
-      pageTop: 0
+      pageTop: 0,
+      data: []
     };
   }
 
@@ -27,7 +29,16 @@ class Detail extends React.Component {
       );
     }
   };
-
+  handleQuery = () => {
+    console.log(this.props.location.search);
+  };
+  getData = () => {
+    fetch("http://localhost:3000/Data/detail.json")
+      .then(res => res.json())
+      .then(res =>
+        this.setState({ data: res.data[0] }, () => console.log(this.state.data))
+      );
+  };
   getWindowScorllY = () => {
     this.setState(
       {
@@ -37,13 +48,25 @@ class Detail extends React.Component {
       () => console.log(this.state)
     );
   };
+  componentDidMount() {
+    this.handleQuery();
+    this.getData();
+  }
 
   render() {
     return (
       <Main>
         <div className="detail-main" onWheel={this.getWindowScorllY}>
-          <div className="detail-cover1">
+          <div
+            className="detail-cover1"
+            style={{
+              backgroundImage: `url(${this.state.data.big_image1})`
+            }}
+          >
             <div
+              style={{
+                backgroundImage: `url(${this.state.data.big_image2})`
+              }}
               className={
                 this.state.bgSelector === null
                   ? "detail-cover2"
@@ -59,11 +82,12 @@ class Detail extends React.Component {
                 }
                 name="btn1"
                 style={
-                  this.state.bgSelector === null
+                  (this.state.bgSelector === null
                     ? null
                     : this.state.bgSelector
                     ? null
-                    : { opacity: "1" }
+                    : { opacity: "1" },
+                  { backgroundImage: `url(${this.state.data.big_image1})` })
                 }
                 onClick={this.bgChange}
               ></button>
@@ -74,11 +98,12 @@ class Detail extends React.Component {
                 name="btn2"
                 onClick={this.bgChange}
                 style={
-                  this.state.bgSelector === null
+                  (this.state.bgSelector === null
                     ? { opacity: "1" }
                     : this.state.bgSelector
                     ? { opacity: "1" }
-                    : null
+                    : null,
+                  { backgroundImage: `url(${this.state.data.big_image2})` })
                 }
               ></button>
             </div>
@@ -89,10 +114,12 @@ class Detail extends React.Component {
             style={{ zIndex: "15" }}
           >
             <DetailTop
+              data={this.state.data}
               pageTop={this.state.pageTop}
               windowScroll={this.state.windowScroll}
             />
             <DetailBottom
+              data={this.state.data}
               pageTop={this.state.pageTop}
               windowScroll={this.state.windowScroll}
             />
