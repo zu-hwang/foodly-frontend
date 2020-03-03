@@ -5,6 +5,9 @@ import PriceSticker from "./PriceSticker";
 import MainTitle from "./MainTitle";
 import "./OverlayBanner.scss";
 
+// todo 1. 배경화변 변경시 덜컹거림
+// todo 2. 배경화면 오버레이 되며 바뀔때 타이틀만 팅! 하고 바뀜! content나 배경에 2개뿌려두고 전체 div opacity로 해야하나 ..
+
 class OverlayBanner extends Component {
   constructor() {
     super();
@@ -20,7 +23,6 @@ class OverlayBanner extends Component {
       link: ""
     };
   }
-
   handleBtnClick = e => {
     // console.log(e.target.id);
     const id = parseInt(e.target.id);
@@ -39,7 +41,33 @@ class OverlayBanner extends Component {
     // ! 글자 클릭했을때 해당 상품으로 이동!
     this.props.history.push("/");
   };
-  componentDidMount() {
+  handleAutoBannerChange = () => {
+    const { data, selectedId } = this.state;
+    if (selectedId === data.length - 1) {
+      this.setState({
+        selectedId: data[0].id,
+        title: data[0].title,
+        subTitle: data[0].subTitle,
+        price: data[0].price,
+        priceText: data[0].priceText,
+        bgImg: data[0].bgImg,
+        buttonImg: data[0].buttonImg,
+        link: data[0].link
+      });
+    } else {
+      this.setState({
+        selectedId: data[selectedId + 1].id,
+        title: data[selectedId + 1].title,
+        subTitle: data[selectedId + 1].subTitle,
+        price: data[selectedId + 1].price,
+        priceText: data[selectedId + 1].priceText,
+        bgImg: data[selectedId + 1].bgImg,
+        buttonImg: data[selectedId + 1].buttonImg,
+        link: data[selectedId + 1].buttonImg
+      });
+    }
+  };
+  componentDidMount = () => {
     fetch("http://localhost:3000/Data/MainContent.json")
       .then(data => data.json())
       .then(data => {
@@ -56,14 +84,20 @@ class OverlayBanner extends Component {
           link: data.overlayBanner[0].link
         });
       });
-  }
-  // ! BG-url을 서버에서 받아 변경하고싶을때 스타일을 인라인을 주는 방법 말고 다른 방법 있나요?
+    // const intervalId =
+    setInterval(this.handleAutoBannerChange, 3000);
+    // console.log(intervalId);
+  };
+  componentWillUnmount = () => {
+    clearInterval(1);
+  };
   render() {
     // 버튼 뿌리기
     const btnMapping = this.state.data.map(data => {
       return (
         <CircleBtn
           id={data.id}
+          key={data.id + "-circlebtn-key"}
           buttonImg={data.buttonImg}
           handleBtnClick={this.handleBtnClick}
           selectedId={this.state.selectedId}
