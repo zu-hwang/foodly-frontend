@@ -11,24 +11,6 @@ $srf: Bitter, serif;
   z-index: 4;
 }
 
-// 왼쪽에 망할 인풋 => 컴포넌트로 옮김
-// .search--container {
-// 	display: block;
-// 	position: absolute;
-// 	top: 60px;
-// 	left: 20px;
-// 	z-index: 5;
-// }
-// .searchBar {
-// 	display: flex;
-// 	justify-content: center;
-// 	align-items: center;
-// }
-
-// .iconSearch {
-// 	margin-right: 20px;
-// }
-
 // 중간에 홈 로고랑 글귀
 .center--Container {
   display: flex;
@@ -87,4 +69,66 @@ $srf: Bitter, serif;
 #iconCart {
   width: 16px;
   height: 20px;
+}
+
+//장바구니
+
+.basket__wrapper {
+  .basket-header {
+    position: relative;
+    color: #342f2f;
+    height: 50px;
+    .basket-title {
+      position: absolute;
+      left: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 15px;
+      text-indent: 5px;
+      font-family: $srf;
+      font-weight: 200;
+    }
+    .basket-closeBtn {
+      position: absolute;
+      right: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 800;
+      font-family: $s-srf;
+    }
+  }
+
+  hr {
+    margin: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    border: none;
+  }
+  .cart-header {
+    margin: 20px 0;
+    height: 20px;
+    font-size: 12px;
+    font-family: $srf;
+    font-weight: lighter;
+    position: relative;
+
+    .quentity {
+      position: absolute;
+      right: 200px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .quentityPrice {
+      position: absolute;
+      right: 100px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
 }

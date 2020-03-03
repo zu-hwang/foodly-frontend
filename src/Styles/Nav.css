@@ -14,4 +14,8 @@
   color: #342f2f;
   -webkit-font-smoothing: antialiased;
   background-color: transparent;
+  z-index: 5;
+  width: 100%;
+  position: absolute;
+  top: 0;
 }

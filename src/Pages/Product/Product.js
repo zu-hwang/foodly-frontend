@@ -1,13 +1,13 @@
 import React from "react";
-import Main from "../Main/Main";
+// import Main from "../Main/Main";
 import DropDownList from "../../Components/ProductForm/DropDownList";
 import ImgProduct from "../../Components/ProductForm/ImgProduct";
 import "../../Styles/Product.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBorderAll } from "@fortawesome/free-solid-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-// import Nav from "../Header/Nav";
-// import Footer from "../../Components/Footer/Footer";
+import Nav from "../Header/Nav";
+import Footer from "../../Components/Footer/Footer";
 // import { Link, withRouter } from "react-router-dom"; 나중에 쓸거야
 
 class Product extends React.Component {
@@ -15,14 +15,6 @@ class Product extends React.Component {
     super();
     this.state = {
       navColor: "#f5f4f4"
-      // productInfo: []
-      // imageUrls: [], //썸네일url 담을 배열
-      // prices: [],
-      // onSales: [], //is_on_sale 담을 배열
-      // inStocks: [], //is_in_stock 담을 배열
-      // names: [], //제품이름
-      // harvests: [],
-      // measures: [] //무게단위 담을 배열
     };
   }
 
@@ -45,8 +37,9 @@ class Product extends React.Component {
     //   };
     // }
     return (
-      // <Nav/>
-      <Main navColor={this.state.navColor}>
+      <>
+        <Nav navColor={this.state.navColor} />
+        {/* <Main navColor={this.state.navColor}> */}
         <main className="mainContent" role="main">
           {/* 실제 product page +여백 시작*/}
           <section className="section">
@@ -103,8 +96,9 @@ class Product extends React.Component {
           </section>
           {/* 실제 product page +여백 끝*/}
         </main>
-        {/* <Footer /> */}
-      </Main>
+        {/* <Main navColor={this.state.navColor}> */}
+        <Footer />
+      </>
     );
   }
 }

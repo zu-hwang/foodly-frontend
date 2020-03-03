@@ -27,15 +27,10 @@ $l-gray: #f5f4f4;
     background-position: center;
     background-color: transparent;
     position: relative; //position:realative 없으면 지우자
+    opacity: 1;
 
-    // .product__visuals :hover ~ .whole-wrapper {
-    //   position: absolute;
-    //   top: 170px;
-    //   left: 30px;
-    //   width: 200px;
-    //   height: 62.39px;
-    //   // display: block;
-    //   opacity: 1;
+    // .product__visuals :hover {
+    //   opacity: 0.5;
     //   transition: all 0.2s ease-in-out;
     // }
     .price {
@@ -76,18 +71,18 @@ $l-gray: #f5f4f4;
       }
     }
     .product__cart {
-      //장바구니 +-튀어나올때 어두운 부분
-      // display: none;
       position: absolute;
       top: 0;
       width: 260px;
       height: 260px;
-      background-color: $black;
       opacity: 0.7;
     }
 
+    // .soldOut {
+    //   z-index: 10;
+    // }
+
     .whole-wrapper {
-      //네스팅하면 클래스명 못바꾸니까 안함
       position: absolute;
       top: 200px;
       left: 30px;
@@ -95,27 +90,40 @@ $l-gray: #f5f4f4;
       height: 62.39px;
       // display: none;
       opacity: 0;
-      transition: all 0.2s ease-in-out;
+      transition: all 1s ease-in-out;
+    }
+
+    .whole-wrapper {
+      position: absolute;
+      top: 200px;
+      left: 30px;
+      width: 200px;
+      height: 62.39px;
+      // display: block;
+      opacity: 0;
+      transition: all 1s liner;
+      // transition-duration: i;
     }
 
     .whole-wrapper--open {
-      //네스팅하면 클래스명 못바꾸니까 안함
       position: absolute;
       top: 170px;
       left: 30px;
       width: 200px;
       height: 62.39px;
-      // display: block;
       opacity: 1;
-      transition: all 0.2s ease-in-out;
+      transition: all 1s liner;
+      // transition-duration: i;
     }
 
     .btn-container {
       position: relative;
       .decrease-btn,
-      .increase-btn {
+      .increase-btn,
+      .decrease-btn--spread,
+      .increase-btn--spread {
         position: absolute;
-        // background-color: $pink;
+        background-color: $pink;
         width: 60px;
         height: 60px;
         border-radius: 50%;
@@ -127,6 +135,16 @@ $l-gray: #f5f4f4;
         z-index: 1;
         background-color: $pink;
         @include center();
+        transition: all 0.2s ease-in-out;
+      }
+
+      .decrease-btn--spread {
+        left: 25%;
+        transform: translateX(-50%);
+        z-index: 1;
+        background-color: $pink;
+        @include center();
+        transition: all 0.2s ease-in-out;
       }
 
       .increase-btn {
@@ -134,6 +152,24 @@ $l-gray: #f5f4f4;
         transform: translateX(-50%);
         z-index: 2;
         @include center();
+        transition: all 0.2s ease-in-out;
+      }
+
+      .increase-btn--spread {
+        left: 75%;
+        transform: translateX(-50%);
+        z-index: 2;
+        @include center();
+        transition: all 0.2s ease-in-out;
+      }
+
+      .decrease-btn--spread:hover {
+        background-color: #5c4b51;
+        transition: all 0.2s ease-in-out;
+      }
+      .increase-btn--spread:hover {
+        background-color: #5c4b51;
+        transition: all 0.2s ease-in-out;
       }
     }
   }
@@ -177,4 +213,29 @@ $l-gray: #f5f4f4;
       }
     }
   }
+}
+
+// 장바구니
+.black-screen,
+.basket-container {
+  // display: none;
+}
+.black-screen {
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  background-color: #5c4b51;
+  opacity: 0.5;
+}
+
+.basket-container {
+  z-index: 11;
+  position: absolute;
+  width: 640px;
+  top: 0;
+  right: 0;
+  background-color: #f5f4f4;
+  height: 1077px;
 }

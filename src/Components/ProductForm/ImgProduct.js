@@ -11,7 +11,11 @@ class ImgProduct extends React.Component {
       navColor: "#f5f4f4",
       productInfo: [],
       buttonShow: "whole-wrapper",
-      num: ""
+      num: "",
+      plus: "increase-btn",
+      minus: "decrease-btn",
+      basketCountBox: "none",
+      inBasket: ""
     };
   }
 
@@ -25,16 +29,13 @@ class ImgProduct extends React.Component {
       );
   };
 
-  mouseEnter = e => {
-    console.log("enter, ", e.target);
-    if (this.state.buttonShow === "whole-wrapper") {
-      this.setState({ buttonShow: "whole-wrapper--open" });
-    }
-  };
-
-  mouseLeave = e => {
-    console.log("out, ", e);
-    this.setState({ buttonShow: "whole-wrapper" });
+  spread = e => {
+    console.log(e);
+    this.setState({
+      plus: "increase-btn--spread",
+      minus: "decrease-btn--spread",
+      unspread: "true" //이걸로 버튼 한번 펼쳐지고 나서 안 모아지게 할려고했음;
+    });
   };
 
   render() {
@@ -45,16 +46,18 @@ class ImgProduct extends React.Component {
           <div
             className="product__visuals"
             style={{ backgroundImage: image }}
-            // onMouseEnter={this.mouseEnter}
-            // onMouseOut={this.mouseEnter}
             onMouseEnter={() => {
+              console.log(this.state.num);
               this.setState({
                 num: `${idx} whole-wrapper--open`
+                // mouseOn: true
               });
             }}
-            onMouseOut={() => {
+            onMouseLeave={() => {
               this.setState({
-                num: null
+                num: null,
+                plus: "increase-btn",
+                minus: "decrease-btn"
               });
             }}
           >
@@ -80,19 +83,45 @@ class ImgProduct extends React.Component {
                   : { display: "block", backgroundColor: "white" }
               }
             ></div>
+            <div
+              className="soldOut"
+              style={
+                productInfo.is_in_stock
+                  ? { display: "none" }
+                  : { display: "block" }
+              }
+            >
+              SOLD OUT
+            </div>
+            <div>
+              <div></div>
+              <div></div>
+            </div>
             {/* 플러스 마이너스 박스 */}
             {this.state.num === `${idx} whole-wrapper--open` ? (
-              <div className="whole-wrapper--open">
-                <div>
-                  <div></div>
-                  <div></div>
-                </div>
-                <div className="btn-container">
-                  <div className="decrease-btn">
-                    <FontAwesomeIcon icon={faMinus} className="plus" />
+              <div className={this.state.num}>
+                <div
+                  className="btn-container"
+                  onMouseEnter={() => {
+                    // console.log(this.state.num);
+                    this.setState({
+                      num: `${idx} whole-wrapper--open`
+                    });
+                  }}
+                  onClick={this.spread}
+                >
+                  <div className={this.state.minus}>
+                    <FontAwesomeIcon icon={faMinus} className="minus" />
                   </div>
-                  <div className="increase-btn">
-                    <FontAwesomeIcon icon={faPlus} className="minus" />
+                  <div
+                    className={this.state.plus}
+                    style={
+                      productInfo.is_in_stock
+                        ? { backgroundColor: "$pink #5c4b51" }
+                        : { backgroundColor: "#5c4b51" }
+                    }
+                  >
+                    <FontAwesomeIcon icon={faPlus} className="plus" />
                   </div>
                 </div>
               </div>

@@ -87,7 +87,7 @@
     {
       "color_id__name": "blue",
       "harvest_year__year": "2017",
-      "is_in_stock": true,
+      "is_in_stock": false,
       "is_on_sale": false,
       "measure_id__measure": "bunch",
       "name": "Campari Tomatoes",

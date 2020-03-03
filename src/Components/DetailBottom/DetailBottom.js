@@ -1,6 +1,5 @@
 import React from "react";
 import "../../Components/DetailBottom/DetailBottom.scss";
-import { text } from "@fortawesome/fontawesome-svg-core";
 
 class DetailBottom extends React.Component {
   constructor() {
