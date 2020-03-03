@@ -6,81 +6,77 @@ $gray: #ada2a4;
 $l-gray: #f5f4f4;
 
 @mixin center {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .dropDownList {
-	// height: 59px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: row;
-	margin-left: 16px;
+  // height: 59px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-left: 16px;
+  z-index: 2;
 
-	.dropDown {
-		width: 180px;
-	}
+  .dropDown {
+    width: 180px;
+  }
 
-	.dropDownContainer,
-	.dropdown-list__item,
-	.dropDown__button {
-		font-family: $s-srf;
-		border-radius: 3px;
-	}
+  .dropDownContainer,
+  .dropdown-list__item,
+  .dropDown__button {
+    font-family: $s-srf;
+    border-radius: 3px;
+  }
 
-	.dropdown-list__item,
-	.dropDown__button {
-		display: block;
-		width: 180px;
-		height: 40px;
-		color: #ada2a4;
-		background-color: #f5f4f4;
-	}
+  .dropdown-list__item,
+  .dropDown__button {
+    display: block;
+    width: 180px;
+    height: 40px;
+    color: #ada2a4;
+    background-color: #f5f4f4;
+  }
 
-	.dropDown__button {
-		width: 180px;
-		border: none;
-		outline: none;
-		margin: 0 0 15px;
-		padding: 8px 8px 8px 19px;
-		text-align: left;
-	}
+  .dropDown__button {
+    width: 180px;
+    border: none;
+    outline: none;
+    margin: 0 0 15px;
+    padding: 8px 8px 8px 19px;
+    text-align: left;
+  }
 
-	.dropDownContainer {
-		width: 180px;
-		display: block;
-		list-style: none;
-		color: #ada2a4;
-		background-color: #f5f4f4;
-		position: absolute;
-		display: table;
-	}
+  .dropDownContainer {
+    width: 177px;
+    padding-left: 3px;
+    display: block;
+    list-style: none;
+    color: #ada2a4;
+    background-color: #f5f4f4;
+    position: absolute;
+    display: table;
+  }
 
-	.dropdown-list__item {
-		text-align: left;
-		color: #ada2a4;
-		background-color: #f5f4f4;
-		padding: 5px -5 0 5px;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		opacity: 0.6;
-		transition: 0.3s;
-	}
-	.dropdown-list__item:hover {
-		opacity: 102;
-		font-size: 17px;
-		background-color: #d9bdb0;
-	}
+  .dropdown-list__item {
+    width: 158px;
+    font-size: 14px;
+    text-align: left;
+    color: #ada2a4;
+    background-color: #f5f4f4;
+    padding-left: 8px;
+    padding-right: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    opacity: 0.6;
+    transition: 0.3s;
+  }
+  .dropdown-list__item:hover {
+    opacity: 1;
+    font-size: 17px;
+    background-color: #d9bdb0;
+  }
 }
-
-//원래는 클래스 명으로 할랬는데 state로 바꿈
-// .dropDownContainer {
-// 	visibility: hidden;
-// }
-
-// .dropDownContainer.open {
-// 	visibility: visible;
-// }

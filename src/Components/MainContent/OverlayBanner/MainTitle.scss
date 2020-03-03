@@ -1,0 +1,23 @@
+@import "../../../Styles/var.scss";
+
+.main-title {
+  width: 100%;
+  p {
+    letter-spacing: -0.1px;
+    color: $black;
+  }
+  p:first-child {
+    letter-spacing: -0.1px;
+    font-family: $s-srf;
+    text-transform: uppercase;
+    font-size: 3em;
+    font-weight: 300;
+    margin-bottom: 8px;
+  }
+  p:nth-child(2) {
+    font-family: $srf;
+    font-size: 2em;
+    font-weight: 300;
+    font-style: italic;
+  }
+}
