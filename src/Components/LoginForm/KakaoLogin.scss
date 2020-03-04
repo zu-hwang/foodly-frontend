@@ -1,0 +1,20 @@
+@import "../../Styles/var.scss";
+
+.kakao-btn-container {
+  margin-top: 30px;
+  width: 100%;
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border: solid $l-gray 1px;
+    padding: 18px 0;
+    border-radius: 3px;
+    // background-color: $orange;
+    // letter-spacing: -0.1px;
+    text-transform: uppercase;
+    font-family: $s-srf;
+    font-weight: 500;
+  }
+}
