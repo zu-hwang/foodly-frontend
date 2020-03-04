@@ -16,9 +16,11 @@ class Register extends Component {
       retry: false
     };
   }
+
   goToHome = () => {
     this.props.history.push("/");
   };
+
   postData = () => {
     // ! 요청보내기
     let myHeaders = new Headers();

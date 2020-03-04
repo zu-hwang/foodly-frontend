@@ -13,13 +13,11 @@ class InputCheckBox extends Component {
       // toggle: this.props.Display
     };
   }
-
   handleDelBtn = e => {
     this.setState({
       toggle: !this.state.toggle
     });
   };
-
   componentDidMount() {
     const { Type, Label } = this.props;
     if (Type === "text") {
