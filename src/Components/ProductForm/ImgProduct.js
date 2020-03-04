@@ -2,7 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { faMinus } from "@fortawesome/free-solid-svg-icons";
-import "../../Styles/ImgProduct.scss";
+import "./ImgProduct.scss";
 import { SERVER_URL } from "../../config";
 
 class ImgProduct extends React.Component {
