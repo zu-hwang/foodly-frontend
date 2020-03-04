@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Data } from "./registerChecking.js";
-import "./InputCheckBox.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import "./InputCheckBox.scss";
 
 class InputCheckBox extends Component {
   constructor(props) {
@@ -10,7 +10,6 @@ class InputCheckBox extends Component {
     this.state = {
       interjection: "", // 감탄사
       errText: ""
-      // toggle: this.props.Display
     };
   }
   handleDelBtn = e => {
