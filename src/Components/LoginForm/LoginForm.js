@@ -88,8 +88,8 @@ class LoginForm extends Component {
   loginKakao = () => {
     window.Kakao.Auth.login({
       success: authObj => {
-        console.log(authObj);
-        console.log("버튼눌렀다");
+        // console.log(authObj);
+        // console.log("버튼눌렀다");
       },
       fail: function(err) {
         console.log("에러", err);
