@@ -3,6 +3,7 @@ import Main from "../../Pages/Main/Main";
 import OverlayBanner from "../MainContent/OverlayBanner/OverlayBanner";
 import RecomandBanner from "./RecomandBanner/RecomandBanner";
 import RecomandSlide from "./RecomandSlide/RecomandSlide";
+import Bundle from "../../Components/Bundle/Bundle";
 import "./MainContent.scss";
 
 class MainContent extends Component {
@@ -45,6 +46,7 @@ class MainContent extends Component {
             data={this.state.productList}
             index={this.state.productList.length}
           />
+          <Bundle />
         </Main>
       </div>
     );

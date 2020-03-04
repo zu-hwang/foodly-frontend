@@ -1,0 +1,71 @@
+@import "../../Styles/var.scss";
+
+.bundle-container {
+  @include flexCenter();
+  flex-direction: column;
+  width: 1040px;
+  margin: 100px auto 150px auto;
+  .title-container {
+    @include flexCenter();
+    flex-direction: column;
+
+    p:first-child {
+      font-family: $script;
+      font-size: 120px;
+      color: $ml-gray;
+    }
+    p:last-child {
+      position: relative;
+      top: -57px;
+      font-family: $s-srf;
+      font-weight: 300;
+      font-size: 28px;
+    }
+  }
+  .boxes-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .bottom-container {
+    @include flexCenter();
+    margin-top: 80px;
+    width: 100%;
+    .side-text {
+      &:first-child {
+        margin-right: 50px;
+      }
+      &:last-child {
+        margin-left: 50px;
+      }
+      font-family: $s-srf;
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 1em;
+      text-transform: uppercase;
+    }
+    div {
+      @include flexCenter;
+      flex-direction: column;
+      background-color: $brown;
+      color: $l-gray;
+      border-radius: 50%;
+      width: 140px;
+      height: 140px;
+
+      & :first-child {
+        // sticker price
+        font-family: $s-srf;
+        font-size: 40px;
+      }
+      & :last-child {
+        // sticker text
+        font-family: $srf;
+        font-style: italic;
+        font-style: 15px;
+        letter-spacing: -0.01em;
+      }
+    }
+  }
+}
