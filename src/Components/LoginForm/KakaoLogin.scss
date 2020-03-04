@@ -16,5 +16,11 @@
     text-transform: uppercase;
     font-family: $s-srf;
     font-weight: 500;
+    transition: 0.2s ease-in-out all;
+    &:hover {
+      cursor: pointer;
+      background-color: #fae100;
+      transition: 0.2s ease-in-out all;
+    }
   }
 }

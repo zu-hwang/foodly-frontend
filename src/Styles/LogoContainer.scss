@@ -1,14 +1,15 @@
+@import "./var.scss";
 $s-srf: Raleway, san-serif;
 $srf: Bitter, serif;
 
 // .headerContainer전체
 .header--Container {
-	//min-width 는 나중에 반응형 때 쓸거야 아마....
-	min-width: 770px;
-	padding: 13px 0;
-	position: relative;
-	text-align: center;
-	z-index: 4;
+  //min-width 는 나중에 반응형 때 쓸거야 아마....
+  min-width: 770px;
+  padding: 13px 0;
+  position: relative;
+  text-align: center;
+  z-index: 4;
 }
 
 // 왼쪽에 망할 인풋 => 컴포넌트로 옮김
@@ -31,59 +32,338 @@ $srf: Bitter, serif;
 
 // 중간에 홈 로고랑 글귀
 .center--Container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: #342f2f;
-	-webkit-font-smoothing: antialiased;
-	// 웹킷 이거 왜쓰는거야?
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #342f2f;
+  -webkit-font-smoothing: antialiased;
+  // 웹킷 이거 왜쓰는거야?
 }
 .siteLogo img {
-	vertical-align: middle;
+  vertical-align: middle;
 }
 .storeDesc {
-	margin: 0 12px;
-	display: inline-block;
-	font-family: $srf;
-	font-size: 14px;
-	font-style: italic;
-	line-height: 20px;
+  margin: 0 12px;
+  display: inline-block;
+  font-family: $srf;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 20px;
 }
 
 //오른쪽 망할 장바구니
 
 .cartOpenButton {
-	position: absolute;
-	padding: 0;
-	top: 63px;
-	right: 34px;
+  position: absolute;
+  padding: 0;
+  top: 63px;
+  right: 34px;
 }
 
 .cartOpenButton .countCart {
-	width: 16px;
-	height: 16px;
-	font-size: 11px;
-	line-height: 15px;
-	color: #fff;
-	background-color: #f06060;
-	border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  font-size: 11px;
+  line-height: 15px;
+  color: #fff;
+  background-color: #f06060;
+  border-radius: 50%;
 }
 .cartOpenButton {
-	width: 70px;
-	height: 28px;
-
-	display: flex;
-	// color: buttontext;
-	letter-spacing: normal;
-	word-spacing: normal;
-	text-transform: none;
-	text-indent: 0px;
-	text-shadow: none;
-	text-align: center;
-	cursor: default;
-	font: 400 13.3333px Arial;
+  width: 70px;
+  height: 28px;
+  display: flex;
+  // color: buttontext;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  text-align: center;
+  cursor: default;
+  font: 400 13.3333px Arial;
+  .money {
+    &::before {
+      content: "$";
+    }
+  }
 }
-#iconCart {
-	width: 16px;
-	height: 20px;
+// #iconCart {
+//   width: 16px;
+//   height: 20px;
+// }
+
+//장바구니
+
+.basket__wrapper {
+  .basket-header {
+    position: relative;
+    color: #342f2f;
+    height: 50px;
+    .basket-title {
+      position: absolute;
+      left: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 15px;
+      text-indent: 5px;
+      font-family: $srf;
+      font-weight: 200;
+    }
+    .basket-closeBtn {
+      position: absolute;
+      right: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 800;
+      font-family: $s-srf;
+    }
+  }
+
+  hr {
+    width: 100%;
+    height: 0.5px;
+    background-color: #fff;
+    border: 1px solid snow;
+  }
+  .cart {
+    .cart-header {
+      margin: 20px 0;
+      height: 20px;
+      font-size: 12px;
+      font-family: $srf;
+      font-weight: lighter;
+      position: relative;
+
+      .quentity {
+        position: absolute;
+        right: 200px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .quentityPrice {
+        position: absolute;
+        right: 100px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    ul {
+      // @include center();
+      li {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        width: 100%;
+        height: 78px;
+        padding: 10px 0 30px 0;
+
+        .cart-list__item--image {
+          position: absolute;
+          left: 20px;
+          top: 50%;
+          transform: translateY(-50%);
+          border: 2px solid #fff;
+          border-radius: 50%;
+          border-width: 4px;
+          width: 60px;
+          height: 60px;
+          .item-Img {
+            width: 60px;
+            height: 60px;
+            border-radius: 42.5px;
+            background-image: url(https://cdn.shopify.com/s/files/1/1148/3974/products/Brandywine-tomatoes-front_compact.jpeg);
+            background-position: center center;
+            background-size: 80px 80px;
+          }
+        }
+        .cart-list__item--name {
+          font-size: 14px;
+          position: absolute;
+          left: 150px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        .cart-list__item--quantity {
+          //여기는 아직 아무내용 없음
+          position: absolute;
+          left: 380px;
+          top: 50%;
+          transform: translateY(-50%);
+          .purchase-quantity {
+            display: flex;
+            flex-direction: row;
+            .minus-btn__container,
+            .plus-btn__container {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 15px;
+              font-size: 20px;
+              color: #ada2a4;
+              padding: 0 5px;
+            }
+            .purchase-input {
+              width: 40px;
+              height: 40px;
+              font-size: 14px;
+              text-align: center;
+              color: #ada2a4;
+              background-color: #fff;
+              border-radius: 3px;
+              outline: none;
+              border: none;
+              font-family: $srf;
+            }
+          }
+        }
+        .cart-list__item--price {
+          position: absolute;
+          left: 495px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        .cart-list__item--remove {
+          //버튼 들어갈 자리
+          position: absolute;
+          left: 600px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+    .special-packing {
+      height: 40px;
+      position: relative;
+      margin-top: 30px;
+      display: flex;
+      flex-direction: row;
+      .choose-package {
+        position: absolute;
+        left: 50px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .paperBag__container {
+        position: absolute;
+        left: 350px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 14px;
+        padding: 8px 13px;
+        color: #fff;
+        background-color: #ada2a4;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+      .special-packing__container {
+        position: absolute;
+        left: 490px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 14px;
+        padding: 8px 13px;
+        color: #fff;
+        background-color: #ada2a4;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+    }
+    .hidden-woodenBox {
+      height: 75px;
+      position: relative;
+      margin-top: 15px;
+      .hidden-woddenBox__imgConatiner {
+        position: absolute;
+        left: 50px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 60px;
+        height: 60px;
+        border: 2px solid #fff;
+        @include center();
+        border-width: 5px;
+        border-radius: 50%;
+        .hidden-woodenBox__img {
+          background-image: url("https://cdn.shopify.com/s/files/1/1148/3974/products/wooden-box_small.jpg");
+          background-position: center center;
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          background-size: 50px 50px;
+        }
+      }
+      .cart-list__item--title {
+        width: 267px;
+        height: 77px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        position: absolute;
+        left: 140px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 15px;
+      }
+      // .cart-list__item--quantity {
+      //   .purchase-quantity {
+      //     display: flex;
+      //     flex-direction: column;
+      //   }
+      // }
+
+      .cart-list__item--price {
+        width: 73px;
+        height: 70px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        position: absolute;
+        left: 550px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 15px;
+      }
+    }
+    .cart__total-price__wrapper {
+      height: 115px;
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+      .total-price__container {
+        height: 50px;
+        width: 100%;
+        position: relative;
+        .total {
+          height: 30px;
+          width: 100px;
+          position: absolute;
+          left: 50px;
+          top: 50%;
+          transform: translateY(-50%);
+          font-weight: 700;
+          font-family: $srf;
+        }
+      }
+      .total-price__Box {
+        height: 30px;
+        width: 100px;
+        position: absolute;
+        left: 475px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 20px;
+        font-family: $srf;
+      }
+      .bulabula {
+        font-size: 13px;
+        padding-top: 10px;
+      }
+    }
+  }
 }
