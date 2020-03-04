@@ -10,62 +10,59 @@ import "./RecomandSlide.scss";
 // todo 4. 고민하는 김에 - 무한 슬라이드...
 
 class RecomandSlide extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      data: [],
       left: 0,
-      index: 0, // data의 길이 10
-      prevBtn: false,
-      nextBtn: true
+      nextBtn: true,
+      prevBtn: false
     };
   }
   hadlePrevBtn = e => {
     let qtWidth = window.innerWidth / 4;
-    let { left, index, data } = this.state;
-    const std = data.length - 4; // 6
-    // 자투리 이동 하기 std보다 index가 크면
-    if (index > std) {
-      this.setState({
-        left: left + qtWidth * (index - std),
-        index: index - std,
-        prevBtn: false,
-        nextBtn: true
-      });
-    } else if (index < std) {
-      this.setState({
-        left: left + qtWidth * index,
-        index: std,
-        prevBtn: true,
-        nextBtn: false
-      });
-    } else if (index === std) {
+    let { left } = this.state;
+    let { data, index } = this.props;
+    const leng = data.length - 4; // 16-4=12
+    if (index === leng - 4) {
+      //맨 끝 지점 1텀 전
       this.setState({
         left: left + qtWidth * 4,
         index: index + 4,
-        prevBtn: false,
-        nextBtn: true
+        nextBtn: true,
+        prevBtn: false
+      });
+    } else if (index < leng - 4) {
+      this.setState({
+        left: left + qtWidth * 4,
+        index: index + 4,
+        nextBtn: true,
+        prevBtn: true
+      });
+    } else if (index === 0) {
+      // 끝지점
+      this.setState({
+        left: left + qtWidth * 4,
+        index: index + 4,
+        nextBtn: true,
+        prevBtn: false
       });
     }
   };
+
   hadleNextBtn = e => {
     let qtWidth = window.innerWidth / 4;
-    let { left, index } = this.state;
-
+    let { left } = this.state;
+    let { data, index } = this.props;
+    data = data - 4;
+    const leng = data.length - 4;
     // 인덱스가 4 보다 작으면 자투리 이동하기
-    if (index < 4) {
-      this.setState({
-        left: left - qtWidth * index,
-        index: index - index,
-        nextBtn: false,
-        prevBtn: true
-      });
-    } else if (index === 4) {
+    if (index === leng) {
+      // 인덱스와 leng이 같음 == 시작위치
       this.setState({
         left: left - qtWidth * 4,
-        index: index - 4, // data.length  초기화 해야 하나 0으로 둬야 하나..?
-        nextBtn: false,
-        prevBtn: true
+        index: index - 4,
+        nextBtn: true,
+        prevBtn: false
       });
     } else if (index > 4) {
       this.setState({
@@ -74,24 +71,33 @@ class RecomandSlide extends Component {
         nextBtn: true,
         prevBtn: true
       });
+    } else if (index === 4) {
+      // 끝지점
+      this.setState({
+        left: left - qtWidth * 4,
+        index: index - 4,
+        nextBtn: false,
+        prevBtn: true
+      });
     }
   };
-
-  componentDidMount() {
-    fetch("http://localhost:3000/Data/MainContent.json")
-      .then(data => data.json())
-      .then(data => {
-        // console.log("데이터 출력", data.recomandProduct.);
-        this.setState({
-          prevSlide: data.recomandProduct.slice(-4),
-          curSlide: data.recomandProduct.slice(0, 4),
-          nextSlide: data.recomandProduct.slice(4, 8),
-          data: data.recomandProduct,
-          index: data.recomandProduct.length - 4
-          // ! 초기값에서 기본 상품 깔리는 상품갯수 꼭 빼줘야 한다!!
-        });
-      });
-  }
+  goToLink = e => {
+    // ! 쿼리파라미터로 상세페이지 이동하기
+    // console.log(parseInt(e.target.id));
+    // this.props.history.push(`/detail?id=${e.target.id}`);
+  };
+  // componentDidMount() {
+  // fetch("http://10.58.5.105:8000")
+  //   .then(data => data.json())
+  //   .then(data => {
+  //     // console.log("데이터 출력", data.recomandProduct.);
+  //     this.setState({
+  //       data: data.recomandProduct,
+  //       index: data.recomandProduct.length - 4
+  //       // ! 초기값에서 기본 상품 깔리는 상품갯수 꼭 빼줘야 한다!!
+  //     });
+  //   });
+  // }
   render() {
     return (
       <div className="recomand-slide">
@@ -102,18 +108,19 @@ class RecomandSlide extends Component {
             transition: "all 0.5s ease-in-out"
           }}
         >
-          {this.state.data.map(data => {
+          {this.props.data.map(data => {
             return (
               <RecomandItem
                 id={data.id}
                 name={data.name}
-                price={data.price}
-                sale={data.sale}
-                category={data.category}
-                stock={data.stock}
-                unit={data.unit}
-                img={data.img}
+                price={"$" + data.price}
+                sale={data["is_on_sale"]}
+                category={"Harvest " + data["harvest_year_id__year"]}
+                stock={data["is_in_stock"]}
+                unit={data["measure_id__measure"]}
+                img={data["small_image"]}
                 key={data.id + "-recomand-product-item"}
+                onClick={this.goToLink}
               />
             );
           })}
