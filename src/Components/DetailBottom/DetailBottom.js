@@ -58,14 +58,9 @@ class DetailBottom extends React.Component {
     fetch("http://localhost:3000/Data/comment.json")
       .then(res => res.json())
       .then(res =>
-        this.setState(
-          {
-            commentData: res.commentData
-          },
-          () => {
-            console.log(this.state.commentData);
-          }
-        )
+        this.setState({
+          commentData: res.commentData
+        })
       );
   };
   handleSubmit = () => {
@@ -101,6 +96,21 @@ class DetailBottom extends React.Component {
       console.log(this.state.commentTop);
     });
   };
+  deleteComment = index => {
+    const comments = this.state.commentData;
+    const newComments = comments.splice(index, 1);
+    console.log(newComments, index);
+    this.setState({ commentData: comments });
+    // fetch("backendaddress", {
+    //   method: "post",
+    //   body: JSON.stringify({
+    //     name: this.state.commentData[index].name,
+    //     id: index,
+    //     comment: this.state.commentData[index].comment,
+    //     email: this.state.commentData[index].email
+    //   })
+    // });
+  };
   componentDidMount() {
     this.setData();
     this.getComment();
@@ -111,7 +121,7 @@ class DetailBottom extends React.Component {
     const { data } = this.props;
     return (
       <div className="detail-bottom">
-        {data.energe === "" || data.mineral === "" ? null : (
+        {data.energe === "" || data.vitamin === "" || data.mineral ? null : (
           <div className="nutritional-a-container">
             <div
               className={
@@ -260,7 +270,7 @@ class DetailBottom extends React.Component {
             </div>
           </div>
         </div>
-        <div className="comment-a-container">
+        <div className="comment-container">
           {/* <div
             className={
               this.props.pageTop < this.props.windowScroll - 1500
@@ -273,8 +283,13 @@ class DetailBottom extends React.Component {
             {this.state.commentData.map((el, index) => {
               return (
                 <>
-                  {index === 0 ? null : <div className="border"></div>}
                   <div className="comment-inner-box">
+                    <button
+                      className="close-button"
+                      onClick={() => this.deleteComment(index)}
+                    >
+                      X
+                    </button>
                     <img
                       className="comment-img"
                       src={el.img}
@@ -401,7 +416,7 @@ class DetailBottom extends React.Component {
         <div className="similar-a-container">
           <div
             className={
-              this.state.commentTop < this.props.windowScroll - 1400
+              this.state.commentTop < this.props.windowScroll - 1100
                 ? "similar-container container-move"
                 : "similar-container"
             }

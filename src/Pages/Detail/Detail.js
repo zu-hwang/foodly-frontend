@@ -9,7 +9,6 @@ class Detail extends React.Component {
   constructor() {
     super();
     this.page = React.createRef();
-
     this.state = {
       bgSelector: null,
       windowScroll: 0,
@@ -82,12 +81,14 @@ class Detail extends React.Component {
                 }
                 name="btn1"
                 style={
-                  (this.state.bgSelector === null
-                    ? null
+                  this.state.bgSelector === null
+                    ? { backgroundImage: `url(${this.state.data.big_image1})` }
                     : this.state.bgSelector
-                    ? null
-                    : { opacity: "1" },
-                  { backgroundImage: `url(${this.state.data.big_image1})` })
+                    ? { backgroundImage: `url(${this.state.data.big_image1})` }
+                    : {
+                        opacity: "1",
+                        backgroundImage: `url(${this.state.data.big_image1})`
+                      }
                 }
                 onClick={this.bgChange}
               ></button>
@@ -98,12 +99,17 @@ class Detail extends React.Component {
                 name="btn2"
                 onClick={this.bgChange}
                 style={
-                  (this.state.bgSelector === null
-                    ? { opacity: "1" }
+                  this.state.bgSelector === null
+                    ? {
+                        opacity: "1",
+                        backgroundImage: `url(${this.state.data.big_image2})`
+                      }
                     : this.state.bgSelector
-                    ? { opacity: "1" }
-                    : null,
-                  { backgroundImage: `url(${this.state.data.big_image2})` })
+                    ? {
+                        opacity: "1",
+                        backgroundImage: `url(${this.state.data.big_image2})`
+                      }
+                    : { backgroundImage: `url(${this.state.data.big_image2})` }
                 }
               ></button>
             </div>
