@@ -1,515 +1,488 @@
-.detail-main{
-  .detail-cover{
-    width: 100vw;
-    height: 100vh;
-    background-attachment: fixed;
-    background-image: url("https://cdn.shopify.com/s/files/1/1148/3974/products/Brandywine-tomatoes-front.jpeg?v=1456211079");
-    background-position: 0px -250px;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  .detail-top{
+@import '../../Styles/var.scss';
+
+.detail-main {
+  .btn-container {
+    width: 150px;
+    height: 200px;
+    position: fixed;
+    right: 5px;
+    top: 45%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
     flex-direction: column;
-    z-index: 1;
-    padding-top: 35px;
-    background-color: #fff;
-    .purchase-container{
-      width: 1000px;
-      height: 307px;
-      .purchase-name{
-        color: #342f2f; 
-        font-size: 32px;
-        font-family: Bitter, serif;
-        text-align: center;
-      }
-      .purchase-explanation{
-        margin-bottom: 70px;
-        color: #ada2a4;
-        font-size: 16px;
-        font-family: Bitter, serif;
-        text-align: center;        
-      }
-      .purchase{
-        display: flex;
-        justify-content: center;
-        .price-box{
-          .price{
-            margin-right: 150px;
-            color: #f06060;
-            font-size: 48px;
-            font-family: "Raleway",Tahoma,Geneva,sans-serif,sans-serif;
-          }
-          .kilogram{
-            color: #342f2f;
-            font-size: 20px;
-            font-family: "Bitter",serif;
-            font-style: italic;
-          }
-        }
-        .purchase-box{
-          .purchase-quantity{
-            .minus-btn{
-              border-style: none;
-              outline: none;
-              color: #ada2a4;
-              font-size: 20px;
-            }
-            .purchase-input{
-              width: 70px;
-              height: 35px;
-              border: none;
-              outline: none;
-              text-align: center;
-              background-color: #f5f4f4;
-            }
-            .plus-btn{
-              border-style: none;
-              outline: none;
-              color: #ada2a4;
-              font-size: 20px;
-            }
-            .multiply{
-            
-            }
-          }
-          .btn{
-            .add-btn{
-              margin-top: 30px;
-              padding: 20px 90px;
-              border-radius: 3px;
-              outline: none;
-              color: #fff;
-              font-size: 16px;
-              font-weight: 700;
-              font-family: "Raleway",Tahoma,Geneva,sans-serif;
-              background-color: #f06060;
-            }
-          }
-        }
+    align-items: center;
+
+    .btn-cover1 {
+      width: 80px;
+      height: 80px;
+      border-radius: 100%;
+      border: solid 3px white;
+      outline: none;
+      opacity: 0.5;
+      background-image: url('//cdn.shopify.com/s/files/1/1148/3974/products/Brandywine-tomatoes-front_compact.jpeg?v=1456211078');
+      background-position: -34px -28px;
+      background-repeat: no-repeat;
+      background-size: 190%;
+      cursor: pointer;
+      &:hover {
+        width: 100px;
+        height: 100px;
+        background-position: -45px -45px;
       }
     }
-    .description-container{
-      width: 100vw;
-      height: 307px;
-      text-align: center;
-      .description-title{
-        margin-bottom: 20px;
-        padding-top: 20px;
-        border-top: 3px solid #f5f4f4;
-        color: #342f2f;
-        font-size: 24px;
-        font-family: "Bitter",serif;
-      }
-      .description-text{
-        color: #342f2f;
-        font-size: 16px;
-        font-family: "Raleway",Tahoma,Geneva,sans-serif,sans-serif;
-        line-height: 30px;
+    .btn-cover1-off {
+      width: 80px;
+      height: 80px;
+      border-radius: 100%;
+      border: solid 3px white;
+      outline: none;
+      opacity: 0.5;
+      background-image: url('//cdn.shopify.com/s/files/1/1148/3974/products/Brandywine-tomatoes-front_compact.jpeg?v=1456211078');
+      background-position: -34px -28px;
+      background-repeat: no-repeat;
+      background-size: 190%;
+    }
+    .btn-cover2 {
+      width: 80px;
+      height: 80px;
+      border-radius: 100%;
+      border: solid 3px white;
+      outline: none;
+      opacity: 0.5;
+      background-image: url('//cdn.shopify.com/s/files/1/1148/3974/products/Brandywine-Tomatoes_compact.jpeg?v=1456211078');
+      background-position: -15px -5px;
+      background-repeat: no-repeat;
+      background-size: 150%;
+      cursor: pointer;
+      &:hover {
+        width: 100px;
+        height: 100px;
       }
     }
-    .share-container{
+    .btn-cover2-off {
+      width: 80px;
+      height: 80px;
+      border-radius: 100%;
+      border: solid 3px white;
+      outline: none;
+      opacity: 0.5;
+      background-image: url('//cdn.shopify.com/s/files/1/1148/3974/products/Brandywine-Tomatoes_compact.jpeg?v=1456211078');
+      background-position: -15px -5px;
+      background-repeat: no-repeat;
+      background-size: 150%;
+    }
+  }
+}
+.detail-cover1 {
+  width: 100vw;
+  height: 100vh;
+  background-attachment: fixed;
+  background-image: url('https://cdn.shopify.com/s/files/1/1148/3974/products/Brandywine-tomatoes-front.jpeg?v=1456211079');
+  background-position: 0px -250px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -2;
+}
+.detail-cover2 {
+  width: 100vw;
+  height: 100vh;
+  background-attachment: fixed;
+  background-image: url('https://cdn.shopify.com/s/files/1/1148/3974/products/Brandywine-Tomatoes.jpeg?v=1456211078');
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -2;
+  opacity: 0;
+}
+.detail-page-container {
+  position: absolute;
+  background-color: #fff;
+}
+
+.bg-opacity1 {
+  animation: bgOpacity1 0.5s ease-in-out;
+  animation-fill-mode: both;
+}
+.bg-opacity2 {
+  animation: bgOpacity2 0.5s ease-in-out;
+  animation-fill-mode: both;
+}
+@keyframes bgOpacity1 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes bgOpacity2 {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    .detail-cover {
+      background-image: url('https://cdn.shopify.com/s/files/1/1148/3974/products/Brandywine-tomatoes-front.jpeg?v=1456211079');
       width: 100vw;
+      height: 100vh;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 0px -250px;
+      // position: fixed;
+    }
+    .detail-top {
+      background-color: #fff;
+      padding-top: 35px;
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 20px;
-      background-color: #f5f4f4;
-      div{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .share-title{
-        padding-right: 20px;
-        color: #342f2f;
-        font-size: 12px;
-        font-family: "Bitter",serif;
-      }
-      .facebook-logo{
-        width: 40px;
-        height: 40px;
-        margin-left: 16px;
-        border-radius: 100%;
-        color: skyblue;
-        background-color: #fff;
-      }
-      .twiter-logo{
-        width: 40px;
-        height: 40px;
-        margin-left: 16px;
-        border-radius: 100%;
-        background-color: #fff;
-      }
-      .pinterest-logo{
-        width: 40px;
-        height: 40px;
-        margin-left: 16px;
-        border-radius: 100%;
-        background-color: #fff;
-      }
-      .google-logo{
-        width: 40px;
-        height: 40px;
-        margin-left: 16px;
-        border-radius: 100%;
-        background-color: #fff;
-      }
-      .social-logo{
-        width: 40px;
-        height: 40px;
-        margin-left: 16px;
-        border-radius: 100%;
-        background-color: #fff;
-      }
-    }
-  }
-  .detail-bottom{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    z-index: 1;
-    padding-top: 35px;
-    background-color: #fff;
-    .nutritional-container{
-      width: 1000px;
-      height: 330px;
-      .nutritional-title{
-        color: #342f2f;
-        font-size: 24px;
-        font-family: "Bitter",serif;
-        text-align: center;
-      }
-      .nutritional-value{
-        .value-box{
+      flex-direction: column;
+      z-index: 1;
+      .purchase-container {
+        width: 1000px;
+        height: 307px;
+        .purchase-name {
+          color: #342f2f;
+          font-size: 32px;
+          font-family: Bitter, serif;
+          text-align: center;
+        }
+        .purchase-explanation {
+          color: #ada2a4;
+          font-size: 16px;
+          font-family: Bitter, serif;
+          text-align: center;
+          margin-bottom: 70px;
+        }
+        .purchase {
           display: flex;
           justify-content: space-around;
-          margin-top: 25px;
-          .energy-box{
-            width: 25%;
-            .energy{
-              display: flex;
-              justify-content: space-between;
-              margin-bottom: 15px;
-              color: #342f2f;
-              font-size: 16px;
-              font-family: "Raleway",Tahoma,Geneva,sans-serif,sans-serif;
+          .price-box {
+            .price {
+              color: #f06060;
+              font-size: 48px;
+              font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
             }
-            .carbohydrates{
-              display: flex;
-              justify-content: space-between;
-              margin-bottom: 15px;
+            .kilogram {
               color: #342f2f;
-              font-size: 16px;
-              font-family: "Raleway",Tahoma,Geneva,sans-serif,sans-serif;
-            }
-            .protein{
-              display: flex;
-              justify-content: space-between;
-              margin-bottom: 15px;
-              color: #342f2f;
-              font-size: 16px;
-              font-family: "Raleway",Tahoma,Geneva,sans-serif,sans-serif;
-            }
-            .total{
-              display: flex;
-              justify-content: space-between;
-              margin-bottom: 15px;
-              color: #342f2f;
-              font-size: 16px;
-              font-family: "Raleway",Tahoma,Geneva,sans-serif,sans-serif;
-            }
-            .dietary{
-              display: flex;
-              justify-content: space-between;
-              margin-bottom: 15px;
-              color: #342f2f;
-              font-size: 16px;
-              font-family: "Raleway",Tahoma,Geneva,sans-serif,sans-serif;
+              font-size: 20px;
+              font-family: 'Bitter', serif;
+              font-style: italic;
             }
           }
-          .vitamins-box{
-            width: 25%;
-            .vitamins-text{
-              margin-bottom: 15px;
-              color: #342f2f;
-              font-size: 16px;
-              font-family: "Raleway",Tahoma,Geneva,sans-serif,sans-serif;
-            }
-            .vitamins-ul{
-              display: flex;
-              justify-content: space-around;
-              align-items: center;
-              .vitamins-li{
-                width: 40px;
-                height: 40px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: row;
-                border-radius: 50%;
-                list-style: none;
-                color: #342f2f;
-                font-size: 16px;
-                font-family: "Raleway",Tahoma,Geneva,sans-serif,sans-serif;
+          .purchase-box {
+            .purchase-quantity {
+              .minus-btn {
+                color: #ada2a4;
+                font-size: 20px;
+                outline: none;
+                border-style: none;
+              }
+              .purchase-input {
+                width: 70px;
+                height: 35px;
                 background-color: #f5f4f4;
+                outline: none;
+                border: none;
+                text-align: center;
+              }
+              .plus-btn {
+                color: #ada2a4;
+                font-size: 20px;
+                outline: none;
+                border-style: none;
+              }
+              .multiply {
+              }
+            }
+            .btn {
+              .add-btn {
+                color: #fff;
+                font-size: 16px;
+                font-weight: 700;
+                font-family: 'Raleway', Tahoma, Geneva, sans-serif;
+                background-color: #f06060;
+                padding: 20px 90px;
+                margin-top: 30px;
+                border-radius: 3px;
+                outline: none;
               }
             }
           }
-          .minerals-box{
-            width: 25%;
-            .minerals-title{
-              margin-bottom: 15px;
-              color: #342f2f;
-              font-size: 16px;
-              font-family: "Raleway",Tahoma,Geneva,sans-serif,sans-serif;
-            }
-            .minerals-ul{
-              width: 250px;
-              display: flex;
-              align-items: center;
-              flex-wrap: wrap;
-              .minerals-li{
-                width: 40px;
-                height: 40px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: row;
-                margin-right: 10px;
-                margin-bottom: 5px;
-                border-radius: 50%;
-                list-style: none;
-                color: #342f2f;
-                font-size: 16px;
-                font-family: "Raleway",Tahoma,Geneva,sans-serif,sans-serif;
-                background-color: #f5f4f4;
-              }
-            }
-          }
-        }  
-      }
-    }
-    .recipe-container{
-      width: 100vw;
-      justify-content: center;
-      .recipe-title{   
-        margin-bottom: 10px;
-        border-top: 3px solid #f5f4f4;
-        padding-top: 50px;
-        color: #342f2f;
-        font-size: 24px;
-        font-family: "Bitter",serif; 
-        text-align: center;
-      }
-      .recipe-box{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        .recipe-box-bg{
-          width: 440px;
-          height: 330px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAAD1BMVEVcTFL///9cTFJcTFJcTFIux7vQAAAABXRSTlMAAAgPFr80/pcAAAAnSURBVHgBY2DEBAxMWMAwVziqcFQhFoBdITMWwIIFjCoEg1GFowoBVCYPevB5gSUAAAAASUVORK5CYII=);
-          .ingredients{
-            margin-right: 10px;
-            color: #adaaaa;
-            font-size: 18px;
-            font-weight: 800;
-            font-family: "Raleway",Tahoma,Geneva,sans-serif,sans-serif;
-            letter-spacing: 15px;
-          }
-          .recipe-img{
-            width: 320px;
-          }
-          .directions{
-            margin-left: 20px;
-            color: #adaaaa;
-            font-size: 18px;
-            font-weight: 800;
-            font-family: "Raleway",Tahoma,Geneva,sans-serif,sans-serif;
-            letter-spacing: 15px;
-          }
         }
       }
-      .dish-name{
-        margin-bottom: 40px;
-        color: #342f2f;
-        font-size: 18px;
-        font-weight: 700;
-        font-family: "Raleway",Tahoma,Geneva,sans-serif;
+      .description-container {
+        width: 100vw;
+        height: 307px;
         text-align: center;
-      }
-      .dish-box{
-        display: flex;
-        justify-content: center;
-        .ingredients-box{
-          .ingredients-ul{
-            margin-right: 30px;
-            .ingredients-li{
-              margin-bottom: 20px;
-              color: #342f2f;
-              font-size: 16px;
-              font-family: "Raleway",Tahoma,Geneva,sans-serif,sans-serif;
-              list-style: none;
-            }
-          }
+        .description-title {
+          color: #342f2f;
+          font-size: 24px;
+          font-family: 'Bitter', serif;
+          margin-bottom: 20px;
+          padding-top: 20px;
+          border-top: 3px solid #f5f4f4;
         }
-        .directions-box{
-          width: 40%;
-          column-count: 2;
+        .description-text {
           color: #342f2f;
           font-size: 16px;
-          font-family: "Raleway",Tahoma,Geneva,sans-serif,sans-serif;
-          .directions-ol{
-            width: 330px;
-            list-style: none;
-            counter-reset: direction;
-            .directions-li::before{
-              content: counter(direction);
-              counter-increment: direction;
-              top: 10px;
-              left: 5px;
-              display: block;
-              margin-bottom: 15px;
+          font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
+          line-height: 30px;
+        }
+      }
+      .share-container {
+        width: 100vw;
+        display: flex;
+        background-color: #f5f4f4;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        .share-title {
+          color: #342f2f;
+          font-size: 12px;
+          font-family: 'Bitter', serif;
+          padding-right: 20px;
+        }
+        .facebook-logo {
+          width: 40px;
+          height: 40px;
+          border-radius: 100%;
+          background-color: #fff;
+          margin-left: 16px;
+        }
+        .twiter-logo {
+          width: 40px;
+          height: 40px;
+          border-radius: 100%;
+          background-color: #fff;
+          margin-left: 16px;
+        }
+        .pinterest-logo {
+          width: 40px;
+          height: 40px;
+          border-radius: 100%;
+          background-color: #fff;
+          margin-left: 16px;
+        }
+        .google-logo {
+          width: 40px;
+          height: 40px;
+          border-radius: 100%;
+          background-color: #fff;
+          margin-left: 16px;
+        }
+        .social-logo {
+          width: 40px;
+          height: 40px;
+          border-radius: 100%;
+          background-color: #fff;
+          margin-left: 16px;
+        }
+      }
+    }
+    .detail-bottom {
+      background-color: #fff;
+      padding-top: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      z-index: 1;
+      .nutritional-container {
+        width: 1000px;
+        height: 330px;
+        // border: 2px solid skyblue;
+        .nutritional-title {
+          color: #342f2f;
+          font-size: 24px;
+          font-family: 'Bitter', serif;
+          text-align: center;
+        }
+        .nutritional-value {
+          .value-box {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 25px;
+            .energy-box {
+              width: 25%;
+              .energy {
+                display: flex;
+                justify-content: space-between;
+                color: #342f2f;
+                font-size: 16px;
+                font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
+                margin-bottom: 15px;
+              }
+              .carbohydrates {
+                display: flex;
+                justify-content: space-between;
+                color: #342f2f;
+                font-size: 16px;
+                font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
+                margin-bottom: 15px;
+              }
+              .protein {
+                display: flex;
+                justify-content: space-between;
+                color: #342f2f;
+                font-size: 16px;
+                font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
+                margin-bottom: 15px;
+              }
+              .total {
+                display: flex;
+                justify-content: space-between;
+                color: #342f2f;
+                font-size: 16px;
+                font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
+                margin-bottom: 15px;
+              }
+              .dietary {
+                display: flex;
+                justify-content: space-between;
+                color: #342f2f;
+                font-size: 16px;
+                font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
+                margin-bottom: 15px;
+              }
+            }
+            .vitamins-box {
+              width: 25%;
+              .vitamins-text {
+                color: #342f2f;
+                font-size: 16px;
+                font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
+                margin-bottom: 15px;
+              }
+              .vitamins-ul {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                .vitamins-li {
+                  color: #342f2f;
+                  font-size: 16px;
+                  font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
+                  width: 40px;
+                  height: 40px;
+                  border-radius: 50%;
+                  background-color: #f5f4f4;
+                  list-style: none;
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                  justify-content: center;
+                }
+              }
+            }
+            .minerals-box {
+              width: 25%;
+              .minerals-title {
+                color: #342f2f;
+                font-size: 16px;
+                font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
+                margin-bottom: 15px;
+              }
+              .minerals-ul {
+                width: 250px;
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                .minerals-li {
+                  color: #342f2f;
+                  font-size: 16px;
+                  font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
+                  width: 40px;
+                  height: 40px;
+                  border-radius: 50%;
+                  background-color: #f5f4f4;
+                  list-style: none;
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                  justify-content: center;
+                  margin-right: 10px;
+                  margin-bottom: 5px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .recipe-container {
+        width: 100vw;
+        justify-content: center;
+        .recipe-title {
+          color: #342f2f;
+          font-size: 24px;
+          font-family: 'Bitter', serif;
+          text-align: center;
+          border-top: 3px solid #f5f4f4;
+          margin-bottom: 50px;
+          padding-top: 50px;
+        }
+        .recipe-box {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .recipe-box-bg {
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAAD1BMVEVcTFL///9cTFJcTFJcTFIux7vQAAAABXRSTlMAAAgPFr80/pcAAAAnSURBVHgBY2DEBAxMWMAwVziqcFQhFoBdITMWwIIFjCoEg1GFowoBVCYPevB5gSUAAAAASUVORK5CYII=);
+            width: 500px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .ingredients {
               color: #adaaaa;
-              font-size: 16px;
-              font-weight: 700;
-              font-family: "Raleway",Tahoma,Geneva,sans-serif;
+              font-size: 18px;
+              font-weight: 600;
+              font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
+              letter-spacing: 15px;
+              margin-right: 10px;
             }
-            .directions-li{
-              margin-bottom: 15px;
-              color: #342f2f;
-              font-size: 16px;
-              font-family: "Raleway",Tahoma,Geneva,sans-serif,sans-serif;
-              line-height: 30px;
+            .recipe-img {
+              width: 320px;
+            }
+            .directions {
+              color: #adaaaa;
+              font-size: 18px;
+              font-weight: 600;
+              font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
+              letter-spacing: 15px;
+              margin-left: 20px;
             }
           }
         }
-      }
-    }
-    .comment-container{
-      width: 100vw;
-      .comment-title{
-        color: #342f2f;
-        font-size: 28px;
-        font-family: "Raleway",Tahoma,Geneva,sans-serif;
-        font-weight: 300;
-        margin-top: 50px;
-        border-top: 3px solid #f5f4f4;
-        text-align: center;
-        padding: 30px 0;
-        
-      }
-      .textarea-box{
-        display: flex;
-        justify-content: center;
-        .comment-textarea{
-          width: 520px;
-          height: 140px;
-          background-color: #f5f4f4;
-          border-style: none;
-          outline: none;
-          resize: none;
-          border-radius: 3px;
+        .dish-name {
+          color: #342f2f;
+          font-size: 18px;
+          font-family: 'Raleway', Tahoma, Geneva, sans-serif;
+          font-weight: 700;
+          text-align: center;
+          margin: 40px 0;
         }
-        .comment-textarea::placeholder{
-          color: #ada2a4;
-          font-size: 14px;
-          font-family: "Raleway",Tahoma,Geneva,sans-serif,sans-serif;
-          padding: 15px 0 0 20px;
-        }
-      }
-      .comment-input-box{
-        display: flex;
-        justify-content: center;
-        margin: 20px 0 30px 0;
-        .comment-name-input{
-          width: 249px;
-          height: 40px;
-          margin-right: 20px;
-          outline: none;
-          background-color: #f5f4f4;
-          border-style: none;
-          border-radius: 3px;
-        }
-        .comment-name-input::placeholder{
-          color: #ada2a4;
-          font-size: 14px;
-          font-family: "Raleway",Tahoma,Geneva,sans-serif,sans-serif;
-          padding-left: 20px;
-        }
-        .comment-email-input{
-          width: 249px;
-          height: 40px;
-          outline: none;
-          background-color: #f5f4f4;
-          border-style: none;
-          border-radius: 3px;
-        }
-        .comment-email-input::placeholder{
-          color: #ada2a4;
-          font-size: 14px;
-          font-family: "Raleway",Tahoma,Geneva,sans-serif,sans-serif;
-          padding: 15px 0 0 20px;
-        }
-      }
-      .comment-btn-box{
-        display: flex;
-        justify-content: center;
-        .comment-btn{
-          width: 520px;
-          height: 62px;
-          outline: none;
-          background-color: #f06060;
-          color: #fff;
-          font-size: 16px;
-          font-family: "Raleway",Tahoma,Geneva,sans-serif;
-          font-weight: 800;
-          margin-bottom: 60px;
-          border-radius: 3px;
-        }
-      }
-    }
-    .similar-container{
-      width: 100vw;
-      .similar-title{
-        color: #342f2f;
-        font-size: 24px;
-        font-family: "Bitter",serif;
-        border-top: 3px solid #f5f4f4;
-        text-align: center;
-        padding: 60px 0 30px 0;
-      }
-      .similar-img-box{
-        display: flex;
-        justify-content: center;
-        margin-bottom: 100px;
-        .similar-first{
-          .first-img{
-            width: 260px;
-            height: 260px;
-            border: 3px solid #f5f4f4;
-            margin-bottom: 30px;
-            background-image: url(//cdn.shopify.com/s/files/1/1148/3974/products/Basil_grande.jpeg?v=1456211118);
-            background-position: center;
+        .dish-box {
+          display: flex;
+          justify-content: center;
+          .ingredients-box {
+            .ingredients-ul {
+              .ingredients-li {
+                color: #342f2f;
+                font-size: 16px;
+                font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
+                margin-bottom: 20px;
+              }
+            }
           }
-          .first-title{
-            text-align: center;
-            color: #342F2F;
+          .directions-box {
+            column-count: 2;
+            width: 40%;
+            color: #342f2f;
             font-size: 16px;
-            font-family: "Bitter",serif;
-            font-weight: 700;
-          }
-          .first-explanation{
-            color: #adaaaa;
-            font-size: 14px;
-            font-family: "Bitter",serif;
+            font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
+
+            .directions-text {
+              margin-bottom: 5px;
+            }
           }
         }
       }

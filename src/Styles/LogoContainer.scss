@@ -12,24 +12,6 @@ $srf: Bitter, serif;
   z-index: 4;
 }
 
-// 왼쪽에 망할 인풋 => 컴포넌트로 옮김
-// .search--container {
-// 	display: block;
-// 	position: absolute;
-// 	top: 60px;
-// 	left: 20px;
-// 	z-index: 5;
-// }
-// .searchBar {
-// 	display: flex;
-// 	justify-content: center;
-// 	align-items: center;
-// }
-
-// .iconSearch {
-// 	margin-right: 20px;
-// }
-
 // 중간에 홈 로고랑 글귀
 .center--Container {
   display: flex;
@@ -58,16 +40,19 @@ $srf: Bitter, serif;
   padding: 0;
   top: 63px;
   right: 34px;
+  outline: hidden;
 }
 
-.cartOpenButton .countCart {
-  width: 16px;
-  height: 16px;
-  font-size: 11px;
-  line-height: 15px;
-  color: #fff;
-  background-color: #f06060;
-  border-radius: 50%;
+.cartOpenButton {
+  .countCart {
+    width: 16px;
+    height: 16px;
+    font-size: 11px;
+    line-height: 15px;
+    color: #fff;
+    background-color: #f06060;
+    border-radius: 50%;
+  }
 }
 .cartOpenButton {
   width: 70px;

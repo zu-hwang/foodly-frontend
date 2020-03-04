@@ -1,3 +1,5 @@
+@import './var.scss';
+
 $s-srf: Raleway, san-serif;
 $srf: Bitter, serif;
 $black: #342f2f;
@@ -6,66 +8,72 @@ $gray: #ada2a4;
 $l-gray: #f5f4f4;
 
 @mixin flexCenter {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 @mixin center {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .mainContent {
-	display: block;
-	width: 100%;
-	height: 150vh;
-	margin-top: 220px;
+  display: block;
+  width: 100%;
+  height: 150vh;
+  margin-top: 300px;
 
-	.section {
-		@include center();
-	}
+  .section {
+    @include center();
+    position: absolute;
+    width: 100%;
+  }
 
-	.wrapper {
-		width: 1040px;
-	}
+  .wrapper {
+    width: 1050px;
+    height: 1500px;
+  }
 }
 
 .pageDesc {
-	@include center();
-	text-align: center;
-	flex-direction: column;
-	h1,
-	h2 {
-		display: block;
-	}
-	h1 {
-		font-family: $s-srf;
-		font-size: 32px;
-	}
-	h2 {
-		font-family: $srf;
-	}
+  @include center();
+  text-align: center;
+  flex-direction: column;
+  h1,
+  h2 {
+    display: block;
+  }
+  h1 {
+    font-family: $s-srf;
+    font-size: 32px;
+  }
+  h2 {
+    font-family: $srf;
+  }
 }
 
 /* product 버전 & 툴바 시작 */
 .collectionVer {
-	height: 50px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-	.gridVer {
-		margin: 0 20px 0;
-	}
+  .gridVer {
+    margin: 0 20px 0;
+    color: $gray;
+    font-size: 18px;
+  }
 }
 
 /* 제품 사진 grid 시작 => div.grid 도 나중에는 컴포넌트에 포함시키고 map돌릴예정*/
 .gird {
-	display: flex;
-	flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
 }
 
 /* 페이지 전환 바 */

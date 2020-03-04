@@ -6,49 +6,241 @@ $gray: #ada2a4;
 $l-gray: #f5f4f4;
 
 @mixin center {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .product {
-	@include center();
-	display: inline-block;
-	width: 260px;
-	height: 328px;
-	margin: 0 0 70px 0;
+  @include center();
+  display: inline-block;
+  width: 260px;
+  height: 328px;
+  margin: 0 1px 70px 1px;
+  // padding: 0 1px 0 1px;
 
-	.product__visuals {
-		width: 260px;
-		height: 260px;
+  .product__visuals {
+    width: 260px;
+    height: 260px;
+    margin-top: 10px;
+    background-size: 258px 258px;
+    background-position: center;
+    background-color: transparent;
+    position: relative; //position:realative 없으면 지우자
+    opacity: 1;
+    background-size: cover;
 
-		a,
-		.img-holder,
-		img {
-			width: 99%;
-			height: 99%;
-		}
-	}
+    // .product__visuals :hover {
+    //   opacity: 0.5;
+    //   transition: all 0.2s ease-in-out;
+    // }
+    .price {
+      position: absolute;
+      top: 25px;
+      left: 20px;
+      width: 60px;
+      height: 60px;
+      border-radius: 60px;
+      color: #fff;
+      background-color: $pink;
+      @include center();
+      span {
+        font-family: $s-srf;
+        text-align: center;
+        font-size: 15px;
+        font-weight: 370;
+        // before 여기~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+        &::before {
+          content: '$';
+        }
+      }
+    }
+    .sale {
+      position: absolute;
+      top: 25px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      border-radius: 60px;
+      color: $black;
+      background-color: #f3b562;
+      @include center();
+      span {
+        position: absolute;
+        top: 17px;
+        left: 12px;
+        font-family: $srf;
+        text-align: center;
+        font-size: 17px;
+        font-weight: 560;
+      }
+    }
+    .product__cart {
+      position: absolute;
+      top: 0;
+      width: 260px;
+      height: 260px;
+      opacity: 0.7;
+    }
 
-	.product__info {
-		@include center;
+    // .soldOut {
+    //   z-index: 10;
+    // }
 
-		.vertical-bar {
-			background-color: $black;
-			height: 15px;
-			width: 2px;
-		}
+    .whole-wrapper {
+      position: absolute;
+      top: 200px;
+      left: 30px;
+      width: 200px;
+      height: 62.39px;
+      // display: none;
+      opacity: 0;
+      transition: all 1s ease-in-out;
+    }
 
-		a {
-			text-decoration: none;
-			margin: auto 7px;
-			color: $black;
-			font-family: $srf;
-		}
-		span {
-			margin: auto 7px;
-			color: $black;
-			font-family: $srf;
-		}
-	}
+    .whole-wrapper {
+      position: absolute;
+      top: 200px;
+      left: 30px;
+      width: 200px;
+      height: 62.39px;
+      // display: block;
+      opacity: 0;
+      transition: all 1s liner;
+      // transition-duration: i;
+    }
+
+    .whole-wrapper--open {
+      position: absolute;
+      top: 170px;
+      left: 30px;
+      width: 200px;
+      height: 62.39px;
+      opacity: 1;
+      transition: all 1s liner;
+      // transition-duration: i;
+    }
+
+    .btn-container {
+      position: relative;
+      .decrease-btn,
+      .increase-btn,
+      .decrease-btn--spread,
+      .increase-btn--spread {
+        position: absolute;
+        background-color: $pink;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        color: $l-gray;
+      }
+      .decrease-btn {
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+        background-color: $pink;
+        @include center();
+        transition: all 0.2s ease-in-out;
+      }
+
+      .decrease-btn--spread {
+        left: 25%;
+        transform: translateX(-50%);
+        z-index: 1;
+        background-color: $pink;
+        @include center();
+        transition: all 0.2s ease-in-out;
+      }
+
+      .increase-btn {
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        @include center();
+        transition: all 0.2s ease-in-out;
+      }
+
+      .increase-btn--spread {
+        left: 75%;
+        transform: translateX(-50%);
+        z-index: 2;
+        @include center();
+        transition: all 0.2s ease-in-out;
+      }
+
+      .decrease-btn--spread:hover {
+        background-color: #5c4b51;
+        transition: all 0.2s ease-in-out;
+      }
+      .increase-btn--spread:hover {
+        background-color: #5c4b51;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+  }
+
+  .product__info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    color: $gray;
+    .product__name {
+      @include center();
+      h4 {
+        font-size: 18px;
+        font-weight: 700;
+        font-family: $srf;
+        color: rgb(52, 47, 47);
+        cursor: pointer;
+      }
+    }
+
+    .product__detailInfo {
+      @include center();
+      text-align: center;
+      font-family: $srf;
+      font-size: 14px;
+      margin-top: 3px;
+      .vertical-bar {
+        background-color: $gray;
+        height: 15px;
+        width: 2px;
+      }
+      .product__name {
+        text-decoration: none;
+        margin: auto 7px;
+
+        font-family: $srf;
+      }
+
+      .vertical-bar {
+        margin: 0 10px 0 10px;
+      }
+    }
+  }
+}
+
+// 장바구니
+.black-screen,
+.basket-container {
+  // display: none;
+}
+.black-screen {
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  background-color: #5c4b51;
+  opacity: 0.5;
+}
+
+.basket-container {
+  z-index: 11;
+  position: absolute;
+  width: 640px;
+  top: 0;
+  right: 0;
+  background-color: #f5f4f4;
+  height: 1077px;
 }

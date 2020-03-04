@@ -1,49 +1,156 @@
 @import "./var.scss";
 
-// 왼쪽에 망할 인풋
 .search--container {
-	display: block;
-	position: absolute;
-	top: 60px;
-	left: 90px;
-	z-index: 5;
+  position: absolute;
+  // margin-top: 60px;
+  margin-left: 2.6%;
+  z-index: 5;
+  top: 63px;
+  display: flex;
+  flex-direction: column;
 
-	.searchBar {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		// width: 210px;
-		height: 38px;
-		position: relative;
+  .search-input-wrap {
+    // background-color: salmon;
+    display: flex;
+    flex-direction: row;
+    width: 230px;
+    border-bottom: 1px solid $black;
+    transition: all 0.5s ease-in-out;
 
-		.searchInput--open {
-			width: 210px;
-			height: 38px;
-			border: none;
-			text-align: start;
-			cursor: text;
-			border-bottom: 1px solid #bcbcbc;
-			z-index: -1;
-			transition: width 340ms linear;
-		}
-		.searchInput {
-			width: 0px;
-			height: 38px;
-			border: none;
-			text-align: start;
-			cursor: text;
-			border-bottom: 0px solid #bcbcbc;
-			z-index: -1;
-			letter-spacing: normal;
-			word-spacing: normal;
-			transition: width 340ms linear;
-		}
+    &.close {
+      width: 0;
+      transition: all 0.5s ease-in-out;
+    }
+    input {
+      padding: 15px 0px;
+      width: 100%;
+      border: none;
+      font-family: $s-srf;
+      font-size: 16px;
+      color: $black;
+      outline: none;
+      background-color: transparent;
+    }
+    input::placeholder {
+      font-family: $s-srf;
+      font-size: 16px;
+      color: $black;
+    }
+    .search--btn {
+      @include center();
+      font-size: 1.2em;
+    }
+  }
+  // ! 팝업창 온오프
+  .search-result-container {
+    &.close {
+      transform: scale(0);
+      transition: transform 0s ease-in-out;
+    }
+    transform: scale(1);
+    transform-origin: top left;
+    transition: transform 0.1s ease-in-out;
+    overflow: hidden;
+    background-color: #fff;
+    position: relative;
+    left: -40px;
+    padding: 20px;
+    max-width: 500px;
+    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.05));
 
-		.iconSearch {
-			margin-right: 18px;
-			position: absolute;
-			right: -6px;
-			cursor: pointer;
-		}
-	}
+    .search-result-frame-no-data,
+    .search-result-frame-min-char {
+      display: block;
+      max-height: 600px;
+      overflow: scroll;
+      padding: 20px 20px 20px 20px;
+      transition: all 0.1s ease-in-out;
+      p {
+        letter-spacing: -0.1px;
+        text-align: left;
+        font-family: $s-srf;
+        color: $black;
+        span {
+          display: inline-block;
+          width: 100px;
+          height: 30px;
+          margin-left: 5px;
+          letter-spacing: -0.1px;
+          font-weight: 700;
+          color: $pink;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .search-result-frame-on {
+      max-height: 600px;
+      overflow: scroll;
+      padding: 20px 80px 20px 20px;
+      transition: all 0.1s ease-in-out;
+
+      .search-result-list {
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        .search-img-box {
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+
+          div {
+            cursor: pointer;
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            background-position: center;
+            background-size: contain;
+          }
+        }
+        .search-info-box {
+          margin-left: 20px;
+          .product-name {
+            letter-spacing: -0.01px;
+            color: $black;
+            font-family: $srf;
+            font-size: 20px;
+            font-weight: 700;
+            &:first-child {
+              cursor: pointer;
+            }
+          }
+          .product-price {
+            font-family: $s-srf;
+            font-weight: 600;
+          }
+
+          ul {
+            list-style: none;
+            li {
+              color: $gray;
+              font-family: $srf;
+              letter-spacing: -0.01px;
+              font-size: 16px;
+              display: inline;
+              padding-right: 6px;
+
+              &::after {
+                content: "|";
+                padding-left: 6px;
+              }
+              &:last-child::after {
+                content: "";
+                padding-left: 6px;
+              }
+            }
+          }
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
 }

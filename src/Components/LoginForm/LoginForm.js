@@ -120,6 +120,7 @@ class LoginForm extends Component {
               OnKeyUp={this.handleEnterKey} // 이벤트 공유
               OnDisplay={this.handleDisplay}
               CheckForm={this.state.checkForm} // ! 버튼클릭하면 변경
+              ref={this.input}
             ></Input>
             <Input
               Label={"Password"} // placeholder 내용

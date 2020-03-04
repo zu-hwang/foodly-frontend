@@ -1,6 +1,6 @@
 import React from "react";
-// import NavDropDownList from "../NavForm/NavDropDownList";
 import "../../Styles/mainNav.scss";
+import { withRouter } from "react-router-dom";
 
 class MainNav extends React.Component {
   constructor() {
@@ -25,6 +25,10 @@ class MainNav extends React.Component {
       secondChild: "secondChild",
       listDisplay: "none"
     });
+  };
+
+  goToPage = e => {
+    this.props.history.push(`/${e.target.innerHTML}`);
   };
 
   render() {
@@ -53,7 +57,9 @@ class MainNav extends React.Component {
               // onClick={this.handleChange}
               style={{ display: this.state.listDisplay }}
             >
-              <li className="dropdown-list__item">Home ver 1</li>
+              <li className="dropdown-list__item" onClick={this.goToPage}>
+                Home ver 1
+              </li>
               <li className="dropdown-list__item">Home ver 2</li>
               <li className="dropdown-list__item">Home ver 3</li>
               <li className="dropdown-list__item">Home ver 4</li>
@@ -61,7 +67,9 @@ class MainNav extends React.Component {
             {/* 숨겨진 애들 끝 */}
           </li>
           <li className="nav--list__item">
-            <div className="item">Product</div>
+            <div className="item" onClick={this.goToPage}>
+              Product
+            </div>
           </li>
           <li className="nav--list__item">
             <div className="item">Blog</div>
@@ -76,7 +84,9 @@ class MainNav extends React.Component {
             <div className="item">Contact</div>
           </li>
           <li className="nav--list__item">
-            <div className="item">Login</div>
+            <div className="item" onClick={this.goToPage}>
+              Login
+            </div>
           </li>
         </ul>
       </div>
@@ -84,4 +94,4 @@ class MainNav extends React.Component {
   }
 }
 
-export default MainNav;
+export default withRouter(MainNav);

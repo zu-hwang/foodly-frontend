@@ -14,6 +14,7 @@ export const Data = {
     interjection: Interjection[getRandomNumber(Interjection.length)],
     errText: "please check E-mail (abc@abc.com)"
   },
+
   password: {
     interjection: "Notice!",
     errText: "The Password is must consist min 6 charecter"
