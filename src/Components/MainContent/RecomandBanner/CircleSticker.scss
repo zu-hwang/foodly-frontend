@@ -1,0 +1,59 @@
+@import "../../../Styles/var.scss";
+
+.circle-sticker {
+  @include flexCenter();
+  padding: 20px;
+  width: 130px;
+  height: 130px;
+  background-color: $orange;
+  border-radius: 50%;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 1.3em;
+  color: $l-gray;
+  p {
+    font-family: $srf;
+    font-weight: 700;
+    letter-spacing: -0.01px;
+    line-height: 1.2em;
+  }
+}
+.sticker-small-price {
+  @include flexCenter();
+  padding: 20px;
+  width: 70px;
+  height: 70px;
+  background-color: $pink;
+  border-radius: 50%;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 1.1em;
+  color: $l-gray;
+  p {
+    font-family: $s-srf;
+    font-weight: 500;
+    letter-spacing: -0.01px;
+    line-height: 1.2em;
+  }
+}
+.sticker-small-sale {
+  @include flexCenter();
+  padding: 20px;
+  width: 70px;
+  height: 70px;
+  background-color: $orange;
+  border-radius: 50%;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 1.1em;
+  color: $l-gray;
+  p {
+    font-family: $srf;
+    font-weight: 500;
+    letter-spacing: -0.01px;
+    line-height: 1.2em;
+    &:after {
+      content: "sale";
+    }
+  }
+}

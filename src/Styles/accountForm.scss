@@ -30,6 +30,19 @@
   }
   .form-container {
     @include flexCenter();
+    position: relative;
+
+    .login-error-box {
+      width: 100%;
+      border: 3px solid $pink;
+      padding: 25px;
+      p {
+        font-family: $s-srf;
+        font-size: 14px;
+        letter-spacing: -0.01px;
+        font-weight: 300;
+      }
+    }
     .small-red {
       font-size: 14px;
       letter-spacing: -0.5px;
@@ -69,6 +82,7 @@
         letter-spacing: -0.2px;
       }
       .mid-red {
+        padding-left: 10px;
         color: $pink;
         font-size: 16px;
         font-weight: 600;

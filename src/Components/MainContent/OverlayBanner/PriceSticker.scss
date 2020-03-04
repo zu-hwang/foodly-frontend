@@ -1,0 +1,22 @@
+@import "../../../Styles/var.scss";
+
+.price-sticker {
+  @include flexCenter();
+
+  background-color: $pink;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+
+  div {
+    color: $l-gray;
+    p:first-child {
+      font-family: $s-srf;
+      font-size: 32px;
+      padding-bottom: 5px;
+    }
+    p:nth-child(2) {
+      @include serif-italic();
+    }
+  }
+}
