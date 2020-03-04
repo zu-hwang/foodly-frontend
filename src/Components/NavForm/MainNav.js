@@ -57,7 +57,9 @@ class MainNav extends React.Component {
               // onClick={this.handleChange}
               style={{ display: this.state.listDisplay }}
             >
-              <li className="dropdown-list__item">Home ver 1</li>
+              <li className="dropdown-list__item" onClick={this.goToPage}>
+                Home ver 1
+              </li>
               <li className="dropdown-list__item">Home ver 2</li>
               <li className="dropdown-list__item">Home ver 3</li>
               <li className="dropdown-list__item">Home ver 4</li>

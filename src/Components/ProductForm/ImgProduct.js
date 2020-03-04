@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { faMinus } from "@fortawesome/free-solid-svg-icons";
 import "../../Styles/ImgProduct.scss";
+import { SERVER_URL } from "../../config";
 
 class ImgProduct extends React.Component {
   constructor(props) {
@@ -12,29 +13,19 @@ class ImgProduct extends React.Component {
       productInfo: [],
       buttonShow: "whole-wrapper",
       num: "",
-      plus: "increase-btn",
-      minus: "decrease-btn",
       basketCountBox: "none",
-      inBasket: ""
+      inBasket: "",
+      spread: true
     };
   }
 
   componentDidMount = () => {
-    const myHeaders = new Headers();
-    myHeaders.append("Content-Type", "application/json");
-
-    const raw = "";
-
     const requestOptions = {
-      method: "GET",
-      headers: myHeaders,
-      body: raw,
-      redirect: "follow"
+      method: "GET"
     };
 
-    fetch("http://10.58.5.105:8000/products/collections", requestOptions)
+    fetch(`${SERVER_URL}/products/collections`, requestOptions)
       .then(response => response.json())
-      .then(result => console.log(result))
       .then(response =>
         this.setState({
           productInfo: response.data
@@ -53,9 +44,8 @@ class ImgProduct extends React.Component {
   spread = e => {
     console.log(e);
     this.setState({
-      plus: "increase-btn--spread",
-      minus: "decrease-btn--spread",
-      unspread: "true" //이걸로 버튼 한번 펼쳐지고 나서 안 모아지게 할려고했음;
+      spread: false
+      // unspread: "true" //이걸로 버튼 한번 펼쳐지고 나서 안 모아지게 할려고했음;
     });
   };
 
@@ -77,8 +67,7 @@ class ImgProduct extends React.Component {
             onMouseLeave={() => {
               this.setState({
                 num: null,
-                plus: "increase-btn",
-                minus: "decrease-btn"
+                spread: true
               });
             }}
           >
@@ -131,11 +120,21 @@ class ImgProduct extends React.Component {
                   }}
                   onClick={this.spread}
                 >
-                  <div className={this.state.minus}>
+                  <div
+                    className={
+                      this.state.spread
+                        ? "decrease-btn"
+                        : "decrease-btn--spread"
+                    }
+                  >
                     <FontAwesomeIcon icon={faMinus} className="minus" />
                   </div>
                   <div
-                    className={this.state.plus}
+                    className={
+                      this.state.spread
+                        ? "increase-btn"
+                        : "increase-btn--spread"
+                    }
                     style={
                       productInfo.is_in_stock === "1"
                         ? { backgroundColor: "$pink #5c4b51" }

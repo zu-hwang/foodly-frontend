@@ -1,0 +1,24 @@
+{
+  "cart": [
+    [
+      {
+        "name": "Tomatoes",
+        "price": "5.00",
+        "thumbnail_url": "Tomatoes.jpeg",
+        "quantity": 5
+      },
+      {
+        "name": "Basil",
+        "price": "2.29",
+        "thumbnail_url": "basil.jpeg",
+        "quantity": 15
+      }
+    ],
+    {
+      "total_quantity": 20
+    },
+    {
+      "total_price": "59.35"
+    }
+  ]
+}

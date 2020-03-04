@@ -28,6 +28,7 @@ $l-gray: #f5f4f4;
     background-color: transparent;
     position: relative; //position:realative 없으면 지우자
     opacity: 1;
+    background-size: cover;
 
     // .product__visuals :hover {
     //   opacity: 0.5;
@@ -48,6 +49,10 @@ $l-gray: #f5f4f4;
         text-align: center;
         font-size: 15px;
         font-weight: 370;
+        // before 여기~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+        &::before {
+          content: '$';
+        }
       }
     }
     .sale {
