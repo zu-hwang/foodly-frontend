@@ -4,15 +4,11 @@
   font-family: $s-srf;
   border: 3px solid $pink;
   padding: 25px;
-  // width: 100%;
-  // 박스 중앙 정렬 방법 찾깅!
-
+  margin-top: 10px;
   div {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 100%;
-
     p {
       font-size: 14px;
       letter-spacing: -0.01px;
@@ -28,14 +24,12 @@
     span {
       color: $pink;
     }
-
     .block {
       display: block;
     }
     .none {
       display: none;
     }
-
     .border {
       border: solid 1px $pink;
     }

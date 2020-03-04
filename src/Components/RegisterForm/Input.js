@@ -6,9 +6,7 @@ class Input extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      inputVal: this.props.Value,
       inputFocused: "focus-out",
-      btnCheck: this.props.CheckForm, // 버튼클릭했을때 트루로 변경
       display: false
     };
   }
@@ -31,7 +29,7 @@ class Input extends Component {
       this.props.Type === "password" &&
       !this.props.CheckForm &&
       this.state.inputFocused === "focused" &&
-      this.state.inputVal < 6
+      this.props.Value.length < 6
     ) {
       return true;
     }
