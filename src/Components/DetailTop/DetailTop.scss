@@ -9,15 +9,15 @@
   padding-top: 35px;
   background-color: #fff;
   .purchase-a-container {
-    overflow: hidden;
-    position: relative;
     width: 100vw;
     min-height: 307px;
+    overflow: hidden;
+    position: relative;
     .purchase-container {
-      position: absolute;
-      top: 100%;
       width: 100vw;
       height: 307px;
+      position: absolute;
+      top: 100%;
       .purchase-name {
         color: $black;
         font-size: 32px;
@@ -99,26 +99,29 @@
     }
   }
   .description-a-container {
-    overflow: hidden;
-    position: relative;
     width: 100vw;
     height: 350px;
+    overflow: hidden;
+    position: relative;
+    border-top: 3px solid $l-gray;
     .description-container {
-      position: absolute;
-      top: 100%;
       width: 100vw;
       height: 307px;
+      display: flex;
+      align-items: center;
       text-align: center;
-
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
       .description-title {
         margin-bottom: 20px;
-        padding-top: 70px;
-        border-top: 3px solid $l-gray;
+        padding-top: 60px;
         color: $black;
         font-size: 24px;
         font-family: 'Bitter', serif;
       }
       .description-text {
+        width: 700px;
         color: $black;
         font-size: 16px;
         font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
@@ -127,17 +130,17 @@
     }
   }
   .share-a-container {
-    overflow: hidden;
-    position: relative;
     width: 100vw;
     height: 90px;
+    position: relative;
+    overflow: hidden;
     .share-container {
       width: 100vw;
       display: flex;
       position: absolute;
       justify-content: center;
+      padding: 15px;
       align-items: center;
-      padding: 20px;
       background-color: $l-gray;
       div {
         display: flex;
@@ -152,9 +155,9 @@
       }
       .logo {
         @include flexCenter();
-        width: 50px;
-        height: 50px;
-        margin-right: 15px;
+        width: 40px;
+        height: 40px;
+        margin-right: 20px;
         margin-bottom: 10px;
         border-radius: 50%;
         color: $black;

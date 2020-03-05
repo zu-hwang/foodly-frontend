@@ -1,5 +1,5 @@
 import React from "react";
-import "../../Styles/DropDownList.scss";
+import "./DropDownList.scss";
 
 //  옵션 선택하는 곳!
 

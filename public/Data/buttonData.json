@@ -2,15 +2,27 @@
   "cart": [
     [
       {
-        "name": "Tomatoes",
+        "id": "Tomatoes",
         "price": "5.00",
-        "thumbnail_url": "Tomatoes.jpeg",
+        "thumbnail_url": "//cdn.shopify.com/s/files/1/1148/3974/products/Campari-Tomatoes_grande.jpeg?v=1456211143",
         "quantity": 5
       },
       {
-        "name": "Basil",
+        "id": "Basil",
         "price": "2.29",
-        "thumbnail_url": "basil.jpeg",
+        "thumbnail_url": "//cdn.shopify.com/s/files/1/1148/3974/products/Basil_grande.jpeg?v=1456211118",
+        "quantity": 15
+      },
+      {
+        "id": "Basil",
+        "price": "2.29",
+        "thumbnail_url": "//cdn.shopify.com/s/files/1/1148/3974/products/Basil_grande.jpeg?v=1456211118",
+        "quantity": 15
+      },
+      {
+        "id": "Basil",
+        "price": "2.29",
+        "thumbnail_url": "//cdn.shopify.com/s/files/1/1148/3974/products/Basil_grande.jpeg?v=1456211118",
         "quantity": 15
       }
     ],
