@@ -8,7 +8,6 @@ class BundleBox extends Component {
   }
   render() {
     const { data, color, onClick } = this.props;
-    console.log(data);
     return (
       <div className="bundle-box">
         <div className="cate-title-box" style={{ backgroundColor: color }}>
