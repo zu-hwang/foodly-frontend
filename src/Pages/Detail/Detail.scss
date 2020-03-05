@@ -1,102 +1,102 @@
 @import '../../Styles/var.scss';
 
 .detail-main {
-  .btn-container {
-    width: 150px;
-    height: 200px;
-    position: fixed;
-    right: 5px;
-    top: 45%;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: center;
+  .detail-cover1 {
+    width: 100vw;
+    height: 100vh;
+    z-index: -2;
+    background-attachment: fixed;
+    background-image: url('https://cdn.shopify.com/s/files/1/1148/3974/products/Brandywine-tomatoes-front.jpeg?v=1456211079');
+    background-position: 0px -250px;
+    background-repeat: no-repeat;
+    background-size: cover;
 
-    .btn-cover1 {
-      width: 80px;
-      height: 80px;
-      border-radius: 100%;
-      border: solid 3px white;
-      outline: none;
-      opacity: 0.5;
-      background-image: url('//cdn.shopify.com/s/files/1/1148/3974/products/Brandywine-tomatoes-front_compact.jpeg?v=1456211078');
-      background-position: -34px -28px;
+    .detail-cover2 {
+      width: 100vw;
+      height: 100vh;
+      z-index: -2;
+      opacity: 0;
+      background-attachment: fixed;
+      background-image: url('https://cdn.shopify.com/s/files/1/1148/3974/products/Brandywine-Tomatoes.jpeg?v=1456211078');
+      background-position: 0px 0px;
       background-repeat: no-repeat;
-      background-size: 190%;
-      cursor: pointer;
-      &:hover {
-        width: 100px;
-        height: 100px;
-        background-position: -45px -45px;
+      background-size: cover;
+    }
+    .btn-container {
+      width: 150px;
+      height: 200px;
+      position: fixed;
+      right: 5px;
+      top: 45%;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      align-items: center;
+      .btn-cover1 {
+        width: 80px;
+        height: 80px;
+        border-radius: 100%;
+        border: solid 3px white;
+        outline: none;
+        opacity: 0.5;
+        background-image: url('//cdn.shopify.com/s/files/1/1148/3974/products/Brandywine-tomatoes-front_compact.jpeg?v=1456211078');
+        background-position: -34px -28px;
+        background-repeat: no-repeat;
+        background-size: 190%;
+        cursor: pointer;
+        &:hover {
+          width: 100px;
+          height: 100px;
+          background-position: -45px -45px;
+        }
       }
-    }
-    .btn-cover1-off {
-      width: 80px;
-      height: 80px;
-      border-radius: 100%;
-      border: solid 3px white;
-      outline: none;
-      opacity: 0.5;
-      background-image: url('//cdn.shopify.com/s/files/1/1148/3974/products/Brandywine-tomatoes-front_compact.jpeg?v=1456211078');
-      background-position: -34px -28px;
-      background-repeat: no-repeat;
-      background-size: 190%;
-    }
-    .btn-cover2 {
-      width: 80px;
-      height: 80px;
-      border-radius: 100%;
-      border: solid 3px white;
-      outline: none;
-      opacity: 0.5;
-      background-image: url('//cdn.shopify.com/s/files/1/1148/3974/products/Brandywine-Tomatoes_compact.jpeg?v=1456211078');
-      background-position: -15px -5px;
-      background-repeat: no-repeat;
-      background-size: 150%;
-      cursor: pointer;
-      &:hover {
-        width: 100px;
-        height: 100px;
+      .btn-cover1-off {
+        width: 80px;
+        height: 80px;
+        border-radius: 100%;
+        border: solid 3px white;
+        outline: none;
+        opacity: 0.5;
+        background-image: url('//cdn.shopify.com/s/files/1/1148/3974/products/Brandywine-tomatoes-front_compact.jpeg?v=1456211078');
+        background-position: -34px -28px;
+        background-repeat: no-repeat;
+        background-size: 190%;
       }
-    }
-    .btn-cover2-off {
-      width: 80px;
-      height: 80px;
-      border-radius: 100%;
-      border: solid 3px white;
-      outline: none;
-      opacity: 0.5;
-      background-image: url('//cdn.shopify.com/s/files/1/1148/3974/products/Brandywine-Tomatoes_compact.jpeg?v=1456211078');
-      background-position: -15px -5px;
-      background-repeat: no-repeat;
-      background-size: 150%;
+      .btn-cover2 {
+        width: 80px;
+        height: 80px;
+        border-radius: 100%;
+        border: solid 3px white;
+        outline: none;
+        opacity: 0.5;
+        background-image: url('//cdn.shopify.com/s/files/1/1148/3974/products/Brandywine-Tomatoes_compact.jpeg?v=1456211078');
+        background-position: -15px -5px;
+        background-repeat: no-repeat;
+        background-size: 150%;
+        cursor: pointer;
+        &:hover {
+          width: 100px;
+          height: 100px;
+        }
+      }
+      .btn-cover2-off {
+        width: 80px;
+        height: 80px;
+        border-radius: 100%;
+        border: solid 3px white;
+        outline: none;
+        opacity: 0.5;
+        background-image: url('//cdn.shopify.com/s/files/1/1148/3974/products/Brandywine-Tomatoes_compact.jpeg?v=1456211078');
+        background-position: -15px -5px;
+        background-repeat: no-repeat;
+        background-size: 150%;
+      }
     }
   }
-}
-.detail-cover1 {
-  width: 100vw;
-  height: 100vh;
-  background-attachment: fixed;
-  background-image: url('https://cdn.shopify.com/s/files/1/1148/3974/products/Brandywine-tomatoes-front.jpeg?v=1456211079');
-  background-position: 0px -250px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: -2;
-}
-.detail-cover2 {
-  width: 100vw;
-  height: 100vh;
-  background-attachment: fixed;
-  background-image: url('https://cdn.shopify.com/s/files/1/1148/3974/products/Brandywine-Tomatoes.jpeg?v=1456211078');
-  background-position: 0px 0px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: -2;
-  opacity: 0;
-}
-.detail-page-container {
-  position: absolute;
-  background-color: #fff;
+  .detail-page-container {
+    position: absolute;
+    background-color: #fff;
+  }
 }
 
 .bg-opacity1 {

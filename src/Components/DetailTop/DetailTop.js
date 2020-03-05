@@ -9,13 +9,22 @@ import {
 } from "react-icons/fa";
 
 class DetailTop extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      num: 1,
-      price: 8.05
+      num: 1
     };
   }
+
+  handlePrice = () => {
+    fetch("", {
+      method: "post",
+      body: JSON.stringify({
+        id: this.props.data.id,
+        quantity: this.state.num
+      }).then(res => res.json())
+    });
+  };
 
   numMinus = () => {
     if (1 < this.state.num) {
@@ -30,21 +39,25 @@ class DetailTop extends React.Component {
   };
 
   render() {
+    const { data } = this.props;
     return (
       <div className="detail-top">
         <div className="purchase-a-container">
           <div
             className={
-              this.props.pageTop < this.props.windowScroll + 600
+              this.props.pageTop < this.props.windowScroll + 900
                 ? "purchase-container  container-move"
                 : "purchase-container"
             }
           >
-            <div className="purchase-name">Brandywine Tomatoes</div>
-            <div className="purchase-explanation">$8.05 | kg</div>
+            <div className="purchase-name">{data.name}</div>
+            <div className="purchase-explanation">
+              Harvest {data.harvest_year_id__year} | In stock {"| "}
+              {data.measure_id__measure}
+            </div>
             <div className="purchase">
               <div className="price-box">
-                <div className="price">${this.state.price}</div>
+                <div className="price">${data.price}</div>
                 <div className="kilogram">per kilogram</div>
               </div>
               <div className="purchase-box">
@@ -62,12 +75,11 @@ class DetailTop extends React.Component {
                     ▷
                   </button>
                   <span className="multiply">
-                    x${this.state.price} = $
-                    {(this.state.num * this.state.price).toFixed(2)}
+                    x${data.price} = ${(this.state.num * data.price).toFixed(2)}
                   </span>
                 </div>
                 <div className="btn">
-                  <button className="add-btn">
+                  <button className="add-btn" onClick={this.handlePrice}>
                     <div className="circle"></div>
                     ADD TO BAG
                   </button>
@@ -79,14 +91,15 @@ class DetailTop extends React.Component {
         <div className="description-a-container">
           <div
             className={
-              this.props.pageTop < this.props.windowScroll + 450
+              this.props.pageTop < this.props.windowScroll + 600
                 ? "description-container  container-move"
                 : "description-container"
             }
           >
             <div className="description-title">Description</div>
             <p className="description-text">
-              Brandywine tomatoes popularly is considered among the best tasting
+              {data.description}
+              {/* Brandywine tomatoes popularly is considered among the best tasting
               available.
               <br />
               probably is caused its origin. Brandywine tomato plant is an
@@ -101,7 +114,7 @@ class DetailTop extends React.Component {
               tomato that is offset by a wonderful acidity that is a perfect
               combination for delicious
               <br />
-              dishes.
+              dishes. */}
             </p>
           </div>
         </div>

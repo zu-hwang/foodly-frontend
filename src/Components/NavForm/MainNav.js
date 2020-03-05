@@ -1,5 +1,5 @@
 import React from "react";
-import "../../Styles/mainNav.scss";
+import "./mainNav.scss";
 import { withRouter } from "react-router-dom";
 
 class MainNav extends React.Component {
@@ -28,21 +28,29 @@ class MainNav extends React.Component {
   };
 
   goToPage = e => {
-    this.props.history.push(`/${e.target.innerHTML}`);
+    this.props.history.push(`/collections/${e.target.innerHTML.toLowerCase()}`);
+  };
+
+  goTo = e => {
+    this.props.history.push(`/${e.target.innerHTML.toLowerCase()}`);
   };
 
   render() {
     return (
       <div className="MainNav">
         <ul className="nav--list">
+          <li className="nav--list__item">
+            <div className="item" onClick={this.goTo}>
+              Home
+            </div>
+          </li>
           <li
             className="nav--list__item opening"
             onMouseEnter={this.handlePlus}
             onMouseLeave={this.hadleMinus}
           >
-            {/* 여기서 부터 */}
             <div className="item">
-              <span>Home</span>
+              <span>Product</span>
               <input type="ckeckbox" id="plusMinus" />
               <label className="plusMinus">
                 <span className="firstChild"></span>
@@ -58,18 +66,31 @@ class MainNav extends React.Component {
               style={{ display: this.state.listDisplay }}
             >
               <li className="dropdown-list__item" onClick={this.goToPage}>
-                Home ver 1
+                Product
               </li>
-              <li className="dropdown-list__item">Home ver 2</li>
-              <li className="dropdown-list__item">Home ver 3</li>
-              <li className="dropdown-list__item">Home ver 4</li>
+
+              <li className="dropdown-list__item" onClick={this.goToPage}>
+                Fresh
+              </li>
+              <li className="dropdown-list__item" onClick={this.goToPage}>
+                Frozen
+              </li>
+              <li className="dropdown-list__item" onClick={this.goToPage}>
+                Dried
+              </li>
+              <li className="dropdown-list__item" onClick={this.goToPage}>
+                Liquid
+              </li>
+              <li className="dropdown-list__item" onClick={this.goToPage}>
+                sale
+              </li>
+              <li className="dropdown-list__item" onClick={this.goToPage}>
+                Specials
+              </li>
+              <li className="dropdown-list__item" onClick={this.goToPage}>
+                Cooked
+              </li>
             </ul>
-            {/* 숨겨진 애들 끝 */}
-          </li>
-          <li className="nav--list__item">
-            <div className="item" onClick={this.goToPage}>
-              Product
-            </div>
           </li>
           <li className="nav--list__item">
             <div className="item">Blog</div>
@@ -84,7 +105,7 @@ class MainNav extends React.Component {
             <div className="item">Contact</div>
           </li>
           <li className="nav--list__item">
-            <div className="item" onClick={this.goToPage}>
+            <div className="item" onClick={this.goTo}>
               Login
             </div>
           </li>

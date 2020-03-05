@@ -10,19 +10,20 @@
   padding-top: 35px;
   background-color: #fff;
   .nutritional-a-container {
-    overflow: hidden;
-    position: relative;
     width: 100vw;
-    height: 350px;
+    height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    position: relative;
     .nutritional-container {
       width: 60%;
       height: 280px;
       position: absolute;
       top: 100%;
       .nutritional-title {
+        padding-top: 10px;
         color: $black;
         font-size: 24px;
         font-family: 'Bitter', serif;
@@ -140,10 +141,11 @@
     }
   }
   .recipe-a-container {
-    overflow: hidden;
-    position: relative;
     width: 100vw;
     height: 1300px;
+    overflow: hidden;
+    position: relative;
+    border-top: 3px solid $l-gray;
     .recipe-container {
       width: 100vw;
       justify-content: center;
@@ -151,7 +153,6 @@
       top: 100%;
       .recipe-title {
         margin-bottom: 10px;
-        border-top: 3px solid $l-gray;
         padding-top: 50px;
         color: $black;
         font-size: 24px;
@@ -201,6 +202,7 @@
       .dish-box {
         display: flex;
         justify-content: center;
+        padding-bottom: 20px;
         .ingredients-box {
           .ingredients-ul {
             margin-right: 30px;
@@ -247,19 +249,74 @@
       }
     }
   }
-  .commet-a-container {
-    overflow: hidden;
-    position: relative;
+  // .comment-a-container {
+  //   width: 100vw;
+  //   overflow: hidden;
+  //   position: relative;
+  .comment-container {
+    .comment-title {
+      width: 100vw;
+      height: 40px;
+      border-top: 3px solid $l-gray;
+      padding: 30px 0;
+      text-align: center;
+      color: $black;
+      font-size: 28px;
+      font-weight: 300;
+      font-family: 'Raleway', Tahoma, Geneva, sans-serif;
+    }
+    .comment-box {
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .comment-inner-box {
+        width: 430px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        position: relative;
+        .close-button {
+          position: absolute;
+          right: 5px;
+          top: 5px;
+        }
+
+        .comment-img {
+          width: 65px;
+          height: 65px;
+          margin-right: 25px;
+          border-radius: 100%;
+          border: 1px solid $pink;
+        }
+        .comment-name {
+          color: $gray;
+          font-size: 14px;
+          font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
+        }
+        .comment {
+          color: $black;
+          font-size: 14px;
+          font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
+        }
+      }
+    }
+  }
+  // }
+  .comment-add-a-container {
     width: 100vw;
     height: 520px;
-    .comment-container {
+    overflow: hidden;
+    position: relative;
+    margin-top: 100px;
+    border-top: 3px solid $l-gray;
+    .comment-add-container {
       width: 100vw;
       height: 520px;
       position: absolute;
       top: 100%;
-      .comment-title {
-        margin-top: 50px;
-        border-top: 3px solid $l-gray;
+      .comment-add-title {
+        margin-top: 30px;
         padding: 30px 0;
         text-align: center;
         color: $black;
@@ -281,7 +338,7 @@
             font-size: 14px;
             font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
           }
-          .comment-textarea {
+          .comment-add-textarea {
             width: 520px;
             height: 140px;
             box-sizing: border-box;
@@ -301,7 +358,7 @@
           }
         }
       }
-      .comment-input-box {
+      .comment-add-input-box {
         display: flex;
         justify-content: center;
         margin: 20px 0 30px 0;
@@ -316,11 +373,11 @@
             font-size: 14px;
             font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
           }
-          .comment-name-input {
+          .comment-add-name-input {
             width: 249px;
             height: 40px;
             box-sizing: border-box;
-            margin-right: 20px;
+            margin-right: 22px;
             padding-left: 20px;
             border-style: none;
             border-radius: 3px;
@@ -333,11 +390,11 @@
             }
           }
         }
-        // .comment-name-input::placeholder {
-        //   color: #ada2a4;
-        //   font-size: 14px;
-        //   font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
-        // }
+        .comment-name-input::placeholder {
+          color: #ada2a4;
+          font-size: 14px;
+          font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
+        }
         .comment-email-input {
           width: 249px;
           height: 40px;
@@ -353,11 +410,11 @@
           }
         }
       }
-      .comment-btn-box {
+      .comment-add-btn-box {
         display: flex;
         justify-content: center;
         /* Radial Out */
-        .comment-btn {
+        .comment-add-btn {
           @include buttonEffect();
           width: 520px;
           height: 62px;
@@ -374,18 +431,18 @@
     }
   }
   .similar-a-container {
-    overflow: hidden;
-    position: relative;
     width: 100vw;
     height: 550px;
+    overflow: hidden;
+    position: relative;
     .similar-container {
       width: 100vw;
       height: 550px;
       position: absolute;
       top: 100%;
       .similar-title {
-        border-top: 3px solid $l-gray;
         padding: 60px 0 30px 0;
+        border-top: 3px solid $l-gray;
         color: $black;
         font-size: 24px;
         font-family: 'Bitter', serif;
@@ -399,8 +456,8 @@
           .similar-img {
             width: 260px;
             height: 260px;
-            object-fit: cover;
             margin-bottom: 30px;
+            object-fit: cover;
             border: 3px solid $l-gray;
           }
           .similar-product-name {
@@ -498,10 +555,21 @@
 @keyframes containerMove {
   from {
     opacity: 0;
-    top: 100%;
+    top: 80%;
   }
   to {
     opacity: 1;
     top: 0%;
   }
+}
+
+.bold {
+  font-weight: 800;
+}
+.border {
+  width: 450px;
+  height: 1px;
+  border-top: 1px solid rgb(85, 81, 81);
+  margin-top: 15px;
+  margin-bottom: 10px;
 }
