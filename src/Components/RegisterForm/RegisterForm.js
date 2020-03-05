@@ -43,10 +43,10 @@ class Register extends Component {
     fetch("http://10.58.7.185:8000/account/signup", requestOptions)
       .then(response => response.json())
       .then(result => {
-        console.log("결과", result.message);
+//         console.log("결과", result.message);
         if (result.message === "success") {
           // 결과에 message 있으면, 200일때 다음 창으로 넘어가기
-          console.log(result.message);
+//           console.log(result.message);
           return this.goToHome();
         } else {
           return this.setState({ retry: true });

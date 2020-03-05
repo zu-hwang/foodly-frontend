@@ -25,19 +25,22 @@ class LoginForm extends Component {
       body: raw
     };
 
-    fetch("http://10.58.1.127:8000/account/signin", requestOptions)
-      .then(response => response.text())
+    fetch("http://10.58.7.185:8000/account/signin", requestOptions)
+      .then(response => response.json())
       .then(result => {
-        console.log(result);
-        if (result.token) {
-          localStorage.setItem("m-a-t-k-n", result.token);
+        // console.log(result);
+        if (result.access || result) {
+          localStorage.setItem("m-a-t-k-n-3-5", result.access);
           this.props.history.push("/"); // 토큰 저장 후 메인창으로 이동
-        } else {
-          // 에러창 팝업
-          this.setState({ loginError: true, email: "", password: "" });
         }
+        //  else {
+        //   this.setState({ loginError: true, email: "", password: "" });
+        // }
       })
-      .catch(error => console.log("error", error));
+      .catch(error => {
+        console.log("error", error);
+        this.setState({ loginError: true, email: "", password: "" });
+      });
   };
 
   handleEmailValue = e => {
