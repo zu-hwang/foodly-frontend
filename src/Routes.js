@@ -6,6 +6,7 @@ import Register from "./Pages/Register/Register";
 import Detail from "./Pages/Detail/Detail";
 import Product from "./Pages/Product/Product";
 import MainContent from "./Components/MainContent/MainContent";
+import Lookbook from "./Pages/Lookbook/Lookbook";
 
 class Routes extends React.Component {
   render() {
@@ -18,6 +19,7 @@ class Routes extends React.Component {
           <Route exact path="/detail" component={Detail} />
           <Route exact path="/nav" component={Nav} />
           <Route exact path="/product" component={Product} />
+          <Route exact path="/lookbook" component={Lookbook} />
         </Switch>
       </Router>
     );
