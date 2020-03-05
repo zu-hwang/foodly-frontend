@@ -41,13 +41,15 @@ class InputCheckBox extends Component {
   render() {
     return (
       <div className="input-check-box">
-        <p>
-          <span>{this.state.interjection}</span>
-          {this.state.errText}
-        </p>
-        <span onClick={this.props.HandleDelBtn}>
-          <FontAwesomeIcon icon={faTimes} />
-        </span>
+        <div>
+          <p>
+            <span>{this.state.interjection}</span>
+            {this.state.errText}
+          </p>
+          <span onClick={this.props.HandleDelBtn}>
+            <FontAwesomeIcon icon={faTimes} />
+          </span>
+        </div>
       </div>
     );
   }
