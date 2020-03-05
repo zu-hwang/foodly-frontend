@@ -1,5 +1,5 @@
 import React from "react";
-import "../../Styles/NavDropDownList.scss";
+import "./NavDropDownList.scss";
 
 // 이 친구는 드롭다운 메뉴 있는 곳에만 쓸거야!!
 class NavDropDownList extends React.Component {
