@@ -16,6 +16,16 @@ class DetailTop extends React.Component {
     };
   }
 
+  handlePrice = () => {
+    fetch("", {
+      method: "post",
+      body: JSON.stringify({
+        id: this.props.data.id,
+        quantity: this.state.num
+      }).then(res => res.json())
+    });
+  };
+
   numMinus = () => {
     if (1 < this.state.num) {
       this.setState({ num: this.state.num - 1 });
@@ -69,7 +79,7 @@ class DetailTop extends React.Component {
                   </span>
                 </div>
                 <div className="btn">
-                  <button className="add-btn">
+                  <button className="add-btn" onClick={this.handlePrice}>
                     <div className="circle"></div>
                     ADD TO BAG
                   </button>
