@@ -82,8 +82,8 @@ class RecomandSlide extends Component {
     }
   };
   goToLink = e => {
-    // console.log(parseInt(e.target.id));
-    // this.props.history.push(`/detail?id=${e.target.id}`);
+    console.log(parseInt(e.target.id));
+    this.props.history.push(`/product/detail/${parseInt(e.target.id)}`);
   };
 
   render() {

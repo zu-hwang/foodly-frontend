@@ -40,7 +40,7 @@ class OverlayBanner extends Component {
   handleTextClick = e => {
     // ! 글자 클릭했을때 해당 상품으로 이동!
     // console.log(parseInt(e.target.id));
-    this.props.history.push(`/product/${parseInt(e.target.id)}`);
+    this.props.history.push(`/product/detail/${parseInt(e.target.id)}`);
   };
   handleAutoBannerChange = () => {
     const { data, selectedId } = this.state;
