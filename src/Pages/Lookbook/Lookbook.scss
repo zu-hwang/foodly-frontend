@@ -22,7 +22,7 @@
     }
     .header-first-text {
       position: absolute;
-      top: 160px;
+      top: 140px;
       color: #fff;
       font-size: 32px;
       font-family: 'Raleway', Tahoma, Geneva, sans-serif;
@@ -30,12 +30,19 @@
     }
     .header-second-text {
       position: absolute;
-      top: 220px;
+      top: 190px;
       color: #fff;
       font-size: 16px;
       font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
       text-align: center;
       line-height: 30px;
+    }
+    .dish-name {
+      position: absolute;
+      top: 285px;
+      color: #fff;
+      font-size: 60px;
+      font-family: 'Alex Brush', Tahoma, Geneva, sans-serif;
     }
     .header-img-container {
       position: absolute;
@@ -46,6 +53,7 @@
         .main-dish-img {
           width: 480px;
           height: 480px;
+          margin-top: 70px;
         }
         .dish-right-img {
         }
@@ -98,7 +106,6 @@
                 color: $pink;
                 font-size: 30px;
                 font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
-                font-weight: 100;
               }
             }
             .info1-text {
@@ -161,7 +168,6 @@
                 color: $pink;
                 font-size: 30px;
                 font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
-                font-weight: 100;
               }
             }
             .info2-text {
@@ -224,7 +230,6 @@
                 color: $pink;
                 font-size: 30px;
                 font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
-                font-weight: 100;
               }
             }
             .info3-text {
@@ -287,7 +292,6 @@
                 color: $pink;
                 font-size: 30px;
                 font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
-                font-weight: 100;
               }
             }
             .info4-text {
@@ -350,7 +354,6 @@
                 color: $pink;
                 font-size: 30px;
                 font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
-                font-weight: 100;
               }
             }
             .info5-text {
@@ -414,7 +417,6 @@
                 color: $pink;
                 font-size: 30px;
                 font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
-                font-weight: 100;
               }
             }
             .info6-text {
@@ -438,7 +440,7 @@
 
   .top-btn-container {
     position: absolute;
-    top: 440px;
+    top: 510px;
     left: 175px;
     .top-add-btn {
       @include buttonEffect();
@@ -470,7 +472,7 @@
 
   .empty {
     width: 100vw;
-    height: 380px;
+    height: 450px;
   }
 
   .product-container {
@@ -497,10 +499,14 @@
           top: 280px;
           left: 30px;
           border: 3px solid $l-gray;
-          .check-box-input[type='checkbox'] {
-            width: inherit;
-            height: inherit;
-            opacity: 0;
+          #check-box-input[type='checkbox'] {
+            display: none;
+          }
+          #check-box-input[type='checkbox'] + label {
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            left: 15px;
           }
         }
         .purchase-box {
@@ -589,7 +595,7 @@
           height: 30px;
           position: absolute;
           right: 411px;
-          bottom: -1262px;
+          bottom: -1333px;
           color: #fff;
           font-size: 16px;
           font-weight: bold;

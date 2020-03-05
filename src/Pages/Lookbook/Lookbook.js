@@ -12,7 +12,6 @@ class Lookbook extends React.Component {
       price: 0,
       data: [],
       showBox: false,
-      data: [],
       navColor: "#F5F4F4",
       isCheck: "true"
     };
@@ -52,6 +51,7 @@ class Lookbook extends React.Component {
               <br />
               products for you to cook it at home
             </div>
+            <div className="dish-name">- Basil Risotto -</div>
             <div className="header-img-container">
               <div className="dish-img-box">
                 {/* <img className="dish-left-img" alt="dish-left-img" /> */}
@@ -257,12 +257,8 @@ class Lookbook extends React.Component {
                       src={el.img}
                     />
                     <div className="check-box">
-                      <input
-                        type="checkbox"
-                        id=""
-                        className="check-box-input"
-                      />
-                      <label for=""></label>
+                      <input id="check-box-input" type="checkbox" />
+                      <label for="check-box-input">✔️</label>
                     </div>
                     <div className="purchase-box">
                       <div>
