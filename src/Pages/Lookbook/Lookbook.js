@@ -31,10 +31,11 @@ class Lookbook extends React.Component {
   componentDidMount = () => {
     fetch("http://localhost:3000/Data/lookbook.json")
       .then(res => res.json())
-      .then(res =>
-        this.setState({
-          data: res.data
-        })
+      .then(
+        res => console.log(res.data.product_info[0].name, "데이터")
+        // this.setState({
+        //   data: res.data
+        // })
       );
   };
 

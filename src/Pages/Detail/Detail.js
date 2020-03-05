@@ -32,7 +32,7 @@ class Detail extends React.Component {
     console.log(this.props.location.search);
   };
   getData = () => {
-    fetch("http://10.58.5.105:8000/products/3")
+    fetch(`http://10.58.5.105:8000/products/${this.props.match.params.id}`)
       .then(res => res.json())
       .then(res =>
         this.setState({ data: res.data[0] }, () => console.log(this.state.data))
