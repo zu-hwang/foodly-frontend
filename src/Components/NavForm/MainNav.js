@@ -28,7 +28,11 @@ class MainNav extends React.Component {
   };
 
   goToPage = e => {
-    this.props.history.push(`/${e.target.innerHTML}`);
+    this.props.history.push(`/collections/${e.target.innerHTML.toLowerCase()}`);
+  };
+
+  goTo = e => {
+    this.props.history.push(`/${e.target.innerHTML.toLowerCase()}`);
   };
 
   render() {
@@ -36,7 +40,7 @@ class MainNav extends React.Component {
       <div className="MainNav">
         <ul className="nav--list">
           <li className="nav--list__item">
-            <div className="item" onClick={this.goToPage}>
+            <div className="item" onClick={this.goTo}>
               Home
             </div>
           </li>
@@ -64,13 +68,28 @@ class MainNav extends React.Component {
               <li className="dropdown-list__item" onClick={this.goToPage}>
                 Product
               </li>
-              <li className="dropdown-list__item">Fresh</li>
-              <li className="dropdown-list__item">Frozen</li>
-              <li className="dropdown-list__item">Dried</li>
-              <li className="dropdown-list__item">Liquid</li>
-              <li className="dropdown-list__item">sale</li>
-              <li className="dropdown-list__item">Special</li>
-              <li className="dropdown-list__item">Cooked</li>
+
+              <li className="dropdown-list__item" onClick={this.goToPage}>
+                Fresh
+              </li>
+              <li className="dropdown-list__item" onClick={this.goToPage}>
+                Frozen
+              </li>
+              <li className="dropdown-list__item" onClick={this.goToPage}>
+                Dried
+              </li>
+              <li className="dropdown-list__item" onClick={this.goToPage}>
+                Liquid
+              </li>
+              <li className="dropdown-list__item" onClick={this.goToPage}>
+                sale
+              </li>
+              <li className="dropdown-list__item" onClick={this.goToPage}>
+                Specials
+              </li>
+              <li className="dropdown-list__item" onClick={this.goToPage}>
+                Cooked
+              </li>
             </ul>
           </li>
           <li className="nav--list__item">
@@ -86,7 +105,7 @@ class MainNav extends React.Component {
             <div className="item">Contact</div>
           </li>
           <li className="nav--list__item">
-            <div className="item" onClick={this.goToPage}>
+            <div className="item" onClick={this.goTo}>
               Login
             </div>
           </li>

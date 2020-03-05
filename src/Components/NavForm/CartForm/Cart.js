@@ -14,24 +14,33 @@ export default class Cart extends Component {
       addWoodenBox: "#ada2a4",
       basketButtonInfo: [],
       totalQuantity: 0,
-      totalPrice: 0
+      totalPrice: 0,
+      money: 0,
+      bagToggle: true
     };
   }
+
+  calculator = (quantity, price) => {
+    const total = quantity * price;
+    this.state.bagToggle
+      ? this.setState({
+          money: this.state.money + total
+        })
+      : this.setState({
+          money: this.state.money + total + 3
+        });
+  };
 
   _openCart = () => {
     this.setState({ cartDisplay: "block" });
   };
   _closeCart = () => {
-    console.log("나야:", this.state.cartDisplay);
+    // console.log("나야:", this.state.cartDisplay);
     this.setState({ cartDisplay: "none" });
   };
 
   _kinsOfBag = () => {
-    if (this.state.addPaperBag === "#5c4b51") {
-      this.setState({ addPaperBag: "#ada2a4", addWoodenBox: "#5c4b51" });
-    } else if (this.state.addPaperBag === "#ada2a4") {
-      this.setState({ addPaperBag: "#5c4b51", addWoodenBox: "#ada2a4" });
-    }
+    this.setState({ bagToggle: !this.state.bagToggle });
   };
 
   componentDidMount = () => {
@@ -63,10 +72,11 @@ export default class Cart extends Component {
             basketButtonInfo: response.cart[0],
             totalQuantity: response.cart[1]["total_quantity"],
             totalPrice: response.cart[2]["total_price"]
-          },
-          () => {
-            console.log("나야", this.state.totalPrice);
           }
+          // ,
+          // () => {
+          //   console.log("나야", this.state.totalPrice);
+          // }
         );
       });
   };
@@ -124,7 +134,8 @@ export default class Cart extends Component {
                           name={basketInfo.id}
                           qt={basketInfo.quantity}
                           price={basketInfo.price}
-                          key={idx}
+                          idx={idx}
+                          _calculator={this.calculator}
                         />
                       );
                     })}
@@ -133,16 +144,22 @@ export default class Cart extends Component {
                 <div className="special-packing">
                   <h3 className="choose-package">CHOOSE PACKAGE</h3>
                   <div
-                    className="paperBag__container"
-                    style={{ backgroundColor: this.state.addPaperBag }}
+                    className={
+                      this.state.bagToggle
+                        ? "paperBag__container--black"
+                        : "paperBag__container"
+                    }
                     onClick={this._kinsOfBag}
                   >
                     paper bag
                     {/* <span className="default-packing__price money">$0</span> */}
                   </div>
                   <div
-                    className="special-packing__container"
-                    style={{ backgroundColor: this.state.addWoodenBox }}
+                    className={
+                      this.state.bagToggle
+                        ? "special-packing__container"
+                        : "special-packing__container--black"
+                    }
                     onClick={this._kinsOfBag}
                   >
                     wooden box
@@ -150,11 +167,10 @@ export default class Cart extends Component {
                   </div>
                 </div>
                 <div
-                  className="hidden-woodenBox"
-                  style={
-                    this.state.addPaperBag === "#5c4b51"
-                      ? { display: "none" }
-                      : { display: "block" }
+                  className={
+                    this.state.bagToggle
+                      ? "hidden-woodenBox--close"
+                      : "hidden-woodenBox"
                   }
                 >
                   <div className="hidden-woddenBox__imgConatiner">
@@ -171,7 +187,7 @@ export default class Cart extends Component {
                         icon={faSyncAlt}
                         className="reFresh--Icon"
                       />
-                      <div className="total">67.40</div>
+                      <div className="total">${this.state.money}</div>
                     </div>
                   </div>
                   <div className="bulabula">

@@ -14,17 +14,24 @@ class Product extends React.Component {
   constructor() {
     super();
     this.state = {
-      navColor: "#f5f4f4"
+      navColor: "#f5f4f4",
+      productInfo: []
     };
+    console.log(this.state.productInfo);
   }
 
   componentDidMount = () => {
-    fetch("http://localhost:3000/Data/productPage.json")
+    fetch(
+      `http://10.58.5.105:8000/products/collections/${this.props.match.params.id}`
+    )
       .then(res => res.json())
       .then(res =>
-        this.setState({
-          productInfo: res.data
-        })
+        this.setState(
+          {
+            productInfo: res.data
+          },
+          () => console.log(this.state.productInfo)
+        )
       );
   };
   // mapOfImg = () =>{
@@ -47,9 +54,11 @@ class Product extends React.Component {
             <div className="wrapper">
               {/* product 카테고리 종류와 품목갯수 시작 */}
               <div className="pageDesc">
-                <h1>ALL PRODUCTS</h1>
+                <h1>{this.props.match.params.id.toUpperCase()}</h1>
                 <h2>
-                  <em> 50 products in collection</em>
+                  <em>
+                    {this.state.productInfo.length} products in collection
+                  </em>
                 </h2>
               </div>
 
@@ -73,7 +82,7 @@ class Product extends React.Component {
 
               {/* 제품 사진 grid 시작 => div.grid 도 나중에는 컴포넌트에 포함시키고 map돌릴예정*/}
               <div className="grid">
-                <ImgProduct />
+                <ImgProduct productInfo={this.state.productInfo} />
               </div>
 
               {/* 페이지 전환 바 */}

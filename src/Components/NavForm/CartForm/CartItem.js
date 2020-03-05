@@ -5,15 +5,20 @@ import {
   faAngleRight,
   faTimes
 } from "@fortawesome/free-solid-svg-icons";
+import "./CartItem.scss";
 
 export default class CartItem extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      num: 1,
+      num: this.props.qt,
       boxClose: false
     };
   }
+
+  delList = () => {
+    this.setState({ boxClose: true });
+  };
 
   numMinus = () => {
     if (1 < this.state.num) {
@@ -24,8 +29,19 @@ export default class CartItem extends Component {
     this.setState({ num: this.state.num + 1 });
   };
   handleQuantitiy = e => {
-    // console.log(e.target.value);
-    this.setState({ num: Number(e.target.value) });
+    // console.log(quantity, price);
+    // this.setState({ num: quantity }, () => {
+    //   this.props._calculator(quantity, price);
+    // });
+    // console.log(e);
+    // console.log(e.target.innerText);
+    // console.log(e.target.innerHTML);
+    // this.setState({ num: Number(e.target.innerHTML) });
+    this.props._calculator(this.state.num, this.props.price);
+  };
+
+  leftRightArrow = () => {
+    this.props._calculator(this.state.num * this.props.price);
   };
 
   render() {
@@ -60,12 +76,9 @@ export default class CartItem extends Component {
               </div>
               {/* 제품  quantity */}
               <form>
-                <input
-                  type="text"
-                  value={this.state.num}
-                  className="purchase-input"
-                  onChange={this.handleQuantitiy}
-                />
+                <div className="purchase-input" onChange={this.handleQuantitiy}>
+                  {this.state.num}
+                </div>
               </form>
               <div className="plus-btn__container" onClick={this.numPlus}>
                 <FontAwesomeIcon icon={faAngleRight} className="plus-btn" />
@@ -77,12 +90,7 @@ export default class CartItem extends Component {
             {/* 제품 price */}
             <span>{this.props.price}</span>
           </div>
-          <div
-            className="cart-list__item--remove"
-            onClick={() => {
-              this.setState({ boxClose: true });
-            }}
-          >
+          <div className="cart-list__item--remove" onClick={this.delList}>
             <FontAwesomeIcon icon={faTimes} />
           </div>
         </li>
