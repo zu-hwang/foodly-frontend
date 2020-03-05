@@ -43,7 +43,7 @@ class Register extends Component {
     fetch("http://10.58.7.185:8000/account/signup", requestOptions)
       .then(response => response.json())
       .then(result => {
-        // console.log("결과", result, result.message, result.status);
+        console.log("결과", result.message);
         if (result.message === "success") {
           // 결과에 message 있으면, 200일때 다음 창으로 넘어가기
           console.log(result.message);
@@ -75,9 +75,9 @@ class Register extends Component {
     this.setState({ checkForm: true, retry: false });
     if (
       this.state.firstName.length > 1 &&
-      !this.state.email.includes(" ") &&
+      !this.state.firstName.includes(" ") &&
       this.state.lastName.length > 1 &&
-      !this.state.email.includes(" ") &&
+      !this.state.lastName.includes(" ") &&
       this.state.email.indexOf("@") > 0 &&
       this.state.email.indexOf(".") > 2 &&
       !this.state.email.includes(" ") &&
@@ -85,25 +85,27 @@ class Register extends Component {
       !this.state.password.includes(" ")
     ) {
       // this.setState({ checkForm: true });
+      console.log("클릭");
       this.postData();
       // console.log("입력이 완벽하군 ! 버튼을 클릭했으니 POST 요청!");
     }
   };
   handleEnterKey = e => {
-    // console.log("엔터키 실행!");
     if (e.key === "Enter") {
+      console.log("엔터키 실행! > 1");
       this.setState({ checkForm: true, retry: false });
       if (
         this.state.firstName.length > 1 &&
-        !this.state.email.includes(" ") &&
+        !this.state.firstName.includes(" ") &&
         this.state.lastName.length > 1 &&
-        !this.state.email.includes(" ") &&
+        !this.state.lastName.includes(" ") &&
         this.state.email.indexOf("@") > 0 &&
         this.state.email.indexOf(".") > 2 &&
         !this.state.email.includes(" ") &&
         this.state.password.length > 6 &&
         !this.state.password.includes(" ")
       ) {
+        console.log("엔터키 실행!");
         this.postData();
         // console.log("입력이 완벽하군 ! ENTER를 눌렀으니 POST 요청!");
       }
