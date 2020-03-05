@@ -22,13 +22,9 @@ export default class Cart extends Component {
 
   calculator = (quantity, price) => {
     const total = quantity * price;
-    this.state.bagToggle
-      ? this.setState({
-          money: this.state.money + total
-        })
-      : this.setState({
-          money: this.state.money + total + 3
-        });
+    this.setState({
+      money: total
+    });
   };
 
   _openCart = () => {
@@ -44,41 +40,41 @@ export default class Cart extends Component {
   };
 
   componentDidMount = () => {
-    // const requestOptions = {
-    //   method: "GET",
-    //   headers: {
-    //     Authorization:
-    //       "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6IjE5OTBAYWJjLmFiYyJ9.rx9SMadaUbA2loV6FqNAeIetFH_EfLwUccGt2a5fXbg"
-    //   }
-    // };
+    const requestOptions = {
+      method: "GET",
+      headers: {
+        Authorization:
+          "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InNraW0xMDI1QGFiYy5hYmMifQ.AX8MtSd4ZBlM1Ttg51qdFAIjJlqRnduyrI6hIMKJwlw"
+      }
+    };
 
-    // fetch("http://10.58.5.250:8000/order/checkout", requestOptions)
-    //   .then(response => response.json())
-    //   .then(response =>
-    //     // console.log(response)
-    //     this.setState({
-    //       basketButtonInfo: response.cart[0],
-    //       totalQuantity: response.cart[1]["total_quantity"],
-    //       totalPrice: response.cart[2]["total_price"]
-    //     })
-    //   )
-    //   .catch(error => console.log("error", error));
-
-    fetch("http://localhost:3000/Data/buttonData.json")
+    fetch("http://10.58.5.250:8000/order/checkout", requestOptions)
       .then(response => response.json())
-      .then(response => {
-        this.setState(
-          {
-            basketButtonInfo: response.cart[0],
-            totalQuantity: response.cart[1]["total_quantity"],
-            totalPrice: response.cart[2]["total_price"]
-          }
-          // ,
-          // () => {
-          //   console.log("나야", this.state.totalPrice);
-          // }
-        );
-      });
+      .then(response =>
+        // console.log(response)
+        this.setState({
+          basketButtonInfo: response.cart[0],
+          totalQuantity: response.cart[1]["total_quantity"],
+          totalPrice: response.cart[2]["total_price"]
+        })
+      )
+      .catch(error => console.log("error", error));
+
+    // fetch("http://localhost:3000/Data/buttonData.json")
+    //   .then(response => response.json())
+    //   .then(response => {
+    //     this.setState(
+    //       {
+    //         basketButtonInfo: response.cart[0],
+    //         totalQuantity: response.cart[1]["total_quantity"],
+    //         totalPrice: response.cart[2]["total_price"]
+    //       }
+    // ,
+    // () => {
+    //   console.log("나야", this.state.totalPrice);
+    // }
+    //   );
+    // });
   };
   //위에 이 친구는 컴포넌트 분리하고 버튼에 정보를 담을 친구
 
@@ -186,8 +182,9 @@ export default class Cart extends Component {
                       <FontAwesomeIcon
                         icon={faSyncAlt}
                         className="reFresh--Icon"
+                        onClick={this.calculator}
                       />
-                      <div className="total">${this.state.money}</div>
+                      <div className="total">$ {this.state.money}</div>
                     </div>
                   </div>
                   <div className="bulabula">
