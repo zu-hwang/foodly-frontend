@@ -38,12 +38,12 @@ class Register extends Component {
       body: raw
     };
 
-    fetch("http://10.58.1.127:8000/account/signup", requestOptions)
+    fetch("http://10.58.7.185:8000/account/signup", requestOptions)
       .then(response => response.json())
       .then(result => {
         console.log("결과", result);
-        if (result.acess) {
-          // ! 결과에 acess가 있으면, 200일때 다음 창으로 넘어가기
+        if (result.message) {
+          // ! 결과에 message 있으면, 200일때 다음 창으로 넘어가기
           return this.goToHome();
         } else if ("400일때") {
           console.log("인풋 형식이 옳지 않음");
