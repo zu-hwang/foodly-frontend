@@ -16,13 +16,13 @@ class Register extends Component {
       retry: false
     };
   }
-
   goToHome = () => {
     this.props.history.push("/");
   };
 
   postData = () => {
     // ! 요청보내기
+
     let myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
@@ -35,22 +35,21 @@ class Register extends Component {
 
     let requestOptions = {
       method: "POST",
-      body: raw
+      headers: myHeaders,
+      body: raw,
+      redirect: "follow"
     };
 
-    fetch("http://10.58.1.127:8000/account/signup", requestOptions)
+    fetch("http://10.58.7.185:8000/account/signup", requestOptions)
       .then(response => response.json())
       .then(result => {
-        console.log("결과", result);
-        if (result.acess) {
-          // ! 결과에 acess가 있으면, 200일때 다음 창으로 넘어가기
+        // console.log("결과", result, result.message, result.status);
+        if (result.message === "success") {
+          // 결과에 message 있으면, 200일때 다음 창으로 넘어가기
+          console.log(result.message);
           return this.goToHome();
-        } else if ("400일때") {
-          console.log("인풋 형식이 옳지 않음");
-          // ! 회원가입 등록이 안될경우 어떻게 할지
+        } else {
           return this.setState({ retry: true });
-        } else if ("500일때") {
-          //  500page 띄우기
         }
       })
       .catch(error => console.log("error", error));
@@ -73,7 +72,7 @@ class Register extends Component {
   };
 
   handleClickBtn = e => {
-    this.setState({ checkForm: true });
+    this.setState({ checkForm: true, retry: false });
     if (
       this.state.firstName.length > 1 &&
       !this.state.email.includes(" ") &&
@@ -93,7 +92,7 @@ class Register extends Component {
   handleEnterKey = e => {
     // console.log("엔터키 실행!");
     if (e.key === "Enter") {
-      this.setState({ checkForm: true });
+      this.setState({ checkForm: true, retry: false });
       if (
         this.state.firstName.length > 1 &&
         !this.state.email.includes(" ") &&
@@ -172,9 +171,7 @@ class Register extends Component {
                 className={
                   this.state.retry ? "notice-retry-block" : "notice-retry-none"
                 }
-              >
-                형식에 맞지 않음. 다시!
-              </div>
+              ></div>
               <button type="button" onClick={this.handleClickBtn}>
                 re create my account
               </button>
