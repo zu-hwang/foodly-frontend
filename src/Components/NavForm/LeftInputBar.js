@@ -12,33 +12,32 @@ class LeftInputBar extends React.Component {
       inputValue: "",
       resultBox: false,
       resultMode: "off", // min-char,no-data,on, off
-      data: null
-      // [
-      //   {
-      //     id: 0,
-      //     name: "Basil",
-      //     price: "$2.29",
-      //     sale: false,
-      //     category: "Harvest 2015",
-      //     stock: 0,
-      //     unit: "Bunch",
-      //     img:
-      //       "//cdn.shopify.com/s/files/1/1148/3974/products/Basil_grande.jpeg?v=1456211118",
-      //     link: "0번 인덱스 링크"
-      //   },
-      //   {
-      //     id: 0,
-      //     name: "Basil",
-      //     price: "$2.29",
-      //     sale: false,
-      //     category: "Harvest 2015",
-      //     stock: 0,
-      //     unit: "Bunch",
-      //     img:
-      //       "//cdn.shopify.com/s/files/1/1148/3974/products/Basil_grande.jpeg?v=1456211118",
-      //     link: "1번 인덱스 링크"
-      //   }
-      // ]
+      data:
+        //  null
+        [
+          {
+            id: 0,
+            name: "Basil",
+            price: "$2.29",
+            sale: false,
+            category: "Harvest 2015",
+            stock: 0,
+            unit: "Bunch",
+            img:
+              "//cdn.shopify.com/s/files/1/1148/3974/products/Basil_grande.jpeg?v=1456211118"
+          },
+          {
+            id: 0,
+            name: "Basil",
+            price: "$2.29",
+            sale: false,
+            category: "Harvest 2015",
+            stock: 0,
+            unit: "Bunch",
+            img:
+              "//cdn.shopify.com/s/files/1/1148/3974/products/Basil_grande.jpeg?v=1456211118"
+          }
+        ]
     };
     this.focusSearch = React.createRef();
     this.searchIcon = React.createRef();
@@ -114,11 +113,10 @@ class LeftInputBar extends React.Component {
   };
 
   handleSearchLink = e => {
-    console.log("서치창 > 리스트클릭 > 해당 상품으로 이동할꺼다!");
-    console.log(parseInt(e.target.id));
+    // console.log("서치창 > 리스트클릭 > 해당 상품으로 이동할꺼다!");
+    // console.log(parseInt(e.target.id));
     const id = parseInt(e.target.id);
-    console.log(this.state.data[id].link);
-    this.props.history.push(`/${this.state.data[id].link}`);
+    this.props.history.push(`/product/detail/${id}`);
   };
   checkingResultBox = () => {
     // 결과 박스 뭘 출력할지!
@@ -189,7 +187,7 @@ class LeftInputBar extends React.Component {
                 <span onClick={this.handleClickCollections}>collections</span>
               </p>
             )}
-            {this.state.resultMode === "off" && <p></p>}
+            {/* {this.state.resultMode === "off" && <p></p>} */}
             {this.state.resultMode === "on" &&
               this.state.data.map(data => {
                 return (
