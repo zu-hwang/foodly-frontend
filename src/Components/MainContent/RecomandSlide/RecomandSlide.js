@@ -82,22 +82,10 @@ class RecomandSlide extends Component {
     }
   };
   goToLink = e => {
-    // ! 쿼리파라미터로 상세페이지 이동하기
     // console.log(parseInt(e.target.id));
     // this.props.history.push(`/detail?id=${e.target.id}`);
   };
-  // componentDidMount() {
-  // fetch("http://10.58.5.105:8000")
-  //   .then(data => data.json())
-  //   .then(data => {
-  //     // console.log("데이터 출력", data.recomandProduct.);
-  //     this.setState({
-  //       data: data.recomandProduct,
-  //       index: data.recomandProduct.length - 4
-  //       // ! 초기값에서 기본 상품 깔리는 상품갯수 꼭 빼줘야 한다!!
-  //     });
-  //   });
-  // }
+
   render() {
     return (
       <div className="recomand-slide">

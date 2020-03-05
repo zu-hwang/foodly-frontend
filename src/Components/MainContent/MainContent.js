@@ -26,9 +26,9 @@ class MainContent extends Component {
       .then(result => {
         // console.log("연결해보자", result.data["category_deal"]);
         this.setState({
-          categoryDeal: result.data["category_deal"],
           productList: result.data["recommand_product"],
-          seasonalDeal: result.data["seasonal_deal"],
+          categoryDeal: result.data["category_deal"][0],
+          seasonalDeal: result.data["seasonal_deal"][0],
           bundleDeal: result.data["bundle_deal"]
         });
       })
@@ -37,6 +37,7 @@ class MainContent extends Component {
 
   render() {
     const { categoryDeal, productList, seasonalDeal, bundleDeal } = this.state;
+    // console.log(categoryDeal[0], seasonalDeal[0]);
     return (
       <div className="main-container">
         <Main>

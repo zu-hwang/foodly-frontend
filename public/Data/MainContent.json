@@ -2,6 +2,7 @@
   "overlayBanner": [
     {
       "id": 0,
+      "prodId": 8,
       "title": "tomato season",
       "subTitle": "nutritious delicious",
       "price": "$3.05",
@@ -12,6 +13,7 @@
     },
     {
       "id": 1,
+      "prodId": 12,
       "title": "paella or paster",
       "subTitle": "you'll need this sweet pepper for both",
       "price": "$6.95",
@@ -22,6 +24,7 @@
     },
     {
       "id": 2,
+      "prodId": 21,
       "title": "apple pie? yes, please",
       "subTitle": "of Gala Cultivar",
       "price": "$3.55",

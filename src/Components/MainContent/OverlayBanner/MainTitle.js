@@ -7,18 +7,31 @@ class MainTitle extends Component {
       id,
       title,
       subTitle,
-      handleTextClick,
+      prodId,
+      onClick,
       titleStyle,
       subTitleStyle
     } = this.props;
     return (
       <div
         className="main-title"
-        id={id + "main-title"}
-        onClick={handleTextClick}
+        id={prodId ? prodId + "-main-title" : id + "-main-title"}
+        onClick={onClick}
       >
-        <p style={titleStyle}>{title}</p>
-        <p style={subTitleStyle}>{subTitle}</p>
+        <p
+          id={prodId ? prodId + "-main-title-p1" : id + "-main-title-p2"}
+          onClick={onClick}
+          style={titleStyle}
+        >
+          {title}
+        </p>
+        <p
+          id={prodId ? prodId + "-main-title-p2" : id + "-main-title-p2"}
+          onClick={onClick}
+          style={subTitleStyle}
+        >
+          {subTitle}
+        </p>
       </div>
     );
   }

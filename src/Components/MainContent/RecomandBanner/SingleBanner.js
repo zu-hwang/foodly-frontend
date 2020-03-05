@@ -40,7 +40,9 @@ class SingleBanner extends Component {
             <CircleSticker id={id} stickerText={stickerText} />
           </div>
           <div>
-            <span>{subText}</span>
+            <span id={id + "-subtext"} onClick={onClick}>
+              {subText}
+            </span>
             <div className="line"></div>
           </div>
         </div>

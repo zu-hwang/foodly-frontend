@@ -4,40 +4,31 @@ import SingleBanner from "./SingleBanner";
 import "./RecomandBanner.scss";
 
 class RecomandBanner extends Component {
-  constructor() {
-    super();
-    this.state = {};
-  }
   handleBannerClick = e => {
     // ! 배너 클릭했을때 페이지 이동
     // ! 해당상품 페이지 링크 업데이트 하기 루트이하 link키에 넣기.
-    this.props.history.push("/");
+    console.log(parseInt(e.target.id));
+    console.log(e.target.id);
+    this.props.history.push(`/product/detail/${parseInt(e.target.id)}`);
   };
-  // componentDidMount = () => {
-  //   fetch("http://localhost:3000/Data/MainContent.json")
-  //     .then(data => data.json())
-  //     .then(data => {
-  //       this.setState({ data: data.recomandBanner });
-  //     });
-  // };
   render() {
     const { category, seasonal } = this.props;
+    // console.log("카테고리 1번배너", category, "시즈널 2번배너", seasonal);
     return (
       <div className="recomand-banner">
         {/* category banner */}
         <SingleBanner
-          id={category.id + "-single-banner-key"}
+          id={category.id}
           title="start your day"
           subTitle={"with " + category.name}
           stickerText="special pack"
           subText={category["category__name"] + " deal"}
           bgImg={category["big_image2"]}
-          // link={category.link}
           onClick={this.handleBannerClick}
         />
         {/* seasonal banner */}
         <SingleBanner
-          id={seasonal.id + "-single-banner-key"}
+          id={seasonal.id}
           title={seasonal.name}
           subTitle={""}
           stickerText={seasonal["discount_rate"] + "% discount"}
