@@ -76,3 +76,17 @@ $orange: #f3b562;
 .none {
   display: none;
 }
+
+@mixin icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  outline: none;
+  color: #fff;
+  font-size: 16px;
+  font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
+  background-color: $pink;
+}

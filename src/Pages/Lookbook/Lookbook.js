@@ -1,5 +1,6 @@
 import React from "react";
-import Main from "../Main/Main";
+import Nav from "../Header/Nav";
+import Footer from "../../Components/Footer/Footer";
 import "../Lookbook/Lookbook.scss";
 import { AiOutlineShopping } from "react-icons/ai";
 
@@ -11,13 +12,21 @@ class Lookbook extends React.Component {
       price: 0,
       data: [],
       showBox: false,
-      data: []
+      data: [],
+      navColor: "#F5F4F4",
+      isCheck: "true"
     };
   }
 
   onHover = () => {
     this.setState({ showBox: !this.state.showBox });
     console.log("show :", this.showBox);
+  };
+
+  totalPrice = () => {
+    if (this.state.ischeck !== "false") {
+      this.setState({ price: this.state.data.price });
+    }
   };
 
   componentDidMount = () => {
@@ -32,7 +41,8 @@ class Lookbook extends React.Component {
 
   render() {
     return (
-      <Main>
+      <>
+        <Nav navColor={this.state.navColor} />
         <div className="lookbook-container">
           <div className="header-container">
             <div className="header-the">The</div>
@@ -249,8 +259,10 @@ class Lookbook extends React.Component {
                     <div className="check-box">
                       <input
                         type="checkbox"
+                        id=""
                         className="check-box-input"
-                      ></input>
+                      />
+                      <label for=""></label>
                     </div>
                     <div className="purchase-box">
                       <div>
@@ -289,7 +301,8 @@ class Lookbook extends React.Component {
             </div>
           </div>
         </div>
-      </Main>
+        <Footer />
+      </>
     );
   }
 }

@@ -9,6 +9,7 @@
     align-items: center;
     flex-direction: column;
     position: relative;
+    margin-top: 217px;
     background-color: #5c4b51;
     .header-the {
       color: #fff;
@@ -52,20 +53,11 @@
       .img-icon-container {
         position: relative;
         .icon1 {
-          width: 42px;
-          height: 42px;
+          @include icon();
           position: absolute;
           top: -280px;
           left: 160px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          border-radius: 100%;
-          outline: none;
-          color: #fff;
-          font-size: 16px;
-          font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
-          background-color: $pink;
+          animation-delay: 1s;
           .infobox1 {
             width: 410px;
             height: 375px;
@@ -125,20 +117,10 @@
           }
         }
         .icon2 {
-          width: 42px;
-          height: 42px;
+          @include icon();
           position: absolute;
           top: -120px;
           left: 110px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          border-radius: 100%;
-          outline: none;
-          color: #fff;
-          font-size: 16px;
-          font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
-          background-color: $pink;
           .infobox2 {
             width: 410px;
             height: 375px;
@@ -198,20 +180,10 @@
           }
         }
         .icon3 {
-          width: 42px;
-          height: 42px;
+          @include icon();
           position: absolute;
           top: -368px;
           left: 283px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          border-radius: 100%;
-          outline: none;
-          color: #fff;
-          font-size: 16px;
-          font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
-          background-color: $pink;
           .infobox3 {
             width: 410px;
             height: 375px;
@@ -271,20 +243,10 @@
           }
         }
         .icon4 {
-          width: 42px;
-          height: 42px;
+          @include icon();
           position: absolute;
           top: -242px;
           left: 363px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          border-radius: 100%;
-          outline: none;
-          color: #fff;
-          font-size: 16px;
-          font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
-          background-color: $pink;
           .infobox4 {
             width: 410px;
             height: 375px;
@@ -344,20 +306,10 @@
           }
         }
         .icon5 {
-          width: 42px;
-          height: 42px;
+          @include icon();
           position: absolute;
           top: -80px;
           left: 290px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          border-radius: 100%;
-          outline: none;
-          color: #fff;
-          font-size: 16px;
-          font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
-          background-color: $pink;
           .infobox5 {
             width: 410px;
             height: 375px;
@@ -417,20 +369,11 @@
           }
         }
         .icon6 {
-          width: 42px;
-          height: 42px;
+          @include icon();
           position: absolute;
           top: -230px;
           left: 80px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          border-radius: 100%;
-          outline: none;
-          color: #fff;
-          font-size: 16px;
-          font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
-          background-color: $pink;
+
           .infobox6 {
             width: 410px;
             height: 375px;
@@ -660,5 +603,17 @@
   opacity: 1;
 }
 
-@keyframes {
+.size-up {
+  animation: containerMove 0.5s 1s ease-in-out;
+  animation-fill-mode: both;
+}
+@keyframes sizeUp {
+  from {
+    opacity: 0;
+    width: 0px;
+  }
+  to {
+    opacity: 1;
+    width: 42px;
+  }
 }
