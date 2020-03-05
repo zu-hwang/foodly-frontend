@@ -259,7 +259,9 @@ class Lookbook extends React.Component {
                     />
                     <div className="check-box">
                       <input id="check-box-input" type="checkbox" />
-                      <label for="check-box-input">✔️</label>
+                      {/* <label htmlFor="check-box-input">
+                        <span>✔️</span>
+                      </label> */}
                     </div>
                     <div className="purchase-box">
                       <div>
