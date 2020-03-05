@@ -28,21 +28,12 @@ export default class CartItem extends Component {
   numPlus = () => {
     this.setState({ num: this.state.num + 1 });
   };
-  handleQuantitiy = e => {
-    // console.log(quantity, price);
-    // this.setState({ num: quantity }, () => {
-    //   this.props._calculator(quantity, price);
-    // });
-    // console.log(e);
-    // console.log(e.target.innerText);
-    // console.log(e.target.innerHTML);
-    // this.setState({ num: Number(e.target.innerHTML) });
-    this.props._calculator(this.state.num, this.props.price);
+  handleQuantitiy = (quantity, price) => {
+    console.log(quantity, price);
+    this.props._calculator(quantity, price);
   };
 
-  leftRightArrow = () => {
-    this.props._calculator(this.state.num * this.props.price);
-  };
+  leftRightArrow = () => {};
 
   render() {
     return (
@@ -76,9 +67,27 @@ export default class CartItem extends Component {
               </div>
               {/* 제품  quantity */}
               <form>
-                <div className="purchase-input" onChange={this.handleQuantitiy}>
-                  {this.state.num}
-                </div>
+                {
+                  /* <input
+                  type="text"
+                  value={this.state.num}
+                  className="purchase-input"
+                  onChange={e => {
+                    this.handleQuantitiy(e.target.value, this.props.price);
+                  }}
+                /> */
+                  <div
+                    className="purchase-input"
+                    onChange={e => {
+                      this.handleQuantitiy(
+                        e.target.innerText,
+                        this.props.price
+                      );
+                    }}
+                  >
+                    {this.state.num}
+                  </div>
+                }
               </form>
               <div className="plus-btn__container" onClick={this.numPlus}>
                 <FontAwesomeIcon icon={faAngleRight} className="plus-btn" />

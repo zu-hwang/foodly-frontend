@@ -54,7 +54,7 @@ class Product extends React.Component {
             <div className="wrapper">
               {/* product 카테고리 종류와 품목갯수 시작 */}
               <div className="pageDesc">
-                <h1>{this.props.match.params.id.toUpperCase()}</h1>
+                <h1>{this.props.match.params.id}</h1>
                 <h2>
                   <em>
                     {this.state.productInfo.length} products in collection
