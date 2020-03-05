@@ -36,14 +36,21 @@ export default class Cart extends Component {
 
   componentDidMount = () => {
     // const requestOptions = {
-    //   method: "GET"
+    //   method: "GET",
+    //   headers: {
+    //     Authorization:
+    //       "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6IjE5OTBAYWJjLmFiYyJ9.rx9SMadaUbA2loV6FqNAeIetFH_EfLwUccGt2a5fXbg"
+    //   }
     // };
 
-    // fetch("10.58.2.221:8000/order/checkout", requestOptions)
+    // fetch("http://10.58.5.250:8000/order/checkout", requestOptions)
     //   .then(response => response.json())
     //   .then(response =>
+    //     // console.log(response)
     //     this.setState({
-    //       basketButtonInfo: response.cart
+    //       basketButtonInfo: response.cart[0],
+    //       totalQuantity: response.cart[1]["total_quantity"],
+    //       totalPrice: response.cart[2]["total_price"]
     //     })
     //   )
     //   .catch(error => console.log("error", error));
@@ -108,17 +115,21 @@ export default class Cart extends Component {
                   <div className="cart-header__item quentity">QTY</div>
                   <div className="cart-header__item quentityPrice">PRICE</div>
                 </div>
-                {this.state.basketButtonInfo.map((basketInfo, idx) => {
-                  return (
-                    <CartItem
-                      image={basketInfo.thumbnail_url}
-                      name={basketInfo.id}
-                      qt={basketInfo.quantity}
-                      price={basketInfo.price}
-                      key={idx}
-                    />
-                  );
-                })}
+                <div className="inCart">
+                  <ul className="cart-list__item--wrapper">
+                    {this.state.basketButtonInfo.map((basketInfo, idx) => {
+                      return (
+                        <CartItem
+                          image={basketInfo.thumbnail_url}
+                          name={basketInfo.id}
+                          qt={basketInfo.quantity}
+                          price={basketInfo.price}
+                          key={idx}
+                        />
+                      );
+                    })}
+                  </ul>
+                </div>
                 <div className="special-packing">
                   <h3 className="choose-package">CHOOSE PACKAGE</h3>
                   <div
