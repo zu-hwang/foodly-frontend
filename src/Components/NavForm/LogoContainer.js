@@ -1,6 +1,4 @@
 import React from "react";
-import config from "../../config";
-// import Cart from "./Cart";
 import "../../Styles/LogoContainer.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
