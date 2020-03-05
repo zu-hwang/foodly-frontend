@@ -1,0 +1,259 @@
+@import '../../../Styles/var.scss';
+
+//오른쪽 망할 장바구니
+
+.cartOpenButton {
+  position: absolute;
+  padding: 0;
+  top: 63px;
+  right: 34px;
+  outline: hidden;
+}
+
+.cartOpenButton {
+  .countCart {
+    width: 16px;
+    height: 16px;
+    font-size: 11px;
+    line-height: 15px;
+    color: #fff;
+    background-color: #f06060;
+    border-radius: 50%;
+  }
+}
+.cartOpenButton {
+  width: 70px;
+  height: 28px;
+  display: flex;
+  // color: buttontext;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  text-align: center;
+  cursor: default;
+  font: 400 13.3333px Arial;
+  .money {
+    &::before {
+      content: '$';
+    }
+  }
+}
+//장바구니
+
+.basket__wrapper {
+  .basket-header {
+    position: relative;
+    color: #342f2f;
+    height: 50px;
+    .basket-title {
+      position: absolute;
+      left: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 15px;
+      text-indent: 5px;
+      font-family: $srf;
+      font-weight: 200;
+    }
+    .basket-closeBtn {
+      position: absolute;
+      right: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 800;
+      font-family: $s-srf;
+    }
+  }
+
+  hr {
+    width: 100%;
+    height: 0.5px;
+    background-color: #fff;
+    border: 1px solid snow;
+  }
+  .cart {
+    .cart-header {
+      margin: 20px 0;
+      height: 20px;
+      font-size: 12px;
+      font-family: $srf;
+      font-weight: lighter;
+      position: relative;
+
+      .quentity {
+        position: absolute;
+        right: 200px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .quentityPrice {
+        position: absolute;
+        right: 100px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    .special-packing {
+      height: 40px;
+      position: relative;
+      margin-top: 30px;
+      display: flex;
+      flex-direction: row;
+      .choose-package {
+        position: absolute;
+        left: 50px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .paperBag__container {
+        position: absolute;
+        left: 350px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 14px;
+        padding: 8px 13px;
+        color: #fff;
+        background-color: #ada2a4;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+      .paperBag__container--black {
+        position: absolute;
+        left: 350px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 14px;
+        padding: 8px 13px;
+        color: #fff;
+        background-color: #5c4b51;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+      .special-packing__container {
+        position: absolute;
+        left: 490px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 14px;
+        padding: 8px 13px;
+        color: #fff;
+        background-color: #ada2a4;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+      .special-packing__container--black {
+        position: absolute;
+        left: 490px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 14px;
+        padding: 8px 13px;
+        color: #fff;
+        background-color: #5c4b51;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+    }
+    .hidden-woodenBox {
+      height: 75px;
+      position: relative;
+      margin-top: 15px;
+      .hidden-woddenBox__imgConatiner {
+        position: absolute;
+        left: 50px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 60px;
+        height: 60px;
+        border: 2px solid #fff;
+        @include center();
+        border-width: 5px;
+        border-radius: 50%;
+        .hidden-woodenBox__img {
+          background-image: url('https://cdn.shopify.com/s/files/1/1148/3974/products/wooden-box_small.jpg');
+          background-position: center center;
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          background-size: 50px 50px;
+        }
+      }
+      .cart-list__item--title {
+        width: 267px;
+        height: 77px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        position: absolute;
+        left: 140px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 15px;
+      }
+      // .cart-list__item--quantity {
+      //   .purchase-quantity {
+      //     display: flex;
+      //     flex-direction: column;
+      //   }
+      // }
+
+      .cart-list__item--price {
+        width: 73px;
+        height: 70px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        position: absolute;
+        left: 550px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 15px;
+      }
+    }
+    .hidden-woodenBox--close {
+      display: none;
+    }
+    .cart__total-price__wrapper {
+      height: 115px;
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+      .total-price__container {
+        height: 50px;
+        width: 100%;
+        position: relative;
+        .total {
+          height: 30px;
+          width: 100px;
+          position: absolute;
+          left: 50px;
+          top: 50%;
+          transform: translateY(-50%);
+          font-weight: 700;
+          font-family: $srf;
+        }
+      }
+      .total-price__Box {
+        height: 30px;
+        width: 100px;
+        position: absolute;
+        left: 475px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 20px;
+        font-family: $srf;
+      }
+      .bulabula {
+        font-size: 13px;
+        padding-top: 10px;
+      }
+    }
+  }
+}

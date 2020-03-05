@@ -33,6 +33,7 @@ class Detail extends React.Component {
   };
   getData = () => {
     fetch("http://10.58.5.105:8000/products/3")
+
       .then(res => res.json())
       .then(res =>
         this.setState({ data: res.data[0] }, () => console.log(this.state.data))
@@ -52,6 +53,12 @@ class Detail extends React.Component {
     this.handleQuery();
     this.getData();
     // fetch(`http://10.58.5.105:8000/products/${this.props.match.params.id}`);
+  }
+
+  componentDidMount() {
+    this.handleQuery();
+    this.getData();
+    fetch(`http://10.58.5.105:8000/products/${this.props.match.params.id}`);
   }
 
   render() {
