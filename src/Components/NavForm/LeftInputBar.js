@@ -89,8 +89,7 @@ class LeftInputBar extends React.Component {
       method: "GET"
     };
     fetch(
-      "http://10.58.5.56:8000/search/search_best?title=" +
-        this.state.inputValue,
+      "http://10.58.7.185:8000/products/search?search=" + this.state.inputValue,
       requestOptions
     )
       .then(res => res.text())
