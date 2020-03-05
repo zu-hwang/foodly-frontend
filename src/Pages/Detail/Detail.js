@@ -32,7 +32,8 @@ class Detail extends React.Component {
     console.log(this.props.location.search);
   };
   getData = () => {
-    fetch("http://localhost:3000/Data/detail.json")
+    fetch("http://10.58.5.105:8000/products/3")
+
       .then(res => res.json())
       .then(res =>
         this.setState({ data: res.data[0] }, () => console.log(this.state.data))
@@ -47,15 +48,12 @@ class Detail extends React.Component {
       () => console.log(this.state)
     );
   };
-  componentDidMount = () => {
-    fetch("http://10.58.5.105:8000/products/1")
-      .then(res => res.json())
-      .then(res =>
-        this.setState({
-          data: res.data
-        })
-      );
-  };
+
+  componentDidMount() {
+    this.handleQuery();
+    this.getData();
+    // fetch(`http://10.58.5.105:8000/products/${this.props.match.params.id}`);
+  }
 
   componentDidMount() {
     this.handleQuery();
@@ -69,14 +67,14 @@ class Detail extends React.Component {
         <div className="detail-main" onWheel={this.getWindowScorllY}>
           <div
             className="detail-cover1"
-            style={{
-              backgroundImage: `url(${this.state.data.big_image1})`
-            }}
+            // style={{
+            //   backgroundImage: `url(${this.state.data.big_image1})`
+            // }}
           >
             <div
-              style={{
-                backgroundImage: `url(${this.state.data.big_image2})`
-              }}
+              // style={{
+              //   backgroundImage: `url(${this.state.data.big_image2})`
+              // }}
               className={
                 this.state.bgSelector === null
                   ? "detail-cover2"
@@ -134,13 +132,13 @@ class Detail extends React.Component {
               data={this.state.data}
               pageTop={this.state.pageTop}
               windowScroll={this.state.windowScroll}
-              data={this.state.data}
+              // data={this.state.data}
             />
             <DetailBottom
               data={this.state.data}
               pageTop={this.state.pageTop}
               windowScroll={this.state.windowScroll}
-              data={this.state.data}
+              // data={this.state.data}
             />
             <Footer />
           </div>
