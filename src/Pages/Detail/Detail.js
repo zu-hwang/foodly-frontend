@@ -10,7 +10,7 @@ class Detail extends React.Component {
     super();
     this.page = React.createRef();
     this.state = {
-      bgSelector: null,
+      bgSelector: true,
       windowScroll: 0,
       pageTop: 0,
       data: []
@@ -46,6 +46,15 @@ class Detail extends React.Component {
       },
       () => console.log(this.state)
     );
+  };
+  componentDidMount = () => {
+    fetch("http://10.58.5.105:8000/products/1")
+      .then(res => res.json())
+      .then(res =>
+        this.setState({
+          data: res.data
+        })
+      );
   };
 
   componentDidMount() {
@@ -125,11 +134,13 @@ class Detail extends React.Component {
               data={this.state.data}
               pageTop={this.state.pageTop}
               windowScroll={this.state.windowScroll}
+              data={this.state.data}
             />
             <DetailBottom
               data={this.state.data}
               pageTop={this.state.pageTop}
               windowScroll={this.state.windowScroll}
+              data={this.state.data}
             />
             <Footer />
           </div>

@@ -428,7 +428,7 @@ class DetailBottom extends React.Component {
                   <div key={index} className="similar">
                     <img
                       className="similar-img"
-                      src={el.img}
+                      src={el.small_image}
                       alt={`${el.name + index}`}
                     />
                     <div className="similar-product-name">{el.name}</div>
