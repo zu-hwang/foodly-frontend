@@ -4,13 +4,11 @@
   @include flexCenter();
   // border: solid 1px #eee;
   outline: none;
-  margin: 50px auto 220px;
+  margin: 280px auto 220px;
   width: 300px;
-
   .title-container {
     @include flexCenter();
     margin-bottom: 50px;
-
     .title {
       font-family: $s-srf;
       font-size: 32px;
@@ -53,7 +51,6 @@
     }
     .btn-wrap {
       width: 100%;
-
       button {
         letter-spacing: 1px;
         width: 100%;
@@ -78,7 +75,6 @@
     .text-container {
       font-family: $s-srf;
       padding-top: 20px;
-
       p {
         color: $black;
         font-size: 16px;

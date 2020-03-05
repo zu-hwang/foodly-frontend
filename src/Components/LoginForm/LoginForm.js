@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import Input from "../RegisterForm/Input";
+import KakaoLogin from "./KakaoLogin";
 import "../../Styles/accountForm.scss";
 
 class LoginForm extends Component {
@@ -84,6 +85,17 @@ class LoginForm extends Component {
   goToRegister = () => {
     this.props.history.push("/register");
   };
+  loginKakao = () => {
+    window.Kakao.Auth.login({
+      success: authObj => {
+        // console.log(authObj);
+        // console.log("버튼눌렀다");
+      },
+      fail: function(err) {
+        console.log("에러", err);
+      }
+    });
+  };
   render() {
     return (
       <>
@@ -108,6 +120,7 @@ class LoginForm extends Component {
               OnKeyUp={this.handleEnterKey} // 이벤트 공유
               OnDisplay={this.handleDisplay}
               CheckForm={this.state.checkForm} // ! 버튼클릭하면 변경
+              ref={this.input}
             ></Input>
             <Input
               Label={"Password"} // placeholder 내용
@@ -133,6 +146,7 @@ class LoginForm extends Component {
                 </span>
               </p>
             </div>
+            <KakaoLogin onClick={this.loginKakao} />
           </div>
         </div>
       </>

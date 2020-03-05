@@ -2,11 +2,11 @@
 
 @mixin hoverBtn() {
   transform: scale(1);
-  transition: all 0.2s linear;
+  transition: all 0.5s linear;
   &:hover {
     opacity: 1;
     transform: scale(1.3);
-    transition: all 0.2s linear;
+    transition: all 1s linear;
     cursor: pointer;
   }
 }
@@ -22,7 +22,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-content: center;
-  transition: all 0.5s ease-in-out;
+  transition: all 1s ease-in-out;
 
   .btn-wrap {
     position: absolute;
@@ -41,8 +41,8 @@
   }
   .price-sticker-wrap {
     position: absolute;
-    width: 140px;
-    height: 140px;
+    width: 160px;
+    height: 160px;
     left: 28%;
     top: 50%;
   }

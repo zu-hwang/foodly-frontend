@@ -4,7 +4,7 @@
       "id": 0,
       "title": "tomato season",
       "subTitle": "nutritious delicious",
-      "price": "3.05",
+      "price": "$3.05",
       "priceText": "start point",
       "bgImg": "//cdn.shopify.com/s/files/1/1148/3974/files/img_homepage_slide_1_99ab6459-79aa-49be-89c7-fb4cd2ac027f_2000x.jpg?v=1488293606",
       "buttonImg": "https://cdn.shopify.com/s/files/1/1148/3974/files/img_thumb_homepage_slide_1_3646b5c7-695e-4d0f-9e50-3c90ef410fbf_150x.jpg?v=1488293608",
@@ -14,7 +14,7 @@
       "id": 1,
       "title": "paella or paster",
       "subTitle": "you'll need this sweet pepper for both",
-      "price": "6.95",
+      "price": "$6.95",
       "priceText": "start point",
       "bgImg": "//cdn.shopify.com/s/files/1/1148/3974/files/img_homepage_slide_2_1e0ca3da-09bc-46b3-a58e-952f99df5a5d_2000x.jpg?v=1488293660",
       "buttonImg": "https://cdn.shopify.com/s/files/1/1148/3974/files/img_thumb_homepage_slide_2_0e49cdfc-a372-4dd9-a54a-1ac37bcd648a_150x.jpg?v=1488293661",
@@ -24,7 +24,7 @@
       "id": 2,
       "title": "apple pie? yes, please",
       "subTitle": "of Gala Cultivar",
-      "price": "3.55",
+      "price": "$3.55",
       "priceText": "start point",
       "bgImg": "//cdn.shopify.com/s/files/1/1148/3974/files/img_homepage_slide_3_2d5607e9-6072-431a-9965-9e0421c370c6_2000x.jpg?v=1488293720",
       "buttonImg": "//cdn.shopify.com/s/files/1/1148/3974/files/img_thumb_homepage_slide_3_7d484d7e-7ff3-4e10-b498-a27b89910779_150x.jpg?v=1488293723",
@@ -50,6 +50,169 @@
       "subText": "September deal",
       "bgImg": "//cdn.shopify.com/s/files/1/1148/3974/files/img_homepage_special_2_1500x.jpg?v=1478008992",
       "link": ""
+    }
+  ],
+  "recomandProduct": [
+    {
+      "id": 0,
+      "name": "Basil",
+      "price": "$2.29",
+      "sale": false,
+      "category": "Harvest 2015",
+      "stock": 0,
+      "unit": "Bunch",
+      "img": "//cdn.shopify.com/s/files/1/1148/3974/products/Basil_grande.jpeg?v=1456211118"
+    },
+    {
+      "id": 1,
+      "name": "Brandywine Tomatoes",
+      "price": "$8.05",
+      "sale": true,
+      "category": "Harvest 2015",
+      "stock": 1,
+      "unit": "kg",
+      "img": "//cdn.shopify.com/s/files/1/1148/3974/products/Brandywine-tomatoes-front_grande.jpeg"
+    },
+    {
+      "id": 2,
+      "name": "C-Overload",
+      "price": "$12.00",
+      "sale": false,
+      "category": "Harvest 2015",
+      "stock": 0,
+      "unit": "Bunch",
+      "img": "//cdn.shopify.com/s/files/1/1148/3974/products/raspberries_ed450429-f3d8-4757-9507-f18101c2c057_grande.jpeg"
+    },
+    {
+      "id": 3,
+      "name": "Campari Tomatoes",
+      "price": "$11.00",
+      "sale": false,
+      "category": "Harvest 2015",
+      "stock": 1,
+      "unit": "kg",
+      "img": "//cdn.shopify.com/s/files/1/1148/3974/products/Campari-Tomatoes_grande.jpeg"
+    },
+    {
+      "id": 4,
+      "name": "Capia Pepper",
+      "price": "$6.95",
+      "sale": false,
+      "category": "Harvest 2015",
+      "stock": 1,
+      "unit": "kg",
+      "img": "//cdn.shopify.com/s/files/1/1148/3974/products/Capia-Pepper-above_grande.jpeg"
+    },
+    {
+      "id": 5,
+      "name": "Cherry Tomatoes",
+      "price": "$3.75",
+      "sale": false,
+      "category": "Harvest 2015",
+      "stock": 1,
+      "unit": "red",
+      "img": "//cdn.shopify.com/s/files/1/1148/3974/products/Cherry-tomatoes-above_grande.jpeg"
+    },
+    {
+      "id": 6,
+      "name": "Damson Plums",
+      "price": "$2.29",
+      "sale": false,
+      "category": "Harvest 2015",
+      "stock": 1,
+      "unit": "kg",
+      "img": "//cdn.shopify.com/s/files/1/1148/3974/products/Damson_grande.jpeg"
+    },
+    {
+      "id": 7,
+      "name": "Empire Apples",
+      "price": "$2.85",
+      "sale": true,
+      "category": "Harvest 2015",
+      "stock": 1,
+      "unit": "kg",
+      "img": "//cdn.shopify.com/s/files/1/1148/3974/products/Empire-Apple_grande.jpeg?"
+    },
+
+    {
+      "id": 8,
+      "name": "Basil",
+      "price": "$2.29",
+      "sale": false,
+      "category": "Harvest 2015",
+      "stock": 0,
+      "unit": "Bunch",
+      "img": "//cdn.shopify.com/s/files/1/1148/3974/products/Basil_grande.jpeg?v=1456211118"
+    },
+    {
+      "id": 9,
+      "name": "Brandywine Tomatoes",
+      "price": "$8.05",
+      "sale": true,
+      "category": "Harvest 2015",
+      "stock": 1,
+      "unit": "kg",
+      "img": "//cdn.shopify.com/s/files/1/1148/3974/products/Brandywine-tomatoes-front_grande.jpeg"
+    },
+    {
+      "id": 10,
+      "name": "C-Overload",
+      "price": "$12.00",
+      "sale": false,
+      "category": "Harvest 2015",
+      "stock": 0,
+      "unit": "Bunch",
+      "img": "//cdn.shopify.com/s/files/1/1148/3974/products/raspberries_ed450429-f3d8-4757-9507-f18101c2c057_grande.jpeg"
+    },
+    {
+      "id": 11,
+      "name": "Campari Tomatoes",
+      "price": "$11.00",
+      "sale": false,
+      "category": "Harvest 2015",
+      "stock": 1,
+      "unit": "kg",
+      "img": "//cdn.shopify.com/s/files/1/1148/3974/products/Campari-Tomatoes_grande.jpeg"
+    },
+    {
+      "id": 12,
+      "name": "Capia Pepper",
+      "price": "$6.95",
+      "sale": false,
+      "category": "Harvest 2015",
+      "stock": 1,
+      "unit": "kg",
+      "img": "//cdn.shopify.com/s/files/1/1148/3974/products/Capia-Pepper-above_grande.jpeg"
+    },
+    {
+      "id": 13,
+      "name": "Cherry Tomatoes",
+      "price": "$3.75",
+      "sale": false,
+      "category": "Harvest 2015",
+      "stock": 1,
+      "unit": "red",
+      "img": "//cdn.shopify.com/s/files/1/1148/3974/products/Cherry-tomatoes-above_grande.jpeg"
+    },
+    {
+      "id": 14,
+      "name": "Damson Plums",
+      "price": "$2.29",
+      "sale": false,
+      "category": "Harvest 2015",
+      "stock": 1,
+      "unit": "kg",
+      "img": "//cdn.shopify.com/s/files/1/1148/3974/products/Damson_grande.jpeg"
+    },
+    {
+      "id": 15,
+      "name": "Empire Apples",
+      "price": "$2.85",
+      "sale": true,
+      "category": "Harvest 2015",
+      "stock": 1,
+      "unit": "kg",
+      "img": "//cdn.shopify.com/s/files/1/1148/3974/products/Empire-Apple_grande.jpeg?"
     }
   ]
 }
