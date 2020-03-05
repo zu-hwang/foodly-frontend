@@ -7,38 +7,27 @@ class BundleBox extends Component {
     this.state = {};
   }
   render() {
-    // data
-    const { title, color, onClick } = this.props;
+    const { data, color, onClick } = this.props;
+    console.log(data);
     return (
       <div className="bundle-box">
         <div className="cate-title-box" style={{ backgroundColor: color }}>
-          {title}
+          {data[0].title}
         </div>
         <ul>
-          {/* 여기에 리스트 맵돌리기! */}
-          <li>
-            <span>1</span>
-            <span>kg</span>
-            <span>apple</span>
-          </li>
-          <li>
-            <span>1</span>
-            <span>kg</span>
-            <span>tomato</span>
-          </li>
-          <li>
-            <span>1</span>
-            <span>kg</span>
-            <span>strawberry</span>
-          </li>
-          <li>
-            <span>1</span>
-            <span>kg</span>
-            <span>strawberry</span>
-          </li>
+          {data[1].map((li, index) => {
+            return (
+              <li key={index}>
+                <span>{li["name__count"]}</span>
+                <span>{li["measure_id__measure"]}</span>
+                <span>{li["name"]}</span>
+              </li>
+            );
+          })}
         </ul>
         <div className="btn-box" style={{ color: color }}>
           <p onClick={onClick}>purchase</p>
+          {/* <p onClick={onClick}>{data[0].price}</p> */}
         </div>
       </div>
     );

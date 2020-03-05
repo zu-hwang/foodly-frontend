@@ -10,9 +10,10 @@ class MainContent extends Component {
   constructor() {
     super();
     this.state = {
-      productList: [],
-      categoryDeal: [],
-      seasonalDeal: []
+      productList: [], // 슬라이드배너
+      categoryDeal: [], // 2단 1번째
+      seasonalDeal: [], // 2단 2번째
+      bundleDeal: []
     };
   }
 
@@ -27,26 +28,22 @@ class MainContent extends Component {
         this.setState({
           categoryDeal: result.data["category_deal"],
           productList: result.data["recommand_product"],
-          seasonalDeal: result.data["seasonal_deal"]
+          seasonalDeal: result.data["seasonal_deal"],
+          bundleDeal: result.data["bundle_deal"]
         });
       })
       .catch(error => console.log("error", error));
   };
 
   render() {
+    const { categoryDeal, productList, seasonalDeal, bundleDeal } = this.state;
     return (
       <div className="main-container">
         <Main>
           <OverlayBanner />
-          <RecomandBanner
-            category={this.state.categoryDeal}
-            seasonal={this.state.seasonalDeal}
-          />
-          <RecomandSlide
-            data={this.state.productList}
-            index={this.state.productList.length}
-          />
-          <Bundle />
+          <RecomandBanner category={categoryDeal} seasonal={seasonalDeal} />
+          <RecomandSlide data={productList} index={productList.length} />
+          <Bundle data={bundleDeal} />
         </Main>
       </div>
     );
