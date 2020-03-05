@@ -1,0 +1,41 @@
+{
+  "data": {
+    "id": 1,
+    "name": "Asparagus",
+    "harvest_year_id__year": "2014",
+    "measure_id__measure": "lb",
+    "is_in_stock": "1",
+    "description": " Asparagus is a nutrient-dense food that is high in folic acid and is also a good source of potassium, fiber, vitamin B6, vitamins A and vitamin C, and thiamine. Extensive research into asparagus nutrition has resulted in this funny-looking vegetable being ranked among the top fruits and vegetables for its ability to reduce the effect of cell-damaging free radicals. ",
+    "price": "2.00",
+    "small_image": "https://cdn.shopify.com/s/files/1/1148/3974/products/asparagus_grande.jpg?v=1473487320",
+    "big_image1": "",
+    "big_image2": "",
+    "big_image3": "",
+    "energy": "20 kcal",
+    "carbonydrate": "4 g",
+    "protein": "2 g",
+    "fat": "0 g",
+    "mineral": "",
+    "vitamin": "",
+    "similar_product": [
+      {
+        "name": "Avocado",
+        "harvest_year_id__year": "2016",
+        "is_in_stock": "1",
+        "measure_id__measure": "lb"
+      },
+      {
+        "name": "Balsamic Vinegar",
+        "harvest_year_id__year": "2014",
+        "is_in_stock": "1",
+        "measure_id__measure": "lb"
+      },
+      {
+        "name": "Balsamic Vinegar 2015",
+        "harvest_year_id__year": "2015",
+        "is_in_stock": "1",
+        "measure_id__measure": "oz"
+      }
+    ]
+  }
+}

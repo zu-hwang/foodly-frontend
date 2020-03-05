@@ -1,9 +1,12 @@
 $s-srf: Raleway, san-serif;
 $srf: Bitter, serif;
+$script: "Alex Brush", cursive;
 $black: #342f2f;
+$brown: #5c4b51;
 $pink: #f06060;
 $gray: #ada2a4;
 $l-gray: #f5f4f4;
+$ml-gray: #e5e3e3;
 $mint: #8cbeb2;
 $orange: #f3b562;
 
@@ -37,7 +40,7 @@ $orange: #f3b562;
   transition-duration: 0.3s;
 
   &:before {
-    content: '';
+    content: "";
     position: absolute;
     z-index: -1;
     top: 0;
@@ -75,4 +78,18 @@ $orange: #f3b562;
 }
 .none {
   display: none;
+}
+
+@mixin icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  outline: none;
+  color: #fff;
+  font-size: 16px;
+  font-family: 'Raleway', Tahoma, Geneva, sans-serif, sans-serif;
+  background-color: $pink;
 }
