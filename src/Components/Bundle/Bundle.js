@@ -4,7 +4,7 @@ import "./Bundle.scss";
 
 class Bundle extends Component {
   onClick = e => {
-    this.props.history.push("/");
+    // this.props.history.push("/");
   };
   render() {
     const { data } = this.props;
