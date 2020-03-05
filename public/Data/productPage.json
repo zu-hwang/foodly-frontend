@@ -3,146 +3,146 @@
     {
       "color_id__name": "blue",
       "harvest_year__year": "2017",
-      "is_in_stock": true,
+      "is_in_stock": 1,
       "is_on_sale": false,
       "measure_id__measure": "bunch",
       "name": "Campari Tomatoes",
       "price": "$10.00",
-      "thumbnail_url": "//cdn.shopify.com/s/files/1/1148/3974/products/Basil_grande.jpeg?v=1456211118",
+      "small_image": "//cdn.shopify.com/s/files/1/1148/3974/products/Basil_grande.jpeg?v=1456211118",
       "wood_type_id__name": "smooth",
-      "measure_id_measure": "lb"
+      "measure_id__measure": "lb"
     },
     {
       "color_id__name": "blue",
       "harvest_year__year": "2017",
-      "is_in_stock": true,
+      "is_in_stock": 1,
       "is_on_sale": false,
       "measure_id__measure": "bunch",
       "name": "Campari Tomatoes",
       "price": "$10.00",
-      "thumbnail_url": "//cdn.shopify.com/s/files/1/1148/3974/products/Campari-Tomatoes_grande.jpeg?v=1456211143",
+      "small_image": "//cdn.shopify.com/s/files/1/1148/3974/products/Campari-Tomatoes_grande.jpeg?v=1456211143",
       "wood_type_id__name": "smooth",
-      "measure_id_measure": "lb"
+      "measure_id__measure": "lb"
     },
     {
       "color_id__name": "blue",
       "harvest_year__year": "2017",
-      "is_in_stock": false,
+      "is_in_stock": 0,
       "is_on_sale": false,
       "measure_id__measure": "bunch",
       "name": "Campari Tomatoes",
       "price": "$10.00",
-      "thumbnail_url": "//cdn.shopify.com/s/files/1/1148/3974/products/Basil_grande.jpeg?v=1456211118",
+      "small_image": "//cdn.shopify.com/s/files/1/1148/3974/products/Basil_grande.jpeg?v=1456211118",
       "wood_type_id__name": "smooth",
-      "measure_id_measure": "lb"
+      "measure_id__measure": "lb"
     },
     {
       "color_id__name": "blue",
       "harvest_year__year": "2017",
-      "is_in_stock": true,
+      "is_in_stock": 1,
       "is_on_sale": false,
       "measure_id__measure": "bunch",
       "name": "Campari Tomatoes",
       "price": "$10.00",
-      "thumbnail_url": "//cdn.shopify.com/s/files/1/1148/3974/products/Campari-Tomatoes_grande.jpeg?v=1456211143",
+      "small_image": "//cdn.shopify.com/s/files/1/1148/3974/products/Campari-Tomatoes_grande.jpeg?v=1456211143",
       "wood_type_id__name": "smooth",
-      "measure_id_measure": "lb"
+      "measure_id__measure": "lb"
     },
     {
       "color_id__name": "blue",
       "harvest_year__year": "2017",
-      "is_in_stock": true,
+      "is_in_stock": 1,
       "is_on_sale": false,
       "measure_id__measure": "bunch",
       "name": "Campari Tomatoes",
       "price": "$10.00",
-      "thumbnail_url": "//cdn.shopify.com/s/files/1/1148/3974/products/Basil_grande.jpeg?v=1456211118",
+      "small_image": "//cdn.shopify.com/s/files/1/1148/3974/products/Basil_grande.jpeg?v=1456211118",
       "wood_type_id__name": "smooth",
-      "measure_id_measure": "lb"
+      "measure_id__measure": "lb"
     },
     {
       "color_id__name": "blue",
       "harvest_year__year": "2017",
-      "is_in_stock": true,
+      "is_in_stock": 1,
       "is_on_sale": true,
       "measure_id__measure": "bunch",
       "name": "Campari Tomatoes",
       "price": "$10.00",
-      "thumbnail_url": "//cdn.shopify.com/s/files/1/1148/3974/products/Campari-Tomatoes_grande.jpeg?v=1456211143",
+      "small_image": "//cdn.shopify.com/s/files/1/1148/3974/products/Campari-Tomatoes_grande.jpeg?v=1456211143",
       "wood_type_id__name": "smooth",
-      "measure_id_measure": "lb"
+      "measure_id__measure": "lb"
     },
     {
       "color_id__name": "blue",
       "harvest_year__year": "2017",
-      "is_in_stock": true,
+      "is_in_stock": 1,
       "is_on_sale": false,
       "measure_id__measure": "bunch",
       "name": "Campari Tomatoes",
       "price": "$10.00",
-      "thumbnail_url": "//cdn.shopify.com/s/files/1/1148/3974/products/Basil_grande.jpeg?v=1456211118",
+      "small_image": "//cdn.shopify.com/s/files/1/1148/3974/products/Basil_grande.jpeg?v=1456211118",
       "wood_type_id__name": "smooth",
-      "measure_id_measure": "lb"
+      "measure_id__measure": "lb"
     },
     {
       "color_id__name": "blue",
       "harvest_year__year": "2017",
-      "is_in_stock": true,
+      "is_in_stock": 0,
       "is_on_sale": false,
       "measure_id__measure": "bunch",
       "name": "Campari Tomatoes",
       "price": "$10.00",
-      "thumbnail_url": "//cdn.shopify.com/s/files/1/1148/3974/products/Campari-Tomatoes_grande.jpeg?v=1456211143",
+      "small_image": "//cdn.shopify.com/s/files/1/1148/3974/products/Campari-Tomatoes_grande.jpeg?v=1456211143",
       "wood_type_id__name": "smooth",
-      "measure_id_measure": "lb"
+      "measure_id__measure": "lb"
     },
     {
       "color_id__name": "blue",
       "harvest_year__year": "2017",
-      "is_in_stock": true,
+      "is_in_stock": 1,
       "is_on_sale": false,
       "measure_id__measure": "bunch",
       "name": "Campari Tomatoes",
       "price": "$10.00",
-      "thumbnail_url": "//cdn.shopify.com/s/files/1/1148/3974/products/Basil_grande.jpeg?v=1456211118",
+      "small_image": "//cdn.shopify.com/s/files/1/1148/3974/products/Basil_grande.jpeg?v=1456211118",
       "wood_type_id__name": "smooth",
-      "measure_id_measure": "lb"
+      "measure_id__measure": "lb"
     },
     {
       "color_id__name": "blue",
       "harvest_year__year": "2017",
-      "is_in_stock": true,
+      "is_in_stock": 1,
       "is_on_sale": false,
       "measure_id__measure": "bunch",
       "name": "Campari Tomatoes",
       "price": "$10.00",
-      "thumbnail_url": "//cdn.shopify.com/s/files/1/1148/3974/products/Campari-Tomatoes_grande.jpeg?v=1456211143",
+      "small_image": "//cdn.shopify.com/s/files/1/1148/3974/products/Campari-Tomatoes_grande.jpeg?v=1456211143",
       "wood_type_id__name": "smooth",
-      "measure_id_measure": "lb"
+      "measure_id__measure": "lb"
     },
     {
       "color_id__name": "blue",
       "harvest_year__year": "2017",
-      "is_in_stock": true,
+      "is_in_stock": 1,
       "is_on_sale": false,
       "measure_id__measure": "bunch",
       "name": "Campari Tomatoes",
       "price": "$10.00",
-      "thumbnail_url": "//cdn.shopify.com/s/files/1/1148/3974/products/Campari-Tomatoes_grande.jpeg?v=1456211143",
+      "small_image": "//cdn.shopify.com/s/files/1/1148/3974/products/Campari-Tomatoes_grande.jpeg?v=1456211143",
       "wood_type_id__name": "smooth",
-      "measure_id_measure": "lb"
+      "measure_id__measure": "lb"
     },
     {
       "color_id__name": "blue",
       "harvest_year__year": "2017",
-      "is_in_stock": true,
+      "is_in_stock": 1,
       "is_on_sale": false,
       "measure_id__measure": "bunch",
       "name": "Campari Tomatoes",
       "price": "$10.00",
-      "thumbnail_url": "//cdn.shopify.com/s/files/1/1148/3974/products/Campari-Tomatoes_grande.jpeg?v=1456211143",
+      "small_image": "//cdn.shopify.com/s/files/1/1148/3974/products/Campari-Tomatoes_grande.jpeg?v=1456211143",
       "wood_type_id__name": "smooth",
-      "measure_id_measure": "lb"
+      "measure_id__measure": "lb"
     }
   ]
 }

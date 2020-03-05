@@ -15,7 +15,17 @@ class RecomandItem extends Component {
     }
   };
   render() {
-    const { name, price, sale, category, stock, unit, img } = this.props;
+    const {
+      id,
+      name,
+      price,
+      sale,
+      category,
+      stock,
+      unit,
+      img,
+      onClick
+    } = this.props;
 
     return (
       <div
@@ -29,6 +39,8 @@ class RecomandItem extends Component {
           <div
             className="img-box"
             style={{ backgroundImage: `url(${img})` }}
+            id={id + "-main-product-list-img"}
+            onClick={onClick}
           ></div>
           <div className={stock ? "none" : "sold-out"}>sold out</div>
           <div className={stock ? "icon-box" : "none"}>
@@ -45,7 +57,9 @@ class RecomandItem extends Component {
           </div>
         </div>
         <div className="product-info-box">
-          <p>{name}</p>
+          <p onClick={onClick} id={id + "-main-product-list-text"}>
+            {name}
+          </p>
           <ul>
             <li>{category}</li>
             <li>{this.checkingStock(stock)}</li>
