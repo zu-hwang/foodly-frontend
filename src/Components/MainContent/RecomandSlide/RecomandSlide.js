@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import RecomandItem from "./RecomandItem";
@@ -49,6 +50,7 @@ class RecomandSlide extends Component {
   };
   goToLink = e => {
     // console.log(e.target.id, parseInt(e.target.id));
+    // console.log(`/product/detail/${parseInt(e.target.id)}`);
     this.props.history.push(`/product/detail/${parseInt(e.target.id)}`);
   };
 
@@ -106,4 +108,4 @@ class RecomandSlide extends Component {
     );
   }
 }
-export default RecomandSlide;
+export default withRouter(RecomandSlide);

@@ -26,7 +26,6 @@ class RecomandItem extends Component {
       img,
       onClick
     } = this.props;
-
     return (
       <div
         className={
