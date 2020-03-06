@@ -1,0 +1,44 @@
+{
+  "data": [
+    {
+      "id": 20,
+      "name": "Fuji Apples",
+      "price": "$9.39",
+      "sale": false,
+      "category": "Harvest 2014",
+      "stock": 1,
+      "unit": "kg",
+      "img": "https://cdn.shopify.com/s/files/1/1148/3974/products/Fuji-single_grande.jpeg?v=1456211065"
+    },
+    {
+      "id": 19,
+      "name": "Empire Apple",
+      "price": "$2.89",
+      "sale": false,
+      "category": "Harvest 2015",
+      "stock": 0,
+      "unit": "kg",
+      "img": "https://cdn.shopify.com/s/files/1/1148/3974/products/Empire-Apple_grande.jpeg?v=1456211165"
+    },
+    {
+      "id": 21,
+      "name": "Gala Apples",
+      "price": "$4.39",
+      "sale": false,
+      "category": "Harvest 2015",
+      "stock": 0,
+      "unit": "kg",
+      "img": "https://cdn.shopify.com/s/files/1/1148/3974/products/apples_grande.jpeg?v=1456211105"
+    },
+    {
+      "id": 22,
+      "name": "Golden Delicious",
+      "price": "$2.30",
+      "sale": false,
+      "category": "Harvest 2016",
+      "stock": 0,
+      "unit": "kg",
+      "img": "https://cdn.shopify.com/s/files/1/1148/3974/products/Golden-Delicious-Apples_grande.jpeg?v=1456211059"
+    }
+  ]
+}

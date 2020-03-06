@@ -12,32 +12,7 @@ class LeftInputBar extends React.Component {
       inputValue: "",
       resultBox: false,
       resultMode: "off", // min-char,no-data,on, off
-      data:
-        //  null
-        [
-          {
-            id: 0,
-            name: "Basil",
-            price: "$2.29",
-            sale: false,
-            category: "Harvest 2015",
-            stock: 0,
-            unit: "Bunch",
-            img:
-              "//cdn.shopify.com/s/files/1/1148/3974/products/Basil_grande.jpeg?v=1456211118"
-          },
-          {
-            id: 0,
-            name: "Basil",
-            price: "$2.29",
-            sale: false,
-            category: "Harvest 2015",
-            stock: 0,
-            unit: "Bunch",
-            img:
-              "//cdn.shopify.com/s/files/1/1148/3974/products/Basil_grande.jpeg?v=1456211118"
-          }
-        ]
+      data: []
     };
     this.focusSearch = React.createRef();
     this.searchIcon = React.createRef();
@@ -83,17 +58,17 @@ class LeftInputBar extends React.Component {
   };
   setData = data => {};
   sendRequest = e => {
-    //! 패치
-    let requestOptions = {
-      method: "GET"
-    };
-    fetch(
-      "http://10.58.7.185:8000/products/search?search=" + this.state.inputValue,
-      requestOptions
-    )
-      .then(res => res.text())
-      .then(res => console.log(res)) //! 만약 결과가 없을때 내용 출력
-      .catch(error => console.log("error", error));
+    // //! 패치
+    // let requestOptions = {
+    //   method: "GET"
+    // };
+    // fetch(
+    //   "http://10.58.7.185:8000/products/search?search=" + this.state.inputValue,
+    //   requestOptions
+    // )
+    //   .then(res => res.text())
+    //   .then(res => console.log(res)) //! 만약 결과가 없을때 내용 출력
+    //   .catch(error => console.log("error", error));
   };
 
   handleOnChange = e => {
@@ -133,6 +108,12 @@ class LeftInputBar extends React.Component {
   };
   componentWillUnmount = () => {
     document.removeEventListener("click", this.handleOutSideClick);
+  };
+  componentDidMount = () => {
+    fetch("http://localhost:3000/Data/searchInput.json")
+      .then(res => res.json())
+      .then(result => this.setState({ data: result.data }))
+      .catch();
   };
   render() {
     return (
