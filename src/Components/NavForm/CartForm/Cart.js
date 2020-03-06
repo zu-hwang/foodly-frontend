@@ -184,8 +184,8 @@ export default class Cart extends Component {
                         onClick={this.calculator}
                       />
                       <div className="total">
-                        ${this.state.money}
-                        {/* 59.35 */}
+                        ${/* {this.state.money} */}
+                        59.35
                       </div>
                     </div>
                   </div>

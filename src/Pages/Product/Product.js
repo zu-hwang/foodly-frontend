@@ -37,7 +37,10 @@ class Product extends React.Component {
   // };
 
   componentWillReceiveProps = (preProps, prevState) => {
-    if (preProps !== this.props.match.params || prevState !== this.state) {
+    console.log("preProps :", preProps);
+    console.log("thisProps :", this.props);
+
+    if (preProps !== this.props.match.params) {
       fetch(
         `http://10.58.5.105:8000/products/collections/${this.props.match.params.id}`
       )
