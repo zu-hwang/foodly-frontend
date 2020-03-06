@@ -12,7 +12,8 @@ export default class CartItem extends Component {
     super(props);
     this.state = {
       num: this.props.qt,
-      boxClose: false
+      boxClose: false,
+      howMany: this.props.qt
     };
   }
 
@@ -28,10 +29,10 @@ export default class CartItem extends Component {
   numPlus = () => {
     this.setState({ num: this.state.num + 1 });
   };
-  handleQuantitiy = (quantity, price) => {
-    console.log(quantity, price);
-    this.props._calculator(quantity, price);
-  };
+  // handleQuantitiy = (quantity, price) => {
+  //   console.log(quantity, price);
+  //   this.props._calculator(quantity, price);
+  // };
 
   leftRightArrow = () => {};
 
@@ -67,27 +68,22 @@ export default class CartItem extends Component {
               </div>
               {/* 제품  quantity */}
               <form>
-                {
-                  /* <input
+                <input
                   type="text"
+                  // value={this.state.num}
                   value={this.state.num}
                   className="purchase-input"
                   onChange={e => {
-                    this.handleQuantitiy(e.target.value, this.props.price);
+                    this.props._calculator(e.target.value, this.props.price);
                   }}
-                /> */
-                  <div
-                    className="purchase-input"
-                    onChange={e => {
-                      this.handleQuantitiy(
-                        e.target.innerText,
-                        this.props.price
-                      );
-                    }}
-                  >
-                    {this.state.num}
-                  </div>
-                }
+                />
+                {/* <div
+                className="purchase-input"
+                value={this.state.num}
+                onChange={e => {
+                  this.props._calculator(e.target.value, this.props.price);
+                }}
+              ></div> */}
               </form>
               <div className="plus-btn__container" onClick={this.numPlus}>
                 <FontAwesomeIcon icon={faAngleRight} className="plus-btn" />
