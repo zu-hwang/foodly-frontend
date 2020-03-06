@@ -20,19 +20,37 @@ class Product extends React.Component {
     console.log(this.state.productInfo);
   }
 
-  componentDidMount = () => {
-    fetch(
-      `http://10.58.5.105:8000/products/collections/${this.props.match.params.id}`
-    )
-      .then(res => res.json())
-      .then(res =>
-        this.setState(
-          {
+  // componentDidMount = (preProps, prevState) => {
+  //   if (preProps !== this.props || prevState !== this.state) {
+  //     fetch(
+  //       `http://10.58.5.105:8000/products/collections/${this.props.match.params.id}`
+  //     )
+  //       .then(res => res.json())
+  //       .then(res =>
+  //         this.setState(
+  //           {
+  //             productInfo: res.data
+  //           }
+  //         )
+  //       );
+  //   }
+  // };
+
+  componentWillReceiveProps = (preProps, prevState) => {
+    console.log("preProps :", preProps);
+    console.log("thisProps :", this.props);
+
+    if (preProps !== this.props.match.params) {
+      fetch(
+        `http://10.58.5.105:8000/products/collections/${this.props.match.params.id}`
+      )
+        .then(res => res.json())
+        .then(res =>
+          this.setState({
             productInfo: res.data
-          },
-          () => console.log(this.state.productInfo)
-        )
-      );
+          })
+        );
+    }
   };
   // mapOfImg = () =>{
   //    <ImgProduct />

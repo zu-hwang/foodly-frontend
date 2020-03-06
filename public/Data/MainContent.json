@@ -1,218 +1,396 @@
 {
-  "overlayBanner": [
-    {
-      "id": 0,
-      "title": "tomato season",
-      "subTitle": "nutritious delicious",
-      "price": "$3.05",
-      "priceText": "start point",
-      "bgImg": "//cdn.shopify.com/s/files/1/1148/3974/files/img_homepage_slide_1_99ab6459-79aa-49be-89c7-fb4cd2ac027f_2000x.jpg?v=1488293606",
-      "buttonImg": "https://cdn.shopify.com/s/files/1/1148/3974/files/img_thumb_homepage_slide_1_3646b5c7-695e-4d0f-9e50-3c90ef410fbf_150x.jpg?v=1488293608",
-      "link": ""
-    },
-    {
-      "id": 1,
-      "title": "paella or paster",
-      "subTitle": "you'll need this sweet pepper for both",
-      "price": "$6.95",
-      "priceText": "start point",
-      "bgImg": "//cdn.shopify.com/s/files/1/1148/3974/files/img_homepage_slide_2_1e0ca3da-09bc-46b3-a58e-952f99df5a5d_2000x.jpg?v=1488293660",
-      "buttonImg": "https://cdn.shopify.com/s/files/1/1148/3974/files/img_thumb_homepage_slide_2_0e49cdfc-a372-4dd9-a54a-1ac37bcd648a_150x.jpg?v=1488293661",
-      "link": ""
-    },
-    {
-      "id": 2,
-      "title": "apple pie? yes, please",
-      "subTitle": "of Gala Cultivar",
-      "price": "$3.55",
-      "priceText": "start point",
-      "bgImg": "//cdn.shopify.com/s/files/1/1148/3974/files/img_homepage_slide_3_2d5607e9-6072-431a-9965-9e0421c370c6_2000x.jpg?v=1488293720",
-      "buttonImg": "//cdn.shopify.com/s/files/1/1148/3974/files/img_thumb_homepage_slide_3_7d484d7e-7ff3-4e10-b498-a27b89910779_150x.jpg?v=1488293723",
-      "link": ""
-    }
-  ],
-
-  "recomandBanner": [
-    {
-      "id": 0,
-      "title": "start your day",
-      "subTitle": "with vit-plate",
-      "stickerText": "special pack",
-      "subText": "Healthy deal",
-      "bgImg": "//cdn.shopify.com/s/files/1/1148/3974/files/img_homepage_special_1_1500x.jpg?v=1478008979",
-      "link": ""
-    },
-    {
-      "id": 1,
-      "title": "c-overload",
-      "subTitle": "",
-      "stickerText": "20% discount",
-      "subText": "September deal",
-      "bgImg": "//cdn.shopify.com/s/files/1/1148/3974/files/img_homepage_special_2_1500x.jpg?v=1478008992",
-      "link": ""
-    }
-  ],
-  "recomandProduct": [
-    {
-      "id": 0,
-      "name": "Basil",
-      "price": "$2.29",
-      "sale": false,
-      "category": "Harvest 2015",
-      "stock": 0,
-      "unit": "Bunch",
-      "img": "//cdn.shopify.com/s/files/1/1148/3974/products/Basil_grande.jpeg?v=1456211118"
-    },
-    {
-      "id": 1,
-      "name": "Brandywine Tomatoes",
-      "price": "$8.05",
-      "sale": true,
-      "category": "Harvest 2015",
-      "stock": 1,
-      "unit": "kg",
-      "img": "//cdn.shopify.com/s/files/1/1148/3974/products/Brandywine-tomatoes-front_grande.jpeg"
-    },
-    {
-      "id": 2,
-      "name": "C-Overload",
-      "price": "$12.00",
-      "sale": false,
-      "category": "Harvest 2015",
-      "stock": 0,
-      "unit": "Bunch",
-      "img": "//cdn.shopify.com/s/files/1/1148/3974/products/raspberries_ed450429-f3d8-4757-9507-f18101c2c057_grande.jpeg"
-    },
-    {
-      "id": 3,
-      "name": "Campari Tomatoes",
-      "price": "$11.00",
-      "sale": false,
-      "category": "Harvest 2015",
-      "stock": 1,
-      "unit": "kg",
-      "img": "//cdn.shopify.com/s/files/1/1148/3974/products/Campari-Tomatoes_grande.jpeg"
-    },
-    {
-      "id": 4,
-      "name": "Capia Pepper",
-      "price": "$6.95",
-      "sale": false,
-      "category": "Harvest 2015",
-      "stock": 1,
-      "unit": "kg",
-      "img": "//cdn.shopify.com/s/files/1/1148/3974/products/Capia-Pepper-above_grande.jpeg"
-    },
-    {
-      "id": 5,
-      "name": "Cherry Tomatoes",
-      "price": "$3.75",
-      "sale": false,
-      "category": "Harvest 2015",
-      "stock": 1,
-      "unit": "red",
-      "img": "//cdn.shopify.com/s/files/1/1148/3974/products/Cherry-tomatoes-above_grande.jpeg"
-    },
-    {
-      "id": 6,
-      "name": "Damson Plums",
-      "price": "$2.29",
-      "sale": false,
-      "category": "Harvest 2015",
-      "stock": 1,
-      "unit": "kg",
-      "img": "//cdn.shopify.com/s/files/1/1148/3974/products/Damson_grande.jpeg"
-    },
-    {
-      "id": 7,
-      "name": "Empire Apples",
-      "price": "$2.85",
-      "sale": true,
-      "category": "Harvest 2015",
-      "stock": 1,
-      "unit": "kg",
-      "img": "//cdn.shopify.com/s/files/1/1148/3974/products/Empire-Apple_grande.jpeg?"
-    },
-
-    {
-      "id": 8,
-      "name": "Basil",
-      "price": "$2.29",
-      "sale": false,
-      "category": "Harvest 2015",
-      "stock": 0,
-      "unit": "Bunch",
-      "img": "//cdn.shopify.com/s/files/1/1148/3974/products/Basil_grande.jpeg?v=1456211118"
-    },
-    {
-      "id": 9,
-      "name": "Brandywine Tomatoes",
-      "price": "$8.05",
-      "sale": true,
-      "category": "Harvest 2015",
-      "stock": 1,
-      "unit": "kg",
-      "img": "//cdn.shopify.com/s/files/1/1148/3974/products/Brandywine-tomatoes-front_grande.jpeg"
-    },
-    {
-      "id": 10,
-      "name": "C-Overload",
-      "price": "$12.00",
-      "sale": false,
-      "category": "Harvest 2015",
-      "stock": 0,
-      "unit": "Bunch",
-      "img": "//cdn.shopify.com/s/files/1/1148/3974/products/raspberries_ed450429-f3d8-4757-9507-f18101c2c057_grande.jpeg"
-    },
-    {
-      "id": 11,
-      "name": "Campari Tomatoes",
-      "price": "$11.00",
-      "sale": false,
-      "category": "Harvest 2015",
-      "stock": 1,
-      "unit": "kg",
-      "img": "//cdn.shopify.com/s/files/1/1148/3974/products/Campari-Tomatoes_grande.jpeg"
-    },
-    {
-      "id": 12,
-      "name": "Capia Pepper",
-      "price": "$6.95",
-      "sale": false,
-      "category": "Harvest 2015",
-      "stock": 1,
-      "unit": "kg",
-      "img": "//cdn.shopify.com/s/files/1/1148/3974/products/Capia-Pepper-above_grande.jpeg"
-    },
-    {
-      "id": 13,
-      "name": "Cherry Tomatoes",
-      "price": "$3.75",
-      "sale": false,
-      "category": "Harvest 2015",
-      "stock": 1,
-      "unit": "red",
-      "img": "//cdn.shopify.com/s/files/1/1148/3974/products/Cherry-tomatoes-above_grande.jpeg"
-    },
-    {
-      "id": 14,
-      "name": "Damson Plums",
-      "price": "$2.29",
-      "sale": false,
-      "category": "Harvest 2015",
-      "stock": 1,
-      "unit": "kg",
-      "img": "//cdn.shopify.com/s/files/1/1148/3974/products/Damson_grande.jpeg"
-    },
-    {
-      "id": 15,
-      "name": "Empire Apples",
-      "price": "$2.85",
-      "sale": true,
-      "category": "Harvest 2015",
-      "stock": 1,
-      "unit": "kg",
-      "img": "//cdn.shopify.com/s/files/1/1148/3974/products/Empire-Apple_grande.jpeg?"
-    }
-  ]
+  "data": {
+    "category_deal": [
+      {
+        "id": 47,
+        "name": "Vit-plate",
+        "category__name": "Fresh",
+        "big_image2": "https://cdn.shopify.com/s/files/1/1148/3974/products/Thompson-Seedless-Grape_1a307bce-03ad-4153-aa6c-25d6919b5a31.jpeg?v=1458054271"
+      }
+    ],
+    "seasonal_deal": [
+      {
+        "id": 10,
+        "discount_rate": "20",
+        "name": "C - OVERLOAD",
+        "season_id__name": "September",
+        "big_image1": "https://cdn.shopify.com/s/files/1/1148/3974/products/raspberries_ed450429-f3d8-4757-9507-f18101c2c057.jpeg?v=1456210992"
+      }
+    ],
+    "recommand_product": [
+      {
+        "id": 1,
+        "price": "2.00",
+        "name": "Asparagus",
+        "small_image": "https://cdn.shopify.com/s/files/1/1148/3974/products/asparagus_grande.jpg?v=1473487320",
+        "big_image1": "",
+        "big_image2": "",
+        "big_image3": "",
+        "harvest_year_id__year": "2014",
+        "measure_id__measure": "lb",
+        "is_on_sale": false,
+        "is_in_stock": "1"
+      },
+      {
+        "id": 2,
+        "price": "3.00",
+        "name": "Avocado",
+        "small_image": "https://cdn.shopify.com/s/files/1/1148/3974/products/avocado_grande.jpg?v=1476190534",
+        "big_image1": "",
+        "big_image2": "",
+        "big_image3": "",
+        "harvest_year_id__year": "2016",
+        "measure_id__measure": "lb",
+        "is_on_sale": false,
+        "is_in_stock": "1"
+      },
+      {
+        "id": 3,
+        "price": "3.48",
+        "name": "Balsamic Vinegar",
+        "small_image": "https://cdn.shopify.com/s/files/1/1148/3974/products/Vinegar_grande.jpeg?v=1456211029",
+        "big_image1": "https://cdn.shopify.com/s/files/1/1148/3974/products/Vinegar.jpeg?v=1456211029",
+        "big_image2": "https://cdn.shopify.com/s/files/1/1148/3974/products/Vinegar-single.jpeg?v=1456211029",
+        "big_image3": "https://cdn.shopify.com/s/files/1/1148/3974/products/Vinegar-and-tomatoes.jpeg?v=1456211029",
+        "harvest_year_id__year": "2014",
+        "measure_id__measure": "lb",
+        "is_on_sale": false,
+        "is_in_stock": "1"
+      },
+      {
+        "id": 4,
+        "price": "3.48",
+        "name": "Balsamic Vinegar 2015",
+        "small_image": "https://cdn.shopify.com/s/files/1/1148/3974/products/Vinegar_39f87480-3235-407b-a2e6-4fe718fde5ff_grande.jpeg?v=1456211000",
+        "big_image1": "https://cdn.shopify.com/s/files/1/1148/3974/products/Vinegar_39f87480-3235-407b-a2e6-4fe718fde5ff.jpeg?v=1456211000",
+        "big_image2": "https://cdn.shopify.com/s/files/1/1148/3974/products/Vinegar-single_51e52c69-100f-41e2-b823-0c8480101143.jpeg?v=1456211000",
+        "big_image3": "https://cdn.shopify.com/s/files/1/1148/3974/products/Vinegar-and-tomatoes_c3c532ba-8857-4e2f-95d6-a27153a068d2.jpeg?v=1456211000",
+        "harvest_year_id__year": "2015",
+        "measure_id__measure": "oz",
+        "is_on_sale": false,
+        "is_in_stock": "1"
+      },
+      {
+        "id": 5,
+        "price": "2.29",
+        "name": "Basil",
+        "small_image": "https://cdn.shopify.com/s/files/1/1148/3974/products/Basil_grande.jpeg?v=1456211118",
+        "big_image1": "https://cdn.shopify.com/s/files/1/1148/3974/products/Basil.jpeg?v=1456211118",
+        "big_image2": "https://cdn.shopify.com/s/files/1/1148/3974/products/Basil-close-up.jpeg?v=1456211118",
+        "big_image3": "https://cdn.shopify.com/s/files/1/1148/3974/products/Basil-side-pic.jpeg?v=1456211118",
+        "harvest_year_id__year": "2015",
+        "measure_id__measure": "bunch",
+        "is_on_sale": false,
+        "is_in_stock": "1"
+      },
+      {
+        "id": 6,
+        "price": "2.95",
+        "name": "Beetroot",
+        "small_image": "https://cdn.shopify.com/s/files/1/1148/3974/products/beetroot_grande.jpg?v=1473487746",
+        "big_image1": "",
+        "big_image2": "",
+        "big_image3": "",
+        "harvest_year_id__year": "2016",
+        "measure_id__measure": "kg",
+        "is_on_sale": false,
+        "is_in_stock": "1"
+      },
+      {
+        "id": 7,
+        "price": "6.99",
+        "name": "Bell pepper",
+        "small_image": "https://cdn.shopify.com/s/files/1/1148/3974/products/paprika_grande.jpg?v=1476191105",
+        "big_image1": "",
+        "big_image2": "",
+        "big_image3": "",
+        "harvest_year_id__year": "2016",
+        "measure_id__measure": "lb",
+        "is_on_sale": false,
+        "is_in_stock": "1"
+      },
+      {
+        "id": 8,
+        "price": "8.05",
+        "name": "Brandywine Tomatoes",
+        "small_image": "https://cdn.shopify.com/s/files/1/1148/3974/products/Brandywine-tomatoes-front_grande.jpeg?v=1456211078",
+        "big_image1": "https://cdn.shopify.com/s/files/1/1148/3974/products/Brandywine-tomatoes-front.jpeg?v=1456211078",
+        "big_image2": "https://cdn.shopify.com/s/files/1/1148/3974/products/Brandywine-Tomatoes.jpeg?v=1456211078",
+        "big_image3": "",
+        "harvest_year_id__year": "2015",
+        "measure_id__measure": "kg",
+        "is_on_sale": true,
+        "is_in_stock": "1"
+      },
+      {
+        "id": 9,
+        "price": "1.80",
+        "name": "Broccoli",
+        "small_image": "https://cdn.shopify.com/s/files/1/1148/3974/products/broccoli_grande.jpg?v=1473487386",
+        "big_image1": "",
+        "big_image2": "",
+        "big_image3": "",
+        "harvest_year_id__year": "2016",
+        "measure_id__measure": "lb",
+        "is_on_sale": false,
+        "is_in_stock": "1"
+      },
+      {
+        "id": 10,
+        "price": "12.00",
+        "name": "C - OVERLOAD",
+        "small_image": "https://cdn.shopify.com/s/files/1/1148/3974/products/raspberries_ed450429-f3d8-4757-9507-f18101c2c057_grande.jpeg?v=1456210992",
+        "big_image1": "https://cdn.shopify.com/s/files/1/1148/3974/products/raspberries_ed450429-f3d8-4757-9507-f18101c2c057.jpeg?v=1456210992",
+        "big_image2": "https://cdn.shopify.com/s/files/1/1148/3974/products/Stanley-Plums-Above_bcaaac45-1ebe-426a-a915-34f35561e082.jpeg?v=1456210992",
+        "big_image3": "https://cdn.shopify.com/s/files/1/1148/3974/products/Apple-in-the-middle.jpeg?v=1456210992",
+        "harvest_year_id__year": "2015",
+        "measure_id__measure": "kg",
+        "is_on_sale": true,
+        "is_in_stock": "0"
+      },
+      {
+        "id": 11,
+        "price": "11.00",
+        "name": "Campari Tomatoes",
+        "small_image": "https://cdn.shopify.com/s/files/1/1148/3974/products/Campari-Tomatoes_grande.jpeg?v=1456211143",
+        "big_image1": "https://cdn.shopify.com/s/files/1/1148/3974/products/Campari-Tomatoes.jpeg?v=1456211143",
+        "big_image2": "https://cdn.shopify.com/s/files/1/1148/3974/products/Campari-Tomatoes-closer_b2dc02f3-fb47-4ed9-b818-37c7660f3a30.jpeg?v=1456211143",
+        "big_image3": "",
+        "harvest_year_id__year": "2015",
+        "measure_id__measure": "kg",
+        "is_on_sale": false,
+        "is_in_stock": "1"
+      },
+      {
+        "id": 12,
+        "price": "6.95",
+        "name": "Capia Pepper",
+        "small_image": "https://cdn.shopify.com/s/files/1/1148/3974/products/Capia-Pepper-above_grande.jpeg?v=1456211049",
+        "big_image1": "https://cdn.shopify.com/s/files/1/1148/3974/products/Capia-Pepper-above.jpeg?v=1456211049",
+        "big_image2": "https://cdn.shopify.com/s/files/1/1148/3974/products/Capia-Pepper.jpeg?v=1456211049",
+        "big_image3": "",
+        "harvest_year_id__year": "2015",
+        "measure_id__measure": "kg",
+        "is_on_sale": true,
+        "is_in_stock": "1"
+      },
+      {
+        "id": 13,
+        "price": "3.74",
+        "name": "Cherry Tomatoes",
+        "small_image": "https://cdn.shopify.com/s/files/1/1148/3974/products/Cherry-tomatoes-above_grande.jpeg?v=1472537367",
+        "big_image1": "",
+        "big_image2": "",
+        "big_image3": "",
+        "harvest_year_id__year": "2015",
+        "measure_id__measure": "red",
+        "is_on_sale": false,
+        "is_in_stock": "1"
+      },
+      {
+        "id": 14,
+        "price": "6.90",
+        "name": "Cherry Tomatoes 2016",
+        "small_image": "https://cdn.shopify.com/s/files/1/1148/3974/products/cherry-tomatoes_grande.jpg?v=1473490001",
+        "big_image1": "",
+        "big_image2": "",
+        "big_image3": "",
+        "harvest_year_id__year": "2016",
+        "measure_id__measure": "kg",
+        "is_on_sale": false,
+        "is_in_stock": "1"
+      },
+      {
+        "id": 15,
+        "price": "2.98",
+        "name": "Chives",
+        "small_image": "https://cdn.shopify.com/s/files/1/1148/3974/products/chives_grande.jpg?v=1473488140",
+        "big_image1": "",
+        "big_image2": "",
+        "big_image3": "",
+        "harvest_year_id__year": "2016",
+        "measure_id__measure": "g",
+        "is_on_sale": false,
+        "is_in_stock": "1"
+      },
+      {
+        "id": 16,
+        "price": "16.80",
+        "name": "Cucumber",
+        "small_image": "https://cdn.shopify.com/s/files/1/1148/3974/products/cucumber_grande.jpg?v=1473489264",
+        "big_image1": "",
+        "big_image2": "",
+        "big_image3": "",
+        "harvest_year_id__year": "2016",
+        "measure_id__measure": "kg",
+        "is_on_sale": false,
+        "is_in_stock": "1"
+      },
+      {
+        "id": 17,
+        "price": "1.99",
+        "name": "Damson Plums",
+        "small_image": "https://cdn.shopify.com/s/files/1/1148/3974/products/Damson_grande.jpeg?v=1456211083",
+        "big_image1": "https://cdn.shopify.com/s/files/1/1148/3974/products/Damson.jpeg?v=1456211083",
+        "big_image2": "https://cdn.shopify.com/s/files/1/1148/3974/products/Damson-close-up.jpeg?v=1456211083",
+        "big_image3": "",
+        "harvest_year_id__year": "2015",
+        "measure_id__measure": "kg",
+        "is_on_sale": false,
+        "is_in_stock": "1"
+      },
+      {
+        "id": 18,
+        "price": "7.50",
+        "name": "Eggplant",
+        "small_image": "https://cdn.shopify.com/s/files/1/1148/3974/products/eggplant_grande.jpg?v=1476190860",
+        "big_image1": "",
+        "big_image2": "",
+        "big_image3": "",
+        "harvest_year_id__year": "2016",
+        "measure_id__measure": "kg",
+        "is_on_sale": true,
+        "is_in_stock": "1"
+      },
+      {
+        "id": 19,
+        "price": "2.89",
+        "name": "Empire Apples",
+        "small_image": "https://cdn.shopify.com/s/files/1/1148/3974/products/Empire-Apple_grande.jpeg?v=1456211165",
+        "big_image1": "https://cdn.shopify.com/s/files/1/1148/3974/products/Empire-Apple.jpeg?v=1456211165",
+        "big_image2": "https://cdn.shopify.com/s/files/1/1148/3974/products/Apple-cuts.jpeg?v=1456211165",
+        "big_image3": "https://cdn.shopify.com/s/files/1/1148/3974/products/Apples-horizontal.jpeg?v=1456211165",
+        "harvest_year_id__year": "2015",
+        "measure_id__measure": "kg",
+        "is_on_sale": false,
+        "is_in_stock": "1"
+      },
+      {
+        "id": 20,
+        "price": "9.39",
+        "name": "Fuji Apples",
+        "small_image": "https://cdn.shopify.com/s/files/1/1148/3974/products/Fuji-single_grande.jpeg?v=1456211065",
+        "big_image1": "https://cdn.shopify.com/s/files/1/1148/3974/products/Fuji-single.jpeg?v=1456211065",
+        "big_image2": "https://cdn.shopify.com/s/files/1/1148/3974/products/Fuji.jpeg?v=1456211065",
+        "big_image3": "",
+        "harvest_year_id__year": "2014",
+        "measure_id__measure": "kg",
+        "is_on_sale": false,
+        "is_in_stock": "1"
+      },
+      {
+        "id": 21,
+        "price": "4.39",
+        "name": "Gala Apples",
+        "small_image": "https://cdn.shopify.com/s/files/1/1148/3974/products/apples_grande.jpeg?v=1456211105",
+        "big_image1": "https://cdn.shopify.com/s/files/1/1148/3974/products/apples.jpeg?v=1456211105",
+        "big_image2": "https://cdn.shopify.com/s/files/1/1148/3974/products/apple_pyramid.jpeg?v=1456211105",
+        "big_image3": "https://cdn.shopify.com/s/files/1/1148/3974/products/Apple_crepes_with_raspberryon_top.jpeg?v=1456211105",
+        "harvest_year_id__year": "2015",
+        "measure_id__measure": "kg",
+        "is_on_sale": false,
+        "is_in_stock": "1"
+      },
+      {
+        "id": 22,
+        "price": "2.30",
+        "name": "Golden Delicious Apples",
+        "small_image": "https://cdn.shopify.com/s/files/1/1148/3974/products/Golden-Delicious-Apples_grande.jpeg?v=1456211059",
+        "big_image1": "https://cdn.shopify.com/s/files/1/1148/3974/products/Golden-Delicious-Apples.jpeg?v=1456211059",
+        "big_image2": "https://cdn.shopify.com/s/files/1/1148/3974/products/Golden-Delicious-Apples-cut-off.jpeg?v=1456211059",
+        "big_image3": "https://cdn.shopify.com/s/files/1/1148/3974/products/Golden-Delicious-Yellow-Background.jpeg?v=1456211059",
+        "harvest_year_id__year": "2015",
+        "measure_id__measure": "kg",
+        "is_on_sale": false,
+        "is_in_stock": "1"
+      },
+      {
+        "id": 23,
+        "price": "2.99",
+        "name": "Green Beans",
+        "small_image": "https://cdn.shopify.com/s/files/1/1148/3974/products/green-beans_grande.jpg?v=1473489516",
+        "big_image1": "",
+        "big_image2": "",
+        "big_image3": "",
+        "harvest_year_id__year": "2016",
+        "measure_id__measure": "lb",
+        "is_on_sale": true,
+        "is_in_stock": "1"
+      },
+      {
+        "id": 24,
+        "price": "9.89",
+        "name": "Green Mixed Spice",
+        "small_image": "https://cdn.shopify.com/s/files/1/1148/3974/products/Green-Mixed-Spice_grande.jpeg?v=1456211020",
+        "big_image1": "https://cdn.shopify.com/s/files/1/1148/3974/products/Green-Mixed-Spice.jpeg?v=1456211020",
+        "big_image2": "https://cdn.shopify.com/s/files/1/1148/3974/products/Green-Mixed-Spice-with-Spoon.jpeg?v=1456211020",
+        "big_image3": "https://cdn.shopify.com/s/files/1/1148/3974/products/Green-Mixed-Spice-Decorated.jpeg?v=1456211020",
+        "harvest_year_id__year": "2014",
+        "measure_id__measure": "g",
+        "is_on_sale": false,
+        "is_in_stock": "1"
+      }
+    ],
+    "bundle_deal": [
+      [
+        {
+          "title": "Berrissimo Pack!",
+          "price": "$10.34"
+        },
+        [
+          {
+            "measure_id__measure": "pint",
+            "name": "Raspberries",
+            "name__count": 2
+          },
+          {
+            "measure_id__measure": "lb",
+            "name": "Strawberries",
+            "name__count": 2
+          }
+        ]
+      ],
+      [
+        {
+          "title": "Jam It Suit!",
+          "price": "$9.68"
+        },
+        [
+          {
+            "measure_id__measure": "kg",
+            "name": "Peaches",
+            "name__count": 2
+          },
+          {
+            "measure_id__measure": "kg",
+            "name": "Sweet Grapes",
+            "name__count": 2
+          }
+        ]
+      ],
+      [
+        {
+          "title": "Pasta Mia Bag!",
+          "price": "$27.34"
+        },
+        [
+          {
+            "measure_id__measure": "kg",
+            "name": "Brandywine Tomatoes",
+            "name__count": 4
+          },
+          {
+            "measure_id__measure": "lb",
+            "name": "Bell pepper",
+            "name__count": 2
+          },
+          {
+            "measure_id__measure": "kg",
+            "name": "Empire Apples",
+            "name__count": 1
+          }
+        ]
+      ]
+    ]
+  }
 }

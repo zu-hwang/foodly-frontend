@@ -21,7 +21,7 @@ class ImgProduct extends React.Component {
   }
 
   spread = e => {
-    console.log(e);
+    // console.log(e);
     this.setState({
       spread: false
       // unspread: "true" //이걸로 버튼 한번 펼쳐지고 나서 안 모아지게 할려고했음;
@@ -29,7 +29,7 @@ class ImgProduct extends React.Component {
   };
 
   render() {
-    console.log(this.props.productInfo);
+    console.log("상품정보 :", this.props.productInfo);
     const eachProduct = this.props.productInfo.map((productInfo, idx) => {
       const image = "url(" + productInfo.small_image + ")"; //배경 URL을 style에 넣을 수 있는 상태로 변경
       return (

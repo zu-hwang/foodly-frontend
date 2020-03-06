@@ -7,7 +7,7 @@ class BundleBox extends Component {
     this.state = {};
   }
   render() {
-    const { data, color, onClick } = this.props;
+    const { data, color, onClick, id } = this.props;
     return (
       <div className="bundle-box">
         <div className="cate-title-box" style={{ backgroundColor: color }}>
@@ -25,7 +25,9 @@ class BundleBox extends Component {
           })}
         </ul>
         <div className="btn-box" style={{ color: color }}>
-          <p onClick={onClick}>purchase</p>
+          <p id={id + "-bundle-perchase"} onClick={onClick}>
+            purchase
+          </p>
           {/* <p onClick={onClick}>{data[0].price}</p> */}
         </div>
       </div>

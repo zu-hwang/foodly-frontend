@@ -55,6 +55,12 @@ class Detail extends React.Component {
     this.getData();
   }
 
+  componentDidMount() {
+    this.handleQuery();
+    this.getData();
+    fetch(`http://10.58.5.105:8000/products/${this.props.match.params.id}`);
+  }
+
   render() {
     return (
       <Main>

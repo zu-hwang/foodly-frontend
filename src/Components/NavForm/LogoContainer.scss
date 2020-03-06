@@ -23,6 +23,8 @@ $srf: Bitter, serif;
 }
 .siteLogo img {
   vertical-align: middle;
+  height: 86px;
+  margin: 5px 0;
 }
 .storeDesc {
   margin: 0 12px;
@@ -69,7 +71,7 @@ $srf: Bitter, serif;
   font: 400 13.3333px Arial;
   .money {
     &::before {
-      content: "$";
+      content: '$';
     }
   }
 }
@@ -275,7 +277,7 @@ $srf: Bitter, serif;
         border-width: 5px;
         border-radius: 50%;
         .hidden-woodenBox__img {
-          background-image: url("https://cdn.shopify.com/s/files/1/1148/3974/products/wooden-box_small.jpg");
+          background-image: url('https://cdn.shopify.com/s/files/1/1148/3974/products/wooden-box_small.jpg');
           background-position: center center;
           width: 60px;
           height: 60px;

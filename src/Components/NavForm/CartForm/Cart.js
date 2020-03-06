@@ -21,16 +21,12 @@ export default class Cart extends Component {
   }
 
   calculator = (quantity, price) => {
+    console.log(quantity, price);
     const total = quantity * price;
-    this.state.bagToggle
-      ? this.setState({
-          money: this.state.money + total
-        })
-      : this.setState({
-          money: this.state.money + total + 3
-        });
+    this.setState({
+      money: total
+    });
   };
-
   _openCart = () => {
     this.setState({ cartDisplay: "block" });
   };
@@ -48,7 +44,7 @@ export default class Cart extends Component {
     //   method: "GET",
     //   headers: {
     //     Authorization:
-    //       "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6IjE5OTBAYWJjLmFiYyJ9.rx9SMadaUbA2loV6FqNAeIetFH_EfLwUccGt2a5fXbg"
+    //       "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InNraW0xMDI1QGFiYy5hYmMifQ.AX8MtSd4ZBlM1Ttg51qdFAIjJlqRnduyrI6hIMKJwlw"
     //   }
     // };
 
@@ -72,11 +68,10 @@ export default class Cart extends Component {
             basketButtonInfo: response.cart[0],
             totalQuantity: response.cart[1]["total_quantity"],
             totalPrice: response.cart[2]["total_price"]
+          },
+          () => {
+            // console.log("나야", this.state.totalPrice);
           }
-          // ,
-          // () => {
-          //   console.log("나야", this.state.totalPrice);
-          // }
         );
       });
   };
@@ -186,8 +181,12 @@ export default class Cart extends Component {
                       <FontAwesomeIcon
                         icon={faSyncAlt}
                         className="reFresh--Icon"
+                        onClick={this.calculator}
                       />
-                      <div className="total">${this.state.money}</div>
+                      <div className="total">
+                        ${/* {this.state.money} */}
+                        59.35
+                      </div>
                     </div>
                   </div>
                   <div className="bulabula">
@@ -200,7 +199,7 @@ export default class Cart extends Component {
                   <div>NOTE TO FOODLY STORE</div>
                   <div className="comment__wrapper">
                     <div>Leave your special requirements here</div>dids
-                    <textarea></textarea>
+                    {/* <textarea></textarea> */}
                   </div>
                 </div>
               </form>

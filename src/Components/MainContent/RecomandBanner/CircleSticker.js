@@ -3,14 +3,15 @@ import "./CircleSticker.scss";
 
 class CircleSticker extends Component {
   render() {
-    const { id, stickerText, style, className } = this.props;
+    const { id, stickerText, style, className, onClick } = this.props;
     return (
       <div
         style={style}
         className={className ? className : "circle-sticker"}
-        id={id + "-circle-sticker"}
+        onClick={onClick}
+        id={id + "-circle-sticker-id"}
       >
-        <p>{stickerText}</p>
+        <p id={id + "-circle-sticker-p"}>{stickerText}</p>
       </div>
     );
   }

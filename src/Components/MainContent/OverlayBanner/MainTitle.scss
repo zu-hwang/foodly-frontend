@@ -1,7 +1,10 @@
 @import "../../../Styles/var.scss";
 
 .main-title {
-  width: 100%;
+  // width: 100%;
+  & :hover {
+    cursor: pointer;
+  }
   p {
     letter-spacing: -0.1px;
     color: $black;
