@@ -87,12 +87,12 @@ class OverlayBanner extends Component {
       });
     // const intervalId =
     // ! 인터벌 추가 켜기
-    // setInterval(this.handleAutoBannerChange, 5000);
+    setInterval(this.handleAutoBannerChange, 4000);
     // console.log(intervalId);
   };
   componentWillUnmount = () => {
     // ! 인터벌 삭제 켜기
-    // clearInterval(1);
+    clearInterval(1);
   };
   render() {
     // 버튼 뿌리기
