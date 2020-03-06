@@ -35,7 +35,9 @@ class Detail extends React.Component {
     fetch(`http://10.58.5.105:8000/products/${this.props.match.params.id}`)
       .then(res => res.json())
       .then(res =>
-        this.setState({ data: res.data[0] }, () => console.log(this.state.data))
+        this.setState({
+          data: res.data
+        })
       );
   };
   getWindowScorllY = () => {
@@ -51,7 +53,6 @@ class Detail extends React.Component {
   componentDidMount() {
     this.handleQuery();
     this.getData();
-    // fetch(`http://10.58.5.105:8000/products/${this.props.match.params.id}`);
   }
 
   render() {
@@ -60,14 +61,14 @@ class Detail extends React.Component {
         <div className="detail-main" onWheel={this.getWindowScorllY}>
           <div
             className="detail-cover1"
-            // style={{
-            //   backgroundImage: `url(${this.state.data.big_image1})`
-            // }}
+            style={{
+              backgroundImage: `url(${this.state.data.big_image1})`
+            }}
           >
             <div
-              // style={{
-              //   backgroundImage: `url(${this.state.data.big_image2})`
-              // }}
+              style={{
+                backgroundImage: `url(${this.state.data.big_image2})`
+              }}
               className={
                 this.state.bgSelector === null
                   ? "detail-cover2"
@@ -125,13 +126,11 @@ class Detail extends React.Component {
               data={this.state.data}
               pageTop={this.state.pageTop}
               windowScroll={this.state.windowScroll}
-              // data={this.state.data}
             />
             <DetailBottom
               data={this.state.data}
               pageTop={this.state.pageTop}
               windowScroll={this.state.windowScroll}
-              // data={this.state.data}
             />
             <Footer />
           </div>

@@ -5,36 +5,42 @@
     "product_info": [
       {
         "name": "Brandywine Tomatoes",
+        "img": "//cdn.shopify.com/s/files/1/1148/3974/products/cherry-tomatoes_grande.jpg?v=1473490001",
         "price": "8.05",
         "measure_id__measure": "kg",
         "harvest_year_id__year": "2015"
       },
       {
         "name": "Bell pepper",
+        "img": "//cdn.shopify.com/s/files/1/1148/3974/products/paprika_grande.jpg?v=1476191105",
         "price": "6.99",
         "measure_id__measure": "lb",
         "harvest_year_id__year": "2016"
       },
       {
         "name": "Eggplant",
+        "img": "//cdn.shopify.com/s/files/1/1148/3974/products/eggplant_grande.jpg?v=1476190860",
         "price": "7.50",
         "measure_id__measure": "kg",
         "harvest_year_id__year": "2016"
       },
       {
         "name": "Green Beans",
+        "img": "//cdn.shopify.com/s/files/1/1148/3974/products/green-beans_grande.jpg?v=1473489516",
         "price": "2.99",
         "measure_id__measure": "lb",
         "harvest_year_id__year": "2016"
       },
       {
         "name": "Leek",
+        "img": "//cdn.shopify.com/s/files/1/1148/3974/products/leek_grande.jpg?v=1473490100",
         "price": "13.00",
         "measure_id__measure": "kg",
         "harvest_year_id__year": "2016"
       },
       {
         "name": "Lime",
+        "img": "//cdn.shopify.com/s/files/1/1148/3974/products/lime_grande.jpg?v=1473488514",
         "price": "6.00",
         "measure_id__measure": "kg",
         "harvest_year_id__year": "2016"

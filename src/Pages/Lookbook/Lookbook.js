@@ -3,6 +3,7 @@ import Nav from "../Header/Nav";
 import Footer from "../../Components/Footer/Footer";
 import "../Lookbook/Lookbook.scss";
 import { AiOutlineShopping } from "react-icons/ai";
+import { FaCheck } from "react-icons/fa";
 
 class Lookbook extends React.Component {
   constructor() {
@@ -11,6 +12,7 @@ class Lookbook extends React.Component {
       name: "",
       price: 0,
       data: [],
+      productInfo: [],
       showBox: false,
       navColor: "#F5F4F4",
       isCheck: "true"
@@ -29,13 +31,13 @@ class Lookbook extends React.Component {
   };
 
   componentDidMount = () => {
-    fetch("http://localhost:3000/Data/lookbook.json")
+    fetch("http://10.58.5.105:8000/products/lookbook")
       .then(res => res.json())
-      .then(
-        res => console.log(res.data.product_info[0].name, "데이터")
-        // this.setState({
-        //   data: res.data
-        // })
+      .then(res =>
+        this.setState({
+          data: res.data,
+          productInfo: res.data.product_info
+        })
       );
   };
 
@@ -44,6 +46,7 @@ class Lookbook extends React.Component {
       <>
         <Nav navColor={this.state.navColor} />
         <div className="lookbook-container">
+          {/* ()=>{console.log("프로덕트인포: ", this.state.productInfo[0])}; */}
           <div className="header-container">
             <div className="header-the">The</div>
             <div className="header-first-text">FULL PLATE LOOKBOOK</div>
@@ -52,16 +55,16 @@ class Lookbook extends React.Component {
               <br />
               products for you to cook it at home
             </div>
-            <div className="dish-name">- Basil Risotto -</div>
+            <div className="dish-name">- {this.state.data.title} -</div>
             <div className="header-img-container">
               <div className="dish-img-box">
-                {/* <img className="dish-left-img" alt="dish-left-img" /> */}
+                <span className="dish-left-img" />
                 <img
                   className="main-dish-img"
                   alt={"main-dish-img"}
-                  src="https://cdn.shopify.com/s/files/1/1148/3974/articles/risotto_grande.png?v=1476082307"
+                  src={this.state.data.thumbnail_url}
                 ></img>
-                {/* <img className="dish-right-img" alt={"dish-right-img"} /> */}
+                <span className="dish-right-img" />
               </div>
               <div className="img-icon-container">
                 <div
@@ -79,10 +82,16 @@ class Lookbook extends React.Component {
                     <div className="info1-num">1</div>
                     <div className="info1-purchase-box">
                       <div className="info1-purchase">
-                        <div className="purchase-name">Bell pepper</div>
+                        ()=>
+                        {console.log("프로덕트인포: ", this.state.productInfo)};
+                        <div className="purchase-name">
+                          {this.state.productInfo.name}
+                        </div>
                         <div className="purchase">1 lb | Harvest 2016</div>
                       </div>
-                      <div className="info1-price">$6.99</div>
+                      <div className="info1-price">
+                        ${this.state.productInfo.price}
+                      </div>
                     </div>
                     <div className="info1-text">
                       You need 1 kg of this ripe cherry tomatoes for 4 people
@@ -244,29 +253,29 @@ class Lookbook extends React.Component {
               </div>
             </div>
           </div>
-
           <div className="empty"></div>
-
           <div className="product-container">
-            {this.state.data.map((el, index) => {
+            {this.state.productInfo.map((el, index) => {
               return (
                 <div className="product-box">
                   <div className="product">
                     <img
                       className="product-img"
                       alt={`${el.name + index}`}
-                      src={el.img}
+                      src={el.small_image}
                     />
                     <div className="check-box">
                       <input id="check-box-input" type="checkbox" />
-                      {/* <label htmlFor="check-box-input">
-                        <span>✔️</span>
-                      </label> */}
+                      <label htmlFor="check-box-input">
+                        <FaCheck />
+                      </label>
                     </div>
                     <div className="purchase-box">
                       <div>
                         <div className="product-name">{el.name}</div>
-                        <div className="product-purchase">{el.purchase}</div>
+                        <div className="product-purchase">
+                          {el.measure_id__measure} | {el.harvest_year_id__year}
+                        </div>
                       </div>
                       <div className="product-price">${el.price}</div>
                     </div>
@@ -275,7 +284,6 @@ class Lookbook extends React.Component {
               );
             })}
           </div>
-
           <div className="bottom-container">
             <div className="bottom-img"></div>
             <div className="bottom-text">
