@@ -9,7 +9,7 @@ class DetailBottom extends React.Component {
       textArea: null,
       nameInput: null,
       emailInput: null,
-      similarData: [],
+      similarProduct: [],
       commentData: [],
       comment: "",
       commentName: "",
@@ -41,15 +41,15 @@ class DetailBottom extends React.Component {
   };
 
   setData = () => {
-    fetch("http://localhost:3000/Data/similarData.json")
+    fetch("http://localhost:3000/Data/similar.json")
       .then(res => res.json())
       .then(res => {
         this.setState(
           {
-            similarData: res.similarData
+            similarProduct: res.data.similar_product
           },
           () => {
-            console.log(this.state.similarData);
+            console.log(res.data.similar_product, "시밀러");
           }
         );
       });
@@ -136,19 +136,27 @@ class DetailBottom extends React.Component {
                   <div className="energy-box">
                     <div className="energy">
                       <div>Energy</div>
-                      <div className="energy-box-calorie">18Kcal</div>
+                      <div className="energy-box-calorie">
+                        {this.props.data.energy}
+                      </div>
                     </div>
                     <div className="carbohydrates">
                       <div>Carbohydrates</div>
-                      <div className="energy-box-calorie">3.9g</div>
+                      <div className="energy-box-calorie">
+                        {this.props.data.carbonydrate}
+                      </div>
                     </div>
                     <div className="protein">
                       <div>Protein</div>
-                      <div className="energy-box-calorie">0.9g</div>
+                      <div className="energy-box-calorie">
+                        {this.props.data.protein}
+                      </div>
                     </div>
                     <div className="total">
                       <div>Total Fat</div>
-                      <div className="energy-box-calorie">0.2g</div>
+                      <div className="energy-box-calorie">
+                        {this.props.data.fat}
+                      </div>
                     </div>
                     <div className="dietary">
                       <div>Dietary Fiber</div>
@@ -423,17 +431,18 @@ class DetailBottom extends React.Component {
           >
             <div className="similar-title">Similar Products</div>
             <div className="similar-box">
-              {this.state.similarData.map((el, index) => {
+              {this.state.similarProduct.map((el, index) => {
                 return (
                   <div key={index} className="similar">
                     <img
                       className="similar-img"
-                      src={el.small_image}
+                      src={this.props.data.small_image}
                       alt={`${el.name + index}`}
                     />
                     <div className="similar-product-name">{el.name}</div>
                     <div className="similar-product-explanation">
-                      {el.price}
+                      Harvest {el.harvest_year_id__year} |{" "}
+                      {el.measure_id__measure}
                     </div>
                   </div>
                 );

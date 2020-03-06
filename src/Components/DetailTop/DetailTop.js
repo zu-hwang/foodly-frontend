@@ -17,7 +17,7 @@ class DetailTop extends React.Component {
   }
 
   handlePrice = () => {
-    fetch("", {
+    fetch("http://10.58.5.250/order/cart", {
       method: "post",
       body: JSON.stringify({
         id: this.props.data.id,
