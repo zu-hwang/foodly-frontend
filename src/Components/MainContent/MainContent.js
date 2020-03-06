@@ -18,21 +18,42 @@ class MainContent extends Component {
   }
 
   componentDidMount = () => {
-    const requestOptions = {
+    fetch("http://localhost:3000/Data/MainContent.json", {
       method: "GET"
-    };
-    fetch("http://10.58.5.105:8000", requestOptions)
-      .then(response => response.json())
+    })
+      .then(res => res.json())
       .then(result => {
-        // console.log("연결해보자", result.data["category_deal"]);
-        this.setState({
-          productList: result.data["recommand_product"],
-          categoryDeal: result.data["category_deal"][0],
-          seasonalDeal: result.data["seasonal_deal"][0],
-          bundleDeal: result.data["bundle_deal"]
-        });
+        // console.log(result.data);
+        this.setState(
+          {
+            productList: result.data["recommand_product"],
+            categoryDeal: result.data["category_deal"][0],
+            seasonalDeal: result.data["seasonal_deal"][0],
+            bundleDeal: result.data["bundle_deal"]
+          },
+          () => {
+            // console.log(this.state);
+          }
+        );
       })
-      .catch(error => console.log("error", error));
+      .catch(err => console.log(err));
+
+    // ! 아래 API연결. 서버연결되면 주석 해제하기
+    // const requestOptions = {
+    //   method: "GET"
+    // };
+    // fetch("http://10.58.5.105:8000", requestOptions)
+    //   .then(response => response.json())
+    //   .then(result => {
+    //     // console.log("연결해보자", result.data["category_deal"]);
+    //     this.setState({
+    //       productList: result.data["recommand_product"],
+    //       categoryDeal: result.data["category_deal"][0],
+    //       seasonalDeal: result.data["seasonal_deal"][0],
+    //       bundleDeal: result.data["bundle_deal"]
+    //     });
+    //   })
+    //   .catch(error => console.log("error", error));
   };
 
   render() {

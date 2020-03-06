@@ -24,7 +24,7 @@ class OverlayBanner extends Component {
     };
   }
   handleBtnClick = e => {
-    console.log(e.target.id);
+    // console.log(e.target.id);
     const id = parseInt(e.target.id);
     this.setState({
       selectedId: id,
@@ -69,10 +69,10 @@ class OverlayBanner extends Component {
     }
   };
   componentDidMount = () => {
-    fetch("http://localhost:3000/Data/MainContent.json")
+    fetch("http://localhost:3000/Data/overlayBanner.json")
       .then(data => data.json())
       .then(data => {
-        // console.log("data", data.overlayBanner);
+        console.log("data", data.overlayBanner);
         this.setState({
           data: data.overlayBanner,
           selectedId: data.overlayBanner[0].id,
@@ -107,18 +107,6 @@ class OverlayBanner extends Component {
       prodId
     } = this.state;
 
-    const btnMapping = data.map(data => {
-      return (
-        <CircleBtn
-          id={data.id}
-          key={data.id + "-circlebtn-key"}
-          buttonImg={data.buttonImg}
-          handleBtnClick={this.handleBtnClick}
-          selectedId={selectedId}
-        />
-      );
-    });
-
     return (
       <div
         className="overlay-banner-wrap"
@@ -127,7 +115,20 @@ class OverlayBanner extends Component {
           backgroundImage: `url(${bgImg})`
         }}
       >
-        <div className="btn-wrap">{btnMapping}</div>
+        <div className="btn-wrap">
+          {/* 맵핑 */}
+          {data.map(data => {
+            return (
+              <CircleBtn
+                id={data.id}
+                key={data.id + "-circlebtn-key"}
+                buttonImg={data.buttonImg}
+                handleBtnClick={this.handleBtnClick}
+                selectedId={selectedId}
+              />
+            );
+          })}
+        </div>
         <div className="title-wrap">
           <MainTitle
             id={selectedId}

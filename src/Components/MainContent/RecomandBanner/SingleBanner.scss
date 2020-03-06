@@ -8,14 +8,14 @@
   min-height: 540px;
   position: relative;
   background-color: $l-gray;
-  &:hover {
-    cursor: pointer;
-  }
+  // &:hover {
+  //   cursor: pointer;
+  // }
 
   .title-wrap {
     position: absolute;
     top: 70px;
-    width: 100%;
+    // width: 100%;
     text-align: center;
   }
   .sub-text-wrap {
@@ -30,15 +30,20 @@
     div:last-child {
       display: flex;
       flex-direction: column;
-      // justify-content: flex-end;
-      span {
-        font-family: $srf;
-        color: $black;
-        letter-spacing: -0.1px;
-        font-weight: 700;
-        font-size: 20px;
-        padding-bottom: 10px;
-        text-align: right;
+      div {
+        display: flex;
+        justify-content: flex-end;
+        span {
+          font-family: $srf;
+          color: $black;
+          letter-spacing: -0.1px;
+          font-weight: 700;
+          font-size: 20px;
+          padding-bottom: 10px;
+          &:hover {
+            cursor: pointer;
+          }
+        }
       }
       .line {
         width: 300px;
@@ -59,7 +64,7 @@
     opacity: 1;
     transition: all 0.2s ease-in-out;
     &:hover {
-      cursor: pointer;
+      // cursor: pointer;
       opacity: 0.7;
       transition: all 0.2s ease-in-out;
     }

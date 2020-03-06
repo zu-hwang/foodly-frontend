@@ -47,13 +47,17 @@ class RecomandItem extends Component {
             <CircleSticker
               stickerText={price}
               className={"sticker-small-price"}
+              onClick={onClick}
+              id={id}
             />
-            {sale ? (
+            {sale && (
               <CircleSticker
                 stickerText={sale}
                 className={"sticker-small-sale"}
+                onClick={onclick}
+                id={id}
               />
-            ) : null}
+            )}
           </div>
         </div>
         <div className="product-info-box">
