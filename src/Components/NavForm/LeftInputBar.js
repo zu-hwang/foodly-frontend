@@ -12,33 +12,7 @@ class LeftInputBar extends React.Component {
       inputValue: "",
       resultBox: false,
       resultMode: "off", // min-char,no-data,on, off
-      data: null
-      // [
-      //   {
-      //     id: 0,
-      //     name: "Basil",
-      //     price: "$2.29",
-      //     sale: false,
-      //     category: "Harvest 2015",
-      //     stock: 0,
-      //     unit: "Bunch",
-      //     img:
-      //       "//cdn.shopify.com/s/files/1/1148/3974/products/Basil_grande.jpeg?v=1456211118",
-      //     link: "0번 인덱스 링크"
-      //   },
-      //   {
-      //     id: 0,
-      //     name: "Basil",
-      //     price: "$2.29",
-      //     sale: false,
-      //     category: "Harvest 2015",
-      //     stock: 0,
-      //     unit: "Bunch",
-      //     img:
-      //       "//cdn.shopify.com/s/files/1/1148/3974/products/Basil_grande.jpeg?v=1456211118",
-      //     link: "1번 인덱스 링크"
-      //   }
-      // ]
+      data: []
     };
     this.focusSearch = React.createRef();
     this.searchIcon = React.createRef();
@@ -84,18 +58,17 @@ class LeftInputBar extends React.Component {
   };
   setData = data => {};
   sendRequest = e => {
-    //! 패치
-    let requestOptions = {
-      method: "GET"
-    };
-    fetch(
-      "http://10.58.5.56:8000/search/search_best?title=" +
-        this.state.inputValue,
-      requestOptions
-    )
-      .then(res => res.text())
-      .then(res => console.log(res)) //! 만약 결과가 없을때 내용 출력
-      .catch(error => console.log("error", error));
+    // //! 패치
+    // let requestOptions = {
+    //   method: "GET"
+    // };
+    // fetch(
+    //   "http://10.58.7.185:8000/products/search?search=" + this.state.inputValue,
+    //   requestOptions
+    // )
+    //   .then(res => res.text())
+    //   .then(res => console.log(res)) //! 만약 결과가 없을때 내용 출력
+    //   .catch(error => console.log("error", error));
   };
 
   handleOnChange = e => {
@@ -115,11 +88,10 @@ class LeftInputBar extends React.Component {
   };
 
   handleSearchLink = e => {
-    console.log("서치창 > 리스트클릭 > 해당 상품으로 이동할꺼다!");
-    console.log(parseInt(e.target.id));
+    // console.log("서치창 > 리스트클릭 > 해당 상품으로 이동할꺼다!");
+    // console.log(parseInt(e.target.id));
     const id = parseInt(e.target.id);
-    console.log(this.state.data[id].link);
-    this.props.history.push(`/${this.state.data[id].link}`);
+    this.props.history.push(`/product/detail/${id}`);
   };
   checkingResultBox = () => {
     // 결과 박스 뭘 출력할지!
@@ -136,6 +108,12 @@ class LeftInputBar extends React.Component {
   };
   componentWillUnmount = () => {
     document.removeEventListener("click", this.handleOutSideClick);
+  };
+  componentDidMount = () => {
+    fetch("http://localhost:3000/Data/searchInput.json")
+      .then(res => res.json())
+      .then(result => this.setState({ data: result.data }))
+      .catch();
   };
   render() {
     return (
@@ -190,7 +168,7 @@ class LeftInputBar extends React.Component {
                 <span onClick={this.handleClickCollections}>collections</span>
               </p>
             )}
-            {this.state.resultMode === "off" && <p></p>}
+            {/* {this.state.resultMode === "off" && <p></p>} */}
             {this.state.resultMode === "on" &&
               this.state.data.map(data => {
                 return (
