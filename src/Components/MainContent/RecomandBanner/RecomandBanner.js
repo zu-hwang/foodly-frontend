@@ -7,8 +7,8 @@ class RecomandBanner extends Component {
   handleBannerClick = e => {
     // ! 배너 클릭했을때 페이지 이동
     // ! 해당상품 페이지 링크 업데이트 하기 루트이하 link키에 넣기.
-    console.log(parseInt(e.target.id));
-    console.log(e.target.id);
+    // console.log(parseInt(e.target.id));
+    // console.log(e.target.id);
     this.props.history.push(`/product/detail/${parseInt(e.target.id)}`);
   };
   render() {

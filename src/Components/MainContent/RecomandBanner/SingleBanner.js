@@ -33,15 +33,22 @@ class SingleBanner extends Component {
             subTitle={subTitle}
             titleStyle={{ fontSize: "1.8em" }}
             subTitleStyle={{ fontSize: "1.5em" }}
+            onClick={onClick}
           />
         </div>
         <div className="sub-text-wrap">
           <div className="circle-sticker-wrap">
-            <CircleSticker id={id} stickerText={stickerText} />
+            <CircleSticker
+              id={id}
+              stickerText={stickerText}
+              onClick={onClick}
+            />
           </div>
           <div>
-            <div id={id + "-subtext"} onClick={onClick}>
-              <span>{subText}</span>
+            <div>
+              <span id={id + "-subtext"} onClick={onClick}>
+                {subText}
+              </span>
             </div>
             <div className="line"></div>
           </div>
