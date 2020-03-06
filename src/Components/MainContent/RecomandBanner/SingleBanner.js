@@ -21,7 +21,7 @@ class SingleBanner extends Component {
       subText
     } = this.props;
     return (
-      <div className="single-banner" onClick={onClick}>
+      <div className="single-banner">
         <div
           className="background-img"
           style={{ backgroundImage: `URL(${bgImg})` }}
@@ -33,14 +33,23 @@ class SingleBanner extends Component {
             subTitle={subTitle}
             titleStyle={{ fontSize: "1.8em" }}
             subTitleStyle={{ fontSize: "1.5em" }}
+            onClick={onClick}
           />
         </div>
         <div className="sub-text-wrap">
           <div className="circle-sticker-wrap">
-            <CircleSticker id={id} stickerText={stickerText} />
+            <CircleSticker
+              id={id}
+              stickerText={stickerText}
+              onClick={onClick}
+            />
           </div>
           <div>
-            <span>{subText}</span>
+            <div>
+              <span id={id + "-subtext"} onClick={onClick}>
+                {subText}
+              </span>
+            </div>
             <div className="line"></div>
           </div>
         </div>

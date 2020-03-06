@@ -18,6 +18,28 @@ class MainContent extends Component {
   }
 
   componentDidMount = () => {
+    // ! 아래 목데이터
+    // fetch("http://localhost:3000/Data/MainContent.json", {
+    //   method: "GET"
+    // })
+    //   .then(res => res.json())
+    //   .then(result => {
+    //     // console.log(result.data);
+    //     this.setState(
+    //       {
+    //         productList: result.data["recommand_product"],
+    //         categoryDeal: result.data["category_deal"][0],
+    //         seasonalDeal: result.data["seasonal_deal"][0],
+    //         bundleDeal: result.data["bundle_deal"]
+    //       },
+    //       () => {
+    //         // console.log(this.state);
+    //       }
+    //     );
+    //   })
+    //   .catch(err => console.log(err));
+
+    // ! 아래 API연결. 서버연결되면 주석 해제하기
     const requestOptions = {
       method: "GET"
     };
@@ -26,9 +48,9 @@ class MainContent extends Component {
       .then(result => {
         // console.log("연결해보자", result.data["category_deal"]);
         this.setState({
-          categoryDeal: result.data["category_deal"],
           productList: result.data["recommand_product"],
-          seasonalDeal: result.data["seasonal_deal"],
+          categoryDeal: result.data["category_deal"][0],
+          seasonalDeal: result.data["seasonal_deal"][0],
           bundleDeal: result.data["bundle_deal"]
         });
       })
@@ -37,12 +59,13 @@ class MainContent extends Component {
 
   render() {
     const { categoryDeal, productList, seasonalDeal, bundleDeal } = this.state;
+    // console.log(categoryDeal[0], seasonalDeal[0]);
     return (
       <div className="main-container">
         <Main>
           <OverlayBanner />
           <RecomandBanner category={categoryDeal} seasonal={seasonalDeal} />
-          <RecomandSlide data={productList} index={productList.length} />
+          <RecomandSlide data={productList} leng={productList.length} />
           <Bundle data={bundleDeal} />
         </Main>
       </div>

@@ -23,6 +23,7 @@
   justify-content: space-between;
   align-content: center;
   transition: all 1s ease-in-out;
+  @include flexCenter();
 
   .btn-wrap {
     position: absolute;
@@ -30,9 +31,8 @@
     top: 40vh;
   }
   .title-wrap {
-    @include flexCenter();
     text-align: center;
-    width: 100%;
+    max-width: 100%;
     display: flex;
     margin-bottom: 200px;
     &:hover {

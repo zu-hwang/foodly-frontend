@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import RecomandItem from "./RecomandItem";
@@ -13,92 +14,48 @@ class RecomandSlide extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      left: 0,
-      nextBtn: true,
-      prevBtn: false
+      left: 0
     };
   }
   hadlePrevBtn = e => {
-    let qtWidth = window.innerWidth / 4;
     let { left } = this.state;
-    let { data, index } = this.props;
-    const leng = data.length - 4; // 16-4=12
-    if (index === leng - 4) {
-      //맨 끝 지점 1텀 전
+    let { leng } = this.props;
+    let width = window.innerWidth;
+    if (left === -width * (leng / 4 - 1)) {
       this.setState({
-        left: left + qtWidth * 4,
-        index: index + 4,
-        nextBtn: true,
-        prevBtn: false
+        left: left + width
       });
-    } else if (index < leng - 4) {
+    } else if (left < 0 && left > -width * (leng / 4 - 1)) {
       this.setState({
-        left: left + qtWidth * 4,
-        index: index + 4,
-        nextBtn: true,
-        prevBtn: true
-      });
-    } else if (index === 0) {
-      // 끝지점
-      this.setState({
-        left: left + qtWidth * 4,
-        index: index + 4,
-        nextBtn: true,
-        prevBtn: false
+        left: left + width
       });
     }
   };
 
   hadleNextBtn = e => {
-    let qtWidth = window.innerWidth / 4;
     let { left } = this.state;
-    let { data, index } = this.props;
-    data = data - 4;
-    const leng = data.length - 4;
-    // 인덱스가 4 보다 작으면 자투리 이동하기
-    if (index === leng) {
-      // 인덱스와 leng이 같음 == 시작위치
+    let { leng } = this.props;
+    let width = window.innerWidth;
+
+    if (left === 0) {
+      this.setState({ left: left - width, nextBtn: true, prevBtn: false });
+    } else if (left === -width * (leng / 4 - 1)) {
       this.setState({
-        left: left - qtWidth * 4,
-        index: index - 4,
-        nextBtn: true,
-        prevBtn: false
-      });
-    } else if (index > 4) {
-      this.setState({
-        left: left - qtWidth * 4,
-        index: index - 4,
-        nextBtn: true,
-        prevBtn: true
-      });
-    } else if (index === 4) {
-      // 끝지점
-      this.setState({
-        left: left - qtWidth * 4,
-        index: index - 4,
         nextBtn: false,
         prevBtn: true
       });
+    } else if (left < 0 && left > -width * (leng / 4 - 1)) {
+      this.setState({ left: left - width, nextBtn: true, prevBtn: true });
     }
   };
   goToLink = e => {
-    // ! 쿼리파라미터로 상세페이지 이동하기
-    // console.log(parseInt(e.target.id));
-    // this.props.history.push(`/detail?id=${e.target.id}`);
+    // console.log(e.target.id, parseInt(e.target.id));
+    // console.log(`/product/detail/${parseInt(e.target.id)}`);
+    this.props.history.push(`/product/detail/${parseInt(e.target.id)}`);
   };
-  // componentDidMount() {
-  // fetch("http://10.58.5.105:8000")
-  //   .then(data => data.json())
-  //   .then(data => {
-  //     // console.log("데이터 출력", data.recomandProduct.);
-  //     this.setState({
-  //       data: data.recomandProduct,
-  //       index: data.recomandProduct.length - 4
-  //       // ! 초기값에서 기본 상품 깔리는 상품갯수 꼭 빼줘야 한다!!
-  //     });
-  //   });
-  // }
+
   render() {
+    let width = window.innerWidth;
     return (
       <div className="recomand-slide">
         <div
@@ -127,14 +84,22 @@ class RecomandSlide extends Component {
         </div>
         <div className="slide-handler-wrap">
           <div
-            className={this.state.prevBtn ? "prev-btn" : "btn-none"}
-            onClick={this.state.prevBtn ? this.hadlePrevBtn : null}
+            className={this.state.left !== 0 ? "prev-btn" : "btn-none"}
+            onClick={this.state.left !== 0 ? this.hadlePrevBtn : null}
           >
             <FontAwesomeIcon icon={faAngleLeft} />
           </div>
           <div
-            className={this.state.nextBtn ? "next-btn" : "btn-none"}
-            onClick={this.state.nextBtn ? this.hadleNextBtn : null}
+            className={
+              this.state.left !== -width * (this.props.leng / 4 - 1)
+                ? "next-btn"
+                : "btn-none"
+            }
+            onClick={
+              this.state.left !== -width * (this.props.leng / 4 - 1)
+                ? this.hadleNextBtn
+                : null
+            }
           >
             <FontAwesomeIcon icon={faAngleRight} />
           </div>
@@ -143,4 +108,4 @@ class RecomandSlide extends Component {
     );
   }
 }
-export default RecomandSlide;
+export default withRouter(RecomandSlide);

@@ -3,15 +3,14 @@
 .recomand-product-item {
   min-width: 25%;
   position: relative;
-  &:hover {
-    cursor: pointer;
-  }
+
   .product-img-box {
     position: relative;
     margin-left: 2px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    overflow: hidden;
 
     .img-box {
       height: 360px;
@@ -52,10 +51,10 @@
   }
 
   .product-info-box {
+    @include flexCenter();
     text-align: center;
     font-family: $srf;
     letter-spacing: -0.1px;
-    @include flexCenter();
     flex-direction: column;
     p {
       margin-top: 20px;
