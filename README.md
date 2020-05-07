@@ -13,13 +13,13 @@ Click below image to see our demo.
 [![Foodly demo](https://i.ibb.co/DbfDptM/Screen-Shot-2020-03-17-at-8-46-32-PM.png=200x)](https://www.youtube.com/watch?v=1K8aV-KZMQw&feature=youtu.be)
 
 
-# 사용한 기술
+## 사용한 기술
 + HTML / CSS
 + JavaScript
 + React (Class)
 + Sass/Scss
 
-# 맡은 부분
+## 맡은 부분
 + Product-detail page, Lookbook page (Yeji Choi)
 + Login page, SignUp page, Main page (Eunji Hwang)
 + Product page, Cart (Kihyun Kwun)
