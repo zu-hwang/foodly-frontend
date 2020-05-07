@@ -1,4 +1,4 @@
-# Introduction
+## Introduction
 
 Web grocery market [Foodly](https://foodly-store.myshopify.com/) clone.
 
@@ -6,7 +6,7 @@ Web grocery market [Foodly](https://foodly-store.myshopify.com/) clone.
 
 + Members        : (Front-end) Yeji Choi, Eunji Hwang, Kihyun Kwun | (Back-end) Seunghyun Ahn, Sooyeon Kim, Heechul Yoon
 
-# Demo
+## Demo
 
 Click below image to see our demo.
 
