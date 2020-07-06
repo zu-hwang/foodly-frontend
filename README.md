@@ -17,9 +17,10 @@ Click below image to see our demo.
 + HTML / CSS
 + JavaScript
 + React (Class)
++ React-Router
 + Sass/Scss
 
 ## 맡은 부분
 + Product-detail page, Lookbook page (Yeji Choi)
-+ Login page, SignUp page, Main page (Eunji Hwang)
-+ Product page, Cart (Kihyun Kwun)
++ Login page, SignUp page, Main page, SearchInput, Footer (Eunji Hwang)
++ GNB, Product page, Cart (Kihyun Kwun)
